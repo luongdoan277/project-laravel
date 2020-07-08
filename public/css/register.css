@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+.login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+.form-control{
+    width: 50%;
+    padding: 0px 70px;
+    display: flex;
+    flex-direction: column;
+}
+.form-control h1{
+    font-size: 35px;
+    margin: 10% 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.form-control .form-login{
+    width: 100%;
+}
+.form-control .form-login > span{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.form-control .form-login input{
+    width: 80%;
+    height: 5.5vh;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+}
+.form-control .form-login #submit{
+    margin: 30px 0;
+    border-radius: 15px;
+    height: 6vh;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background:  #0B1218;
+    color: white;
+    transition: 0.5s;
+}
+.form-control .form-login #submit:hover{
+    background: #d45060;
+}
+.form-control .question{
+    margin-top: 30px;
+}
+.image-login{
+    position: relative;
+    overflow: hidden;
+}
+.image-login > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image-login .logo-logins{
+    cursor: pointer;
+    width: 25%;
+    height: 9vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image-login .logo-logins > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateY(16%);
+}
+
+.image-login .logo-logins >a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.image-login .logo-logins >a>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
