@@ -8,8 +8,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="{{URL::asset('css/homePagePHP.css')}}">
-    <link rel="stylesheet" href="{{URL::asset('FontAwesome/css/all.min.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('sass/home.scss')}}">--}}
+{{--    <link rel="stylesheet" href="{{asset('FontAwesome/css/all.min.css')}}">--}}
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 

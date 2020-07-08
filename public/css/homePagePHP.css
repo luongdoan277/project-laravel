@@ -252,7 +252,7 @@ main{
 .main-product .list-product .product{
     width: 21%;
     height: 28rem;
-    margin: 26px;
+    margin: 0 auto;
 }
 .main-product .list-product .product .them{
     width: 100%;
