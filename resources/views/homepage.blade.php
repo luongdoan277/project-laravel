@@ -17,7 +17,7 @@
             <div class="link">
                 <div class="logo">
                     <a href="/">
-                        <img src="{{URL::asset('images/logo1.png')}}" alt="">
+                        <img src="{{asset('images/logo1.png')}}" alt="">
                     </a>
                 </div>
                 <ul class="link-page">
@@ -49,7 +49,7 @@
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="{{URL::asset('images/slide-1.jpeg')}}" alt="First slide">
+                        <img class="d-block w-100" src="{{asset('images/slide-1.jpeg')}}" alt="First slide">
                         <div class="d-none d-md-block slide-content">
                             <p>Make your style more fashionable in Raya Days with BerryBerri</p>
                             <span>Raya Hampers-May 2020</span>
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="{{URL::asset('images/slide8img.jpeg')}}" alt="Second slide" >
+                        <img class="d-block w-100" src="{{asset('images/slide8img.jpeg')}}" alt="Second slide" >
                         <div class="d-none d-md-block slide-content" style="left: 52%">
                             <p>Make your style more fashionable in Raya Days with BerryBerri</p>
                             <span>Raya Hampers-May 2020</span>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="{{URL::asset('images/slide-6img.jpeg')}}" alt="Third slide">
+                        <img class="d-block w-100" src="{{asset('images/slide-6img.jpeg')}}" alt="Third slide">
                         <div class="d-none d-md-block slide-content" style="left: 35%">
                             <p>Make your style more fashionable in Raya Days with BerryBerri</p>
                             <span>Raya Hampers-May 2020</span>
@@ -94,7 +94,7 @@
         </div>
         <div class="directory-menu">
             <div class="menu-items">
-                <img src="{{URL::asset('images/hats.png')}}" alt="">
+                <img src="{{asset('images/hats.png')}}" alt="">
                 <div class="content">
                     <a href="">
                         <p>
@@ -105,7 +105,7 @@
                 </div>
             </div>
             <div class="menu-items">
-                <img src="{{URL::asset('images/jackets.jpeg')}}" alt="">
+                <img src="{{asset('images/jackets.jpeg')}}" alt="">
                 <div class="content">
                     <a href="">
                         <p>
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <div class="menu-items">
-                <img src="{{URL::asset('images/sneaker.jpeg')}}" alt="">
+                <img src="{{asset('images/sneaker.jpeg')}}" alt="">
                 <div class="content">
                     <a href="">
                         <p>
@@ -127,7 +127,7 @@
                 </div>
             </div>
             <div class="menu-items">
-                <img src="{{URL::asset('images/men.png')}}" alt="">
+                <img src="{{asset('images/men.png')}}" alt="">
                 <div class="content">
                     <a href="">
                         <p>
@@ -138,7 +138,7 @@
                 </div>
             </div>
             <div class="menu-items">
-                <img src="{{URL::asset('images/womens.png')}}" alt="">
+                <img src="{{asset('images/womens.png')}}" alt="">
                 <div class="content">
                     <a href="">
                         <p>
@@ -158,7 +158,7 @@
             <div class="product">
                 <div class="them">
                     <div class="image-product">
-                        <img src="{{URL::asset('images/products.jpeg')}}" alt="">
+                        <img src="{{asset('images/products.jpeg')}}" alt="">
                     </div>
                     <div class="addTo">
                         <a href="">Add To Cart</a>
@@ -172,7 +172,7 @@
             <div class="product">
                 <div class="them">
                     <div class="image-product">
-                        <img src="{{URL::asset('images/products.jpeg')}}" alt="">
+                        <img src="{{asset('images/products.jpeg')}}" alt="">
                     </div>
                     <div class="addTo">
                         <a href="">Add To Cart</a>
@@ -186,7 +186,7 @@
             <div class="product">
                 <div class="them">
                     <div class="image-product">
-                        <img src="{{URL::asset('images/products.jpeg')}}" alt="">
+                        <img src="{{asset('images/products.jpeg')}}" alt="">
                     </div>
                     <div class="addTo">
                         <a href="">Add To Cart</a>
@@ -200,7 +200,7 @@
             <div class="product">
                 <div class="them">
                     <div class="image-product">
-                        <img src="{{URL::asset('images/products.jpeg')}}" alt="">
+                        <img src="{{asset('images/products.jpeg')}}" alt="">
                     </div>
                     <div class="addTo">
                         <a href="">Add To Cart</a>
@@ -220,7 +220,7 @@
         <div class="berryberri">
             <div class="logo-footer">
                 <a href="">
-                    <img src="{{URL::asset('images/logo1.png')}}" alt="">
+                    <img src="{{asset('images/logo1.png')}}" alt="">
                 </a>
             </div>
             <div class="content-footer">

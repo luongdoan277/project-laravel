@@ -1,4 +1,4 @@
-@extends('../homepage')
+@extends('homepage')
 
 @section('footers')
     <footer>

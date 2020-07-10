@@ -6,7 +6,7 @@
         <div class="link">
             <div class="logo">
                 <a href="/">
-                    <img src="{{URL::asset('images/logo1.png')}}" alt="">
+                    <img src="{{asset('images/logo1.png')}}" alt="">
                 </a>
             </div>
             <ul class="link-page">
