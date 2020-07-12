@@ -16,18 +16,24 @@
         <div class="nav-links">
             <div class="link">
                 <div class="logo">
-                    <a href="/">
+                    <a href="{{url('/')}}">
                         <img src="{{asset('images/logo1.png')}}" alt="">
                     </a>
                 </div>
                 <ul class="link-page">
-                    <li><a href="" class="links active">Home</a></li>
+                    <li><a href="{{url('home')}}" class="links active">Home</a></li>
                     <li><a href="#" class="links ">About Us</a></li>
                     <li><a href="#" class="links">Contact</a></li>
                     <li><a href="#" class="links">Blogs</a></li>
-                    <li><a href="#" class="links">Product</a></li>
-                    <li><a href="#" class="links links-hamburger">Sign In</a></li>
+                    <li><a href="{{url('listproduct')}}" class="links">Product</a></li>
+                    <li><a href="{{url('login')}}" class="links links-hamburger">Sign In <i class="fas fa-sign-in-alt"></i></a></li>
                 </ul>
+            </div>
+            <div class="search-home">
+                <form action="" method="get" class="form-control-home">
+                    <input type="text" name="product">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
             </div>
             <div class="cart-in">
                 <div class="cart">
@@ -36,7 +42,7 @@
                     </a>
                 </div>
                 <div class="sign-in">
-                    <a href="loginss.html">Sign In</a>
+                    <a href="{{url('login')}}">Sign In</a>
                 </div>
             </div>
             <div class="menu-hamburger">
@@ -53,7 +59,7 @@
                         <div class="d-none d-md-block slide-content">
                             <p>Make your style more fashionable in Raya Days with BerryBerri</p>
                             <span>Raya Hampers-May 2020</span>
-                            <a href="">Shop Now</a>
+                            <a href="{{url('listproduct')}}">Shop Now</a>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -61,7 +67,7 @@
                         <div class="d-none d-md-block slide-content" style="left: 52%">
                             <p>Make your style more fashionable in Raya Days with BerryBerri</p>
                             <span>Raya Hampers-May 2020</span>
-                            <a href="">Shop Now</a>
+                            <a href="{{url('listproduct')}}">Shop Now</a>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -69,7 +75,7 @@
                         <div class="d-none d-md-block slide-content" style="left: 35%">
                             <p>Make your style more fashionable in Raya Days with BerryBerri</p>
                             <span>Raya Hampers-May 2020</span>
-                            <a href="">Shop Now</a>
+                            <a href="{{url('listproduct')}}">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +91,6 @@
         </div>
     </div>
 </header>
-
 {{--Main--}}
 <main>
     <div class="main">
@@ -96,7 +101,7 @@
             <div class="menu-items">
                 <img src="{{asset('images/hats.png')}}" alt="">
                 <div class="content">
-                    <a href="">
+                    <a href="{{url('hats')}}">
                         <p>
                             Hats
                         </p>
@@ -107,7 +112,7 @@
             <div class="menu-items">
                 <img src="{{asset('images/jackets.jpeg')}}" alt="">
                 <div class="content">
-                    <a href="">
+                    <a href="{{url('jacket')}}">
                         <p>
                             Jackets
                         </p>
@@ -118,7 +123,7 @@
             <div class="menu-items">
                 <img src="{{asset('images/sneaker.jpeg')}}" alt="">
                 <div class="content">
-                    <a href="">
+                    <a href="{{url('sneaker')}}">
                         <p>
                             Sneaker
                         </p>
@@ -129,7 +134,7 @@
             <div class="menu-items">
                 <img src="{{asset('images/men.png')}}" alt="">
                 <div class="content">
-                    <a href="">
+                    <a href="{{url('men')}}">
                         <p>
                             Mens
                         </p>
@@ -140,7 +145,7 @@
             <div class="menu-items">
                 <img src="{{asset('images/womens.png')}}" alt="">
                 <div class="content">
-                    <a href="">
+                    <a href="{{url('women')}}">
                         <p>
                             Womens
                         </p>
