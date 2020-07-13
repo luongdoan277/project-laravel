@@ -54,7 +54,7 @@ body{
     transition: 0.5s;
 }
 .form-control .form-login #submit:hover{
-    background: #d45060;
+    background: #444040;
 }
 .form-control .question{
     margin-top: 30px;
@@ -102,3 +102,43 @@ body{
     height: 100%;
     object-fit: cover;
 }
+
+@media screen and (max-width: 1024px){
+    .form-control{
+        width: 55%;
+    }
+    .form-control h1 {
+        font-size: 30px;
+    }
+    .image-login{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .image-login{
+        display: none;
+    }
+    .form-control h1 {
+        font-size: 28px;
+        padding-left: 13px;
+    }
+    .form-control{
+        width: 100%;
+    }
+    .form-control .form-login{
+        padding-left: 13px;
+    }
+    .form-control .form-login > span {
+        font-size: 12px;
+    }
+    .form-control .form-login input {
+        width: 95%;
+    }
+    .form-control .question {
+        padding-left: 20px;
+    }
+}
+
+
+
