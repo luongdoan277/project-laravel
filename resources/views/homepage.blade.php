@@ -21,7 +21,7 @@
                     </a>
                 </div>
                 <ul class="link-page">
-                    <li><a href="{{url('home')}}" class="links active">Home</a></li>
+                    <li><a href="{{url('/')}}" class="links active">Home</a></li>
                     <li><a href="#" class="links ">About Us</a></li>
                     <li><a href="#" class="links">Contact</a></li>
                     <li><a href="#" class="links">Blogs</a></li>

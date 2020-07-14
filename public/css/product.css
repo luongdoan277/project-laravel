@@ -222,28 +222,47 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 30px;
+    padding-bottom: 18px;
    border-bottom: 2px solid #afa1a1;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
 }
 .product-details .option-product .option-details{
     width: 30%;
     display: flex;
+}
+.product-details .option-product .option-details .display-page{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.product-details .option-product .option-details .display-page > li{
+    padding-right: 10px;
+    list-style: none;
+}
+.product-details .option-product .option-details .display-page > li > a{
+    text-decoration: none;
+    color: #0B1218;
+}
+.product-details .option-product .option-details .option-price{
+    width: 80%;
+    display: flex;
     align-items: center;
 }
-.product-details .option-product .option-details > p{
+.product-details .option-product .option-details .option-price > p{
     margin-bottom: 0;
     margin-right: 5px;
     font-size: 15px;
     font-weight: bold;
 }
-.product-details .option-product .option-details .select-product{
+.product-details .option-product .option-details .option-price .select-product{
     padding: 5px 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 16px;
     outline: none;
+    width: 45%;
 }
 .product-details .option-product .number-items{
     width: 40%;
@@ -290,27 +309,45 @@ main{
 }
 
 /*List product*/
-.title-body-product{
-    width: 100%;
-    text-align: center;
+
+.product-details .page{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
     margin-bottom: 5%;
 }
-.title-body-product > p{
-    margin: 0;
-    padding: 30px 0;
-    font-weight: bold;
-    font-size: 24px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
+.product-details .page > li{
+    padding-right: 10px;
 }
-.title-body-product > a{
+.product-details .page > li >i{
+    font-size: 13px;
+}
+.product-details .page > li > .links-details{
     text-decoration: none;
     font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color: #0B1218;
     text-transform: uppercase;
+}
+.product-details .page > li > a.active-details{
     color: black;
-
+    font-size: 16px;
+    font-weight: bold;
+}
+.main-product .title-body-product{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+.main-product .title-body-product > p{
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.main-product .title-body-product > a{
+    text-decoration: none;
+    color: #0B1218;
 }
 .main-product .list-product{
     width: 100%;
