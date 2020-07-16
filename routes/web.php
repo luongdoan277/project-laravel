@@ -43,6 +43,10 @@ Route::get('/listproduct',function (){
     return view('listproduct');
 });
 
+Route::get('cart',function (){
+   return view('Cart/cart');
+});
+
 Route::get('/login', function () {
     return view('login');
 });
