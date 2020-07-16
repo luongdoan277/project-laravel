@@ -27,7 +27,6 @@ $(window).on('scroll',function () {
     }
 });
 
-
 //Change-Page-Product
 $('.links-changepage').click(function() {
     if ($(this).hasClass('active-page')) {
@@ -35,5 +34,14 @@ $('.links-changepage').click(function() {
     } else {
         $('.active-page').removeClass('active-page');
         $(this).addClass('active-page');
+    }
+});
+
+$('.links-details').click(function() {
+    if ($(this).hasClass('active-details')) {
+        return;
+    } else {
+        $('.active-details').removeClass('active-details');
+        $(this).addClass('active-details');
     }
 });
