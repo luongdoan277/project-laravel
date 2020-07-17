@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="image-login">
-            <img src="{{asset('images/register.jpeg')}}" alt="">
+            <img src="{{asset('images/register-img.jpeg')}}" alt="">
             <div class="logo-logins">
                 <a href="{{'/'}}">
                     <img src="{{asset('images/logo2.png')}}" alt="">

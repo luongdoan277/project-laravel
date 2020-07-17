@@ -19,7 +19,7 @@
                     </a>
                 </div>
                 <ul class="link-page-product">
-                    <li><a href="" class="links-product">Home</a></li>
+                    <li><a href="{{url('/')}}" class="links-product">Home</a></li>
                     <li><a href="#" class="links-product ">About Us</a></li>
                     <li><a href="#" class="links-product">Contact</a></li>
                     <li><a href="#" class="links-product">Blogs</a></li>

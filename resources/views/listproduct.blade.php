@@ -59,6 +59,11 @@
 </header>
 <main>
         <div class="product-details">
+            <ul class="page">
+                <li><a href="#" class="links-details">Home</a></li>
+                <li><i class="fas fa-angle-double-right"></i></li>
+                <li><a href="#" class="links-details active-details">Product</a></li>
+            </ul>
             <div class="listproduct-details">
                 <div class="main-product">
                     <div class="title-body-product">

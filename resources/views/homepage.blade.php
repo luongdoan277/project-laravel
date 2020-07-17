@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="{{asset('css/homepage.css')}}">
     <link rel="stylesheet" href="{{asset('FontAwesome/css/all.min.css')}}">
     <!-- Bootstrap CSS -->
@@ -12,6 +12,7 @@
 <body>
 {{--Header--}}
 <header>
+
     <div class="navbars">
         <div class="nav-links">
             <div class="link">
@@ -40,6 +41,7 @@
                     <a href="#">
                         <i class="fas fa-shopping-bag"></i>
                     </a>
+                    <p>1</p>
                 </div>
                 <div class="sign-in">
                     <a href="{{url('login')}}">Sign In</a>
@@ -55,7 +57,7 @@
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="{{asset('images/slide-1.jpeg')}}" alt="First slide">
+                        <img class="d-block w-100" src="{{asset('images/slide-6img.jpeg')}}" alt="First slide">
                         <div class="d-none d-md-block slide-content">
                             <p>Make your style more fashionable in Raya Days with BerryBerri</p>
                             <span>Raya Hampers-May 2020</span>
@@ -63,7 +65,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="{{asset('images/slide8img.jpeg')}}" alt="Second slide" >
+                        <img class="d-block w-100" src="{{asset('images/slide-1.jpeg')}}" alt="Second slide" >
                         <div class="d-none d-md-block slide-content" style="left: 52%">
                             <p>Make your style more fashionable in Raya Days with BerryBerri</p>
                             <span>Raya Hampers-May 2020</span>
@@ -71,7 +73,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="{{asset('images/slide-6img.jpeg')}}" alt="Third slide">
+                        <img class="d-block w-100" src="{{asset('images/slide8img.jpeg')}}" alt="Third slide">
                         <div class="d-none d-md-block slide-content" style="left: 35%">
                             <p>Make your style more fashionable in Raya Days with BerryBerri</p>
                             <span>Raya Hampers-May 2020</span>
@@ -90,7 +92,9 @@
             </div>
         </div>
     </div>
+
 </header>
+
 {{--Main--}}
 <main>
     <div class="main">
@@ -219,13 +223,13 @@
         </div>
     </div>
 </main>
-
+{{--Footer--}}
 <footer>
     <div class="footer">
         <div class="berryberri">
             <div class="logo-footer">
                 <a href="">
-                    <img src="{{asset('images/logo1.png')}}" alt="">
+                    <img src="{{URL::asset('images/logo1.png')}}" alt="">
                 </a>
             </div>
             <div class="content-footer">

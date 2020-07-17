@@ -13,7 +13,7 @@ body{
     height: 60vh;
     position: relative;
     overflow: hidden;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
 }
 
 .nav-links-product{
@@ -29,6 +29,7 @@ body{
     background: rgba(32, 32, 33, 0.73);
     z-index: 2;
     position: fixed;
+
 }
 .white{
     box-shadow: rgb(78, 78, 78) 0px 0px 7px;
@@ -233,7 +234,7 @@ main{
 .product-details .option-product .option-details .display-page{
     width: 20%;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     margin: 0;
 }
 .product-details .option-product .option-details .display-page > li{
@@ -314,7 +315,7 @@ main{
     display: flex;
     justify-content: flex-start;
     list-style: none;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 .product-details .page > li{
     padding-right: 10px;
@@ -332,6 +333,9 @@ main{
     color: black;
     font-size: 16px;
     font-weight: bold;
+}
+.main-product{
+    margin-bottom: 5%;
 }
 .main-product .title-body-product{
     width: 100%;

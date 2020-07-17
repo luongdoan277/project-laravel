@@ -91,9 +91,30 @@ body{
     align-items: center;
     z-index: 2;
 }
-
+.nav-links .cart-in .cart{
+    position: relative;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-links .cart-in .cart > p{
+    width: 17px;
+    height: 16px;
+    background: #f5cb5f;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0B1218;
+    border-radius: 50%;
+    font-size: 13px;
+    margin: 0;
+}
 .nav-links .cart-in .cart > a > i{
-    font-size: 25px;
+    font-size: 23px;
     color: white;
     margin: 0;
 }
@@ -242,7 +263,7 @@ body{
 /*Main*/
 main{
     padding: 0 60px;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 .main{
     margin-bottom: 3%;
@@ -299,7 +320,6 @@ main{
     text-decoration: none;
     color: #423c3c;
     transition: 0.3s ease-in-out;
-    border: 5px solid #464649;
 }
 .menu-items .content > a:hover{
     background: #fffbfb;
@@ -311,7 +331,10 @@ main{
     margin: 0;
     margin-top: 10px;
 }
-
+.menu-items .content > a > span{
+    font-size: 15px;
+    letter-spacing: 2px;
+}
 .main-product .list-product{
     width: 100%;
     display: grid;
@@ -324,7 +347,7 @@ main{
 }
 .main-product .list-product .product .them{
     width: 100%;
-    height: 23rem;
+    height: 25rem;
     position: relative;
 }
 .main-product .list-product .product .them .image-product{
@@ -616,12 +639,17 @@ main{
     .nav-links .menu-hamburger{
         display: block;
     }
+    .nav-links .cart-in .cart{
+        width: 100%;
+    }
     .nav-links .cart-in .cart > a > i {
-        font-size: 22px;
+        font-size: 23px;
         color: white;
         margin: 0;
     }
-
+    .nav-links .cart-in .cart > p{
+        right: 9px;
+    }
     .berryberri .logo-footer > a {
         width: 25%;
     }
@@ -637,6 +665,9 @@ main{
         height: 75vh;
         position: relative;
         margin-bottom: 3%;
+    }
+    .nav-links .cart-in .cart > p{
+        right: 0px;
     }
 }
 @media screen and (max-width: 724px){
@@ -685,6 +716,9 @@ main{
         width: 80%;
     }
 
+    .nav-links .cart-in .cart > p{
+        right: -8px;
+    }
     .nav-links .link .link-page{
         width: 100%;
     }
