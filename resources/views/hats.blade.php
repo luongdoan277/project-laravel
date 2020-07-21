@@ -35,7 +35,7 @@
             </div>
             <div class="cart-in">
                 <div class="cart">
-                    <a href="#">
+                    <a href="{{url('cart')}}">
                         <i class="fas fa-shopping-bag"></i>
                     </a>
                 </div>
