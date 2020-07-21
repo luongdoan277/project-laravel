@@ -20,7 +20,7 @@ Route::get('/cart','CartController@showCart');
 
 Route::resource('login', 'userController@index');
 
-Route::get('women',function (){
+Route::get('/women',function (){
     return view('women');
 });
 
@@ -28,7 +28,7 @@ Route::get('/men',function (){
     return view('men');
 });
 
-Route::get('sneaker',function (){
+Route::get('/sneaker',function (){
     return view('sneaker');
 });
 
