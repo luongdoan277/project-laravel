@@ -16,6 +16,7 @@ Route::get('/',function (){
     return view('homepage');
 });
 
+Route::resource('login', 'userController@index');
 
 Route::get('women',function (){
     return view('women');
@@ -39,10 +40,6 @@ Route::get('/hats',function (){
 
 Route::get('/listproduct',function (){
     return view('listproduct');
-});
-
-Route::get('/login', function () {
-    return view('login');
 });
 
 Route::get('/details', function () {

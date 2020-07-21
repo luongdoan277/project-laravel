@@ -14,11 +14,24 @@
         <div class="form-control">
             <h1>Sign In</h1>
             <form action="" method="post" class="form-login">
-                <span>Email</span>
-                <input type="text" name="username">
-                <span>Password</span>
-                <input type="password" name="password">
-                <input type="submit" name="submit" value="Sign In" id="submit">
+                @csrf
+                <div class="email-login">
+                    <span>Email</span>
+                    <input type="text" name="email">
+                    @if($errors->has('email'))
+                        <span>{{$errors->first('email')}}</span>
+                    @endif
+                </div>
+                <div class="password-login">
+                    <span>Password</span>
+                    <input type="password" name="password">
+                    @if($errors->has('password'))
+                        <span>{{$errors->first('password')}}</span>
+                    @endif
+                </div>
+                <div class="submit">
+                    <input type="submit" name="submit" value="Sign In" id="submit">
+                </div>
             </form>
             <div class="question">
                 <span>Do you have a BerryBerri Account?</span>
