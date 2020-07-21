@@ -29,7 +29,8 @@ body{
 .black{
     background: rgb(31,31,31);
     color: white;
-    box-shadow: rgba(78, 78, 78, 0.59) 0px 0px 7px
+    box-shadow: rgba(78, 78, 78, 0.59) 0px 0px 7px;
+    z-index: 5;
 }
 .nav-links .link {
     display: flex;
@@ -372,12 +373,43 @@ main{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 10px;
 }
+.main-product .list-product .product .them .check-product {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    background: #3d39394d;
+    transition: 0.3s;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
 .main-product .list-product .product .them .addTo:hover{
     opacity: 1;
 }
-.main-product .list-product .product .them .addTo > a {
+
+
+.main-product .list-product .product .them .check-product .check {
+    text-decoration: none;
+    color: #3d3939;
+    background: #fffbfb;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.3s;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7%;
+    padding: 5px 10px;
+    margin-bottom: 3%;
+    cursor: pointer;
+    z-index: 2;
+}
+.main-product .list-product .product .them .addTo .add {
     border-radius: 3px;
     text-decoration: none;
     color: #3d3939;
@@ -389,14 +421,14 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 12%;
+    height: 10%;
     padding: 5px 10px;
+    margin-bottom: 3%;
 }
-.main-product .list-product .product .them .addTo > a:hover{
+.main-product .list-product .product .them .addTo .add:hover{
     color: #fffbfb;
     background: black;
 }
-
 
 .main-product .list-product .product .price{
     display: flex;

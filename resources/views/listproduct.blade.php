@@ -59,11 +59,6 @@
 </header>
 <main>
         <div class="product-details">
-            <ul class="page">
-                <li><a href="#" class="links-details">Home</a></li>
-                <li><i class="fas fa-angle-double-right"></i></li>
-                <li><a href="#" class="links-details active-details">Product</a></li>
-            </ul>
             <div class="listproduct-details">
                 <div class="main-product">
                     <div class="title-body-product">
@@ -76,8 +71,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -90,8 +88,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -104,8 +105,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -118,8 +122,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -140,8 +147,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -154,8 +164,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -168,8 +181,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -182,8 +198,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -204,8 +223,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -218,8 +240,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -232,8 +257,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -246,8 +274,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -268,8 +299,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -282,8 +316,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -296,8 +333,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -310,8 +350,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -332,8 +375,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -346,8 +392,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -360,8 +409,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
@@ -374,8 +426,11 @@
                                 <div class="image-product">
                                     <img src="{{asset('images/products.jpeg')}}" alt="">
                                 </div>
+                                <div class="check-product">
+                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
                                 <div class="addTo">
-                                    <a href="">Add To Cart</a>
+                                    <a href="" class="add">Add To Cart</a>
                                 </div>
                             </div>
                             <div class="price">
