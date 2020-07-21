@@ -45,7 +45,7 @@
                     <p>1</p>
                 </div>
                 <div class="sign-in">
-                    <a href="{{url('login')}}">Sign In</a>
+                    <a href="{{route('login')}}">Sign In</a>
                 </div>
             </div>
             <div class="menu-hamburger">

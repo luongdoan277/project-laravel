@@ -18,6 +18,7 @@ Route::get('/',function (){
 Route::get('product', 'Product@index');
 Route::get('/cart','CartController@showCart');
 
+Route::resource('login', 'userController@index');
 
 Route::get('women',function (){
     return view('women');
@@ -45,10 +46,6 @@ Route::get('/listproduct',function (){
 
 Route::get('cart',function (){
    return view('Cart/cart');
-});
-
-Route::get('/login', function () {
-    return view('login');
 });
 
 Route::get('/details', function () {

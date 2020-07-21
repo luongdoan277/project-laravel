@@ -30,23 +30,37 @@ body{
 .form-control .form-login{
     width: 100%;
 }
-.form-control .form-login > span{
+.form-control .form-login .email-login > span{
     display: block;
     margin-bottom: 15px;
     font-weight: bold;
     font-size: 14px;
 }
-.form-control .form-login input{
+.form-control .form-login .password-login > span{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.form-control .form-login .email-login > input{
     width: 80%;
     height: 5.5vh;
     padding: 7px 10px;
     margin-bottom: 10px;
     display: block;
 }
-.form-control .form-login #submit{
+.form-control .form-login .password-login > input{
+    width: 80%;
+    height: 5.5vh;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+.form-control .form-login .submit #submit{
+    width: 80%;
     margin: 30px 0;
     border-radius: 15px;
-    height: 6vh;
+    height: 7vh;
     outline: none;
     border: none;
     cursor: pointer;
