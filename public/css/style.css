@@ -1,0 +1,280 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&display=swap');*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto Thin";
+}
+.container{
+    /*border: 1px solid black;*/
+}
+.check-out{
+    font-size: 40px;
+    padding: 30px 0px;
+}
+.border-left{
+    float: left;
+    margin-bottom: 5%;
+}
+.border-right{
+    float: right;
+    border: 1px solid #d2cfcf;
+    margin-top: 30px;
+    padding: 20px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+.text{
+    background-color: #E0E0E0;
+    width: 100%;
+    float: left;
+    margin: 30px 0;
+}
+.cart{
+    width: 100%;
+    float: left;
+    margin-bottom: 3%;
+}
+.product{
+    width: 30%;
+    float: left;
+    text-align: center;
+    padding: 20px 0px;
+}
+.description{
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding: 20px 0px;
+}
+.quantity{
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding: 20px 0px;
+}
+.price{
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding: 20px 0px;
+}
+.remove{
+    width: 10%;
+    float: left;
+    text-align: center;
+    padding: 20px 0px;
+}
+.img{
+    width: 30%;
+    float: left;
+    height: 255px;
+}
+.img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.title{
+    width: 20%;
+    float: left;
+    text-align: center;
+    font-size: 15px;
+    padding: 110px 0px;
+}
+.count{
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding: 105px 0px;
+}
+.price1{
+    width: 20%;
+    float: left;
+    font-size: 15px;
+    text-align: center;
+    padding: 110px 0px;
+}
+.icon-remove{
+    width: 10%;
+    float: left;
+    text-align: center;
+    padding: 110px 0px;
+}
+.input-button{
+    width: 40px;
+    height: 30px;
+}
+.subtotal{
+    width: 100%;
+    float: left
+}
+.payment{
+    background-color: black;
+    width: 100%;
+    float: left;
+    height: 40px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.payment h6{
+    padding: 7px 0px;
+    font-size: 15px;
+}
+/*footer*/
+.footer{
+    width: 100%;
+    padding: 70px 60px;
+    background: rgb(31,31,31);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+}
+.berryberri{
+    padding-right: 20px;
+}
+.berryberri .logo-footer{
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 3%;
+    overflow: hidden;
+}
+.berryberri .logo-footer > a{
+    width: 40%;
+    height: 100%;
+    display: inline-block;
+    transform: translateX(-4%);
+}
+.berryberri .logo-footer > a >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.berryberri .content-footer{
+    margin-bottom: 5%;
+}
+.berryberri .content-footer > span{
+    font-size: 15px;
+    color: #fffbfb;
+}
+
+.berryberri .find-us > p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fffbfb;
+}
+.berryberri .find-us .icon > a{
+    margin-right: 5%;
+    font-size: 22px;
+    color: #fffbfb;
+}
+.customer-services{
+    padding-right: 20px;
+}
+.customer-services > p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fffbfb;
+}
+.customer-services .list-content{
+}
+.customer-services .list-content >a{
+    display: block;
+    margin-bottom: 3%;
+    text-decoration: none;
+    color: #f1eeee;
+}
+.news{
+}
+.news > p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fffbfb;
+}
+.news > span{
+    font-size: 15px;
+    color: #fffbfb;
+}
+.form .form-control{
+    width: 89%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    margin-bottom: 6%;
+}
+.form .form-control > input{
+    width: 100%;
+    padding: 3px 9px;
+    height: 100%;
+    outline: none;
+}
+.form .title-address > p{
+    color: #fffbfb;
+    margin-top: 3%;
+}
+.form .sex{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
+    margin-bottom: 6%;
+}
+.form .sex > a{
+    text-align: center;
+    color: #fffbfb;
+    padding: 10px 30px;
+    text-decoration: none;
+    border: 3px solid #fffbfb;
+    transition: 0.5s;
+    font-weight: bold;
+}
+.form .sex > a:hover{
+    background: #fffbfb;
+    color: #3d3939;
+}
+.form .sex .male{
+    grid-column: 3/4;
+}
+.form .privacy{
+    font-size: 15px;
+    margin-bottom: 3%;
+}
+.form .privacy > a{
+    text-decoration: none;
+    color: #fffbfb;
+    margin-right: 5%;
+}
+.form > span{
+    font-size: 14px;
+    color: #fffbfb;
+}
+
+
+@media screen and (max-width: 500px){
+    .text .product > b{
+        font-size: 13px;
+    }
+}
+/*@media screen and (max-width: 500px){*/
+/*    .text .description > b{*/
+/*        font-size: 13px;*/
+/*    }*/
+/*}*/
+/*@media screen and (max-width: 500px){*/
+/*    .text .quantity > b{*/
+/*        font-size: 13px;*/
+/*    }*/
+/*}*/
+/*@media screen and (max-width: 500px){*/
+/*    .text .price > b{*/
+/*        font-size: 13px;*/
+/*    }*/
+/*}*/
+/*@media screen and (max-width: 500px){*/
+/*    .text .remove > b{*/
+/*        font-size: 13px;*/
+/*    }*/
+/*}*/
