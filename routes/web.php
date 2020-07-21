@@ -51,6 +51,10 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/details', function () {
+    return view('productdetails');
+});
+
 Route::get('/register', function () {
     return view('register');
 });
