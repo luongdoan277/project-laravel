@@ -2,21 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Faker\Factory;
 use Illuminate\Http\Request;
-use Illuminate\View\View;
-use PharIo\Manifest\Application;
 
-class userController extends Controller
+class MenController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return Factory|\Illuminate\Contracts\View\Factory|View|Application
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('users.login');
+        return view('menpage');
     }
 
     /**

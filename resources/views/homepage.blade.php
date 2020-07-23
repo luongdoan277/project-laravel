@@ -13,7 +13,6 @@
 <body>
 {{--Header--}}
 <header>
-
     <div class="navbars">
         <div class="nav-links">
             <div class="link">
@@ -27,8 +26,8 @@
                     <li><a href="#" class="links ">About Us</a></li>
                     <li><a href="#" class="links">Contact</a></li>
                     <li><a href="#" class="links">Blogs</a></li>
-                    <li><a href="{{url('listproduct')}}" class="links">Product</a></li>
-                    <li><a href="{{url('login')}}" class="links links-hamburger">Sign In <i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href="{{route('listProducts.index')}}" class="links">Product</a></li>
+                    <li><a href="{{route('login.index')}}" class="links links-hamburger">Sign In <i class="fas fa-sign-in-alt"></i></a></li>
                 </ul>
             </div>
             <div class="search-home">
@@ -45,7 +44,7 @@
                     <p>1</p>
                 </div>
                 <div class="sign-in">
-                    <a href="{{route('login')}}">Sign In</a>
+                    <a href="{{route('login.index')}}">Sign In</a>
                 </div>
             </div>
             <div class="menu-hamburger">
@@ -106,7 +105,7 @@
             <div class="menu-items">
                 <img src="{{asset('images/hats.png')}}" alt="">
                 <div class="content">
-                    <a href="{{url('hats')}}">
+                    <a href="{{route('hats.index')}}">
                         <p>
                             Hats
                         </p>
@@ -117,7 +116,7 @@
             <div class="menu-items">
                 <img src="{{asset('images/jackets.jpeg')}}" alt="">
                 <div class="content">
-                    <a href="{{url('jacket')}}">
+                    <a href="{{route('jacket.index')}}">
                         <p>
                             Jackets
                         </p>
@@ -139,7 +138,7 @@
             <div class="menu-items">
                 <img src="{{asset('images/men.png')}}" alt="">
                 <div class="content">
-                    <a href="{{url('men')}}">
+                    <a href="{{route('men.index')}}">
                         <p>
                             Mens
                         </p>
@@ -150,7 +149,7 @@
             <div class="menu-items">
                 <img src="{{asset('images/womens.png')}}" alt="">
                 <div class="content">
-                    <a href="{{url('women')}}">
+                    <a href="{{route('women.index')}}">
                         <p>
                             Womens
                         </p>

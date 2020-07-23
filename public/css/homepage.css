@@ -262,12 +262,13 @@ body{
 }
 
 /*Main*/
-main{
+.main{
+    padding: 0 60px;
+    margin-bottom: 3%;
+}
+.main-product{
     padding: 0 60px;
     margin-bottom: 10%;
-}
-.main{
-    margin-bottom: 3%;
 }
 .title-body{
     width: 100%;
@@ -604,12 +605,15 @@ main{
     }
 }
 @media screen and (max-width: 970px){
-    main{
-        padding: 0 4px;
+    .main{
+        padding: 0;
+    }
+    .main-product{
+        padding: 0;
     }
     .main-product .list-product{
         grid-template-columns: 1fr 1fr 1fr 1fr ;
-        gap: 10px;
+        gap: 2px;
     }
     .main-product .list-product .product {
         margin: 10px;
@@ -692,6 +696,12 @@ main{
     /**/
 }
 @media screen and (max-width: 768px){
+    .main{
+        padding: 0;
+    }
+    .main-product{
+        padding: 0;
+    }
     .navbars {
         width: 100%;
         height: 75vh;
@@ -712,6 +722,12 @@ main{
     }
 }
 @media screen and (max-width: 500px){
+    .main{
+        padding: 0;
+    }
+    .main-product{
+        padding: 0;
+    }
     .main-product .list-product{
         grid-template-columns: 1fr 1fr;
         gap: 3px;
