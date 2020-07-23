@@ -212,11 +212,8 @@ body{
 
 
 /*main*/
-main{
-    padding: 0 60px;
-    margin-bottom: 5%;
-}
 .product-details{
+    padding: 0 60px;
     margin-bottom: 5%;
 }
 .product-details .option-product{
@@ -622,9 +619,6 @@ main{
     }
 }
 @media screen and (max-width: 970px){
-    main{
-        padding: 0 5px;
-    }
     .main-product .list-product{
         grid-template-columns: 1fr 1fr 1fr 1fr ;
         gap: 10px;
@@ -783,6 +777,9 @@ main{
     }
     .berryberri .logo-footer > a {
         width: 40%;
+    }
+    .product-details{
+        padding: 0;
     }
     /**/
 }

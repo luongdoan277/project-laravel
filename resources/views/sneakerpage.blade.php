@@ -1,63 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Product</title>
-    <link rel="stylesheet" href="{{asset('FontAwesome/css/all.min.css')}}">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('css/product.css')}}">
-</head>
-<body>
-<header>
-    <div class="navbar-listproduct">
-        <div class="nav-links-product">
-            <div class="link-product">
-                <div class="logo-product">
-                    <a href="/">
-                        <img src="{{asset('images/logo1.png')}}" alt="">
-                    </a>
-                </div>
-                <ul class="link-page-product">
-                    <li><a href="" class="links-product">Home</a></li>
-                    <li><a href="#" class="links-product ">About Us</a></li>
-                    <li><a href="#" class="links-product">Contact</a></li>
-                    <li><a href="#" class="links-product">Blogs</a></li>
-                    <li><a href="#" class="links-product active">Product</a></li>
-                    <li><a href="#" class="links-product links-hamburger">Sign In <i class="fas fa-sign-in-alt"></i></a></li>
-                </ul>
-            </div>
-            <div class="search-home-product">
-                <form action="" method="get" class="form-control-product">
-                    <input type="text" name="product">
-                    <a href=""><i class="fas fa-search"></i></a>
-                </form>
-            </div>
-            <div class="cart-in">
-                <div class="cart">
-                    <a href="{{url('cart')}}">
-                        <i class="fas fa-shopping-bag"></i>
-                    </a>
-                </div>
-                <div class="sign-in">
-                    <a href="loginss.html">Sign In</a>
-                </div>
-            </div>
-            <div class="menu-hamburger-product">
-                <div class="line" id="line1"></div>
-                <div class="line" id="line2"></div>
-                <div class="line" id="line3"></div>
-            </div>
-        </div>
-        <div class="image-list-product">
-            <img src="{{asset('images/jackets-product.jpeg')}}" alt="image list product">
-            <div class="content-listproduct">
-                <p>Jackets</p>
-            </div>
-        </div>
-    </div>
-</header>
-<main>
+@extends('page.mainProducts')
+
+@section('image')
+    <img src="{{asset('images/sneaker-product.jpeg')}}" alt="image list product">
+@endsection
+
+@section('content')
+    @include('component.headerProduct')
+    <main>
         <div class="product-details">
             <ul class="page">
                 <li><a href="#" class="links-details">Home</a></li>
@@ -98,7 +47,7 @@
             <div class="listproduct-details">
                 <div class="main-product">
                     <div class="title-body-product">
-                        <p>Jackets</p>
+                        <p>Sneaker</p>
                         <a href="{{url('listproduct')}}">Back to product page</a>
                     </div>
                     <div class="list-product">
@@ -396,5 +345,3 @@
 <script src="{{asset('js/menu-hamburgerProduct.js')}}"></script>
 </body>
 </html>
-
-
