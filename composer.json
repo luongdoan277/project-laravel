@@ -16,7 +16,7 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.1",
         "spatie/laravel-permission": "^3.13",
-        "tymon/jwt-auth": "^1.0",
+        "tymon/jwt-auth": "dev-develop",
         "elasticquent/elasticquent": "dev-master"
     },
     "require-dev": {

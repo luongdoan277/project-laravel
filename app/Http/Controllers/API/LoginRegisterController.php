@@ -14,7 +14,7 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 class LoginRegisterController extends Controller
 {
     public function register(Request $request){
-        $validater = Validator::make($request->json()->all(), [
+        $validater = Validator::make($request->all(), [
             'firstname' => 'required|string|max:255',
             'lastname' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -24,18 +24,20 @@ class LoginRegisterController extends Controller
         if ($validater->fails()){
             return response()->json($validater->errors()->toJson(),400);
         }
+        $firstname = $request->get('firstname');
+        $lastname = $request->get('lastname');
+        $name = $firstname . ' ' . $lastname;
         $user= User::create([
-            'firstname' => $request->json()->get('firstname'),
-            'lastname' => $request->json()->get('lastname'),
-            'email' => $request->json()->get('email'),
-            'password' => bcrypt($request->json()->get('password')),
+            'name' => $name,
+            'email' => $request->get('email'),
+            'password' => bcrypt($request->get('password')),
         ]);
         $token = JWTAuth::fromUser($user);
         return response()->json(compact('user', 'token'),201);
     }
     public function login(Request $request)
     {
-        $credentials = $request->json()->all();
+        $credentials = $request->all();
 
         try {
             if (! $token = JWTAuth::attempt($credentials)) {
