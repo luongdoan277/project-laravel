@@ -29,16 +29,18 @@ class LoginRegisterController extends Controller
         $name = $firstname . ' ' . $lastname;
         $user= User::create([
             'name' => $name,
+            'email_verified_at' => now(),
             'email' => $request->get('email'),
             'password' => bcrypt($request->get('password')),
+            'reme'
         ]);
         $token = JWTAuth::fromUser($user);
-        return response()->json(compact('user', 'token'),201);
+        response()->json(compact('user', 'token'),201);
+        return redirect('/');
     }
     public function login(Request $request)
     {
         $credentials = $request->all();
-
         try {
             if (! $token = JWTAuth::attempt($credentials)) {
                 return response()->json(['error' => 'invalid_credentials'], 400);
@@ -46,8 +48,8 @@ class LoginRegisterController extends Controller
         } catch (JWTException $e) {
             return response()->json(['error' => 'could_not_create_token'], 500);
         }
-
-        return response()->json( compact('token') )->isRedirect('/');
+        response()->json( compact('remember_token') );
+        return redirect('/');
     }
     public function getAuthenticatedUser()
     {

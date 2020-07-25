@@ -17,6 +17,9 @@ Route::get('/',function (){
     return view('homepage');
 });
 Route::get('cart', 'CartController@showCart');
+Route::get('register',function (){
+    return view('users.register');
+});
 //Login
 Route::resource('login', 'UserController');
 

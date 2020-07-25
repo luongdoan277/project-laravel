@@ -13,7 +13,7 @@
     <div class="login">
         <div class="form-control">
             <h1>Sign Up</h1>
-            <form action="php/register.php" method="post" class="form-login">
+            <form action="{{route('postRegister')}}" method="post" class="form-login">
                 <span>First Name</span>
                 <input type="text" name="firstname">
                 <span>Last Name</span>
