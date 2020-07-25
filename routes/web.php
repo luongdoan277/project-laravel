@@ -12,47 +12,31 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Home Page
 Route::get('/',function (){
     return view('homepage');
 });
-Route::get('product', 'Product@index');
 Route::get('/cart','CartController@showCart');
 
-Route::resource('login', 'userController@index');
 
-Route::get('/women',function (){
-    return view('women');
-});
+//Login
+Route::resource('login', 'UserController');
 
-Route::get('/men',function (){
-    return view('men');
-});
+//List Products
+Route::resource('listProducts','ListProductController');
 
-Route::get('/sneaker',function (){
-    return view('sneaker');
-});
+//Hats
+Route::resource('hats','HatController');
 
-Route::get('/jacket',function (){
-    return view('jacket');
-});
+//Jacket
+Route::resource('jacket','JacketController');
 
-Route::get('/hats',function (){
-    return view('hats');
-});
+//Men
+Route::resource('men','MenController');
 
-Route::get('/listproduct',function (){
-    return view('listproduct');
-});
+//Women
+Route::resource('women','WomenController');
 
-Route::get('cart',function (){
-   return view('Cart/cart');
-});
-
-Route::get('/details', function () {
-    return view('productdetails');
-});
-
-Route::get('/register', function () {
-    return view('register');
-});
+//Sneaker
+Route::resource('sneaker','SneakerController');
 
