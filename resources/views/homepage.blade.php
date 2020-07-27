@@ -27,7 +27,7 @@
                     <li><a href="#" class="links">Contact</a></li>
                     <li><a href="#" class="links">Blogs</a></li>
                     <li><a href="{{route('listProducts.index')}}" class="links">Product</a></li>
-                    <li><a href="{{route('login.index')}}" class="links links-hamburger">Sign In <i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href="{{route('user.index')}}" class="links links-hamburger">Sign In <i class="fas fa-sign-in-alt"></i></a></li>
                 </ul>
             </div>
             <div class="search-home">
@@ -38,13 +38,13 @@
             </div>
             <div class="cart-in">
                 <div class="cart">
-                    <a href="{{url('cart')}}">
+                    <a href="#">
                         <i class="fas fa-shopping-bag"></i>
                     </a>
                     <p>1</p>
                 </div>
                 <div class="sign-in">
-                    <a href="{{route('login.index')}}">Sign In</a>
+                    <a href="{{route('user.index')}}">Sign In</a>
                 </div>
             </div>
             <div class="menu-hamburger">
@@ -170,7 +170,7 @@
                         <img src="{{asset('images/products.jpeg')}}" alt="">
                     </div>
                     <div class="check-product">
-                        <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                        <a href="{{route('detail.index')}}" class="check"><i class="fas fa-info-circle"></i></a>
                     </div>
                     <div class="addTo">
                         <a href="" class="add">Add To Cart</a>
@@ -187,7 +187,7 @@
                         <img src="{{asset('images/products.jpeg')}}" alt="">
                     </div>
                     <div class="check-product">
-                        <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                        <a href="{{route('detail.index')}}" class="check"><i class="fas fa-info-circle"></i></a>
                     </div>
                     <div class="addTo">
                         <a href="" class="add">Add To Cart</a>
@@ -204,7 +204,7 @@
                         <img src="{{asset('images/products.jpeg')}}" alt="">
                     </div>
                     <div class="check-product">
-                        <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                        <a href="{{route('detail.index')}}" class="check"><i class="fas fa-info-circle"></i></a>
                     </div>
                     <div class="addTo">
                         <a href="" class="add">Add To Cart</a>
@@ -221,7 +221,7 @@
                         <img src="{{asset('images/products.jpeg')}}" alt="">
                     </div>
                     <div class="check-product">
-                        <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                        <a href="{{route('detail.index')}}" class="check"><i class="fas fa-info-circle"></i></a>
                     </div>
                     <div class="addTo">
                         <a href="" class="add">Add To Cart</a>

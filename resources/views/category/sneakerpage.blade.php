@@ -1,7 +1,7 @@
-@extends('page.mainProducts')
+@extends('layouts.mainProducts')
 
 @section('image')
-    <img src="{{asset('images/jackets-product.jpeg')}}" alt="image list product">
+    <img src="{{asset('images/sneaker-product.jpeg')}}" alt="image list product">
 @endsection
 
 @section('content')
@@ -47,7 +47,7 @@
             <div class="listproduct-details">
                 <div class="main-product">
                     <div class="title-body-product">
-                        <p>Jackets</p>
+                        <p>Sneaker</p>
                         <a href="{{url('listproduct')}}">Back to product page</a>
                     </div>
                     <div class="list-product">
@@ -345,5 +345,3 @@
 <script src="{{asset('js/menu-hamburgerProduct.js')}}"></script>
 </body>
 </html>
-
-

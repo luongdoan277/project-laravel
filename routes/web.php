@@ -13,12 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Home Page
-Route::get('/',function (){
+Route::get('/', function () {
     return view('homepage');
 });
+
+//Cart
 Route::get('cart', 'CartController@showCart');
-//Login
-Route::resource('login', 'UserController');
+
+//Login & register
+Route::resource('user', 'UserController');
+
 
 //List Products
 Route::resource('listProducts','ListProductController');
@@ -38,3 +42,5 @@ Route::resource('women','WomenController');
 //Sneaker
 Route::resource('sneaker','SneakerController');
 
+//Details Product
+Route::resource('detail','DetailsController');

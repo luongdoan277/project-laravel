@@ -209,7 +209,6 @@ body{
 
 .main-details .product-details .information-product .title-details {
     padding: 10px 0;
-    background: #eaeaea;
 }
 .main-details .product-details .information-product .title-details > p{
     text-transform: uppercase;
@@ -222,7 +221,7 @@ body{
 }
 .main-details .product-details .information-product .price-details > p{
     font-weight: bold;
-    font-size: 19px;
+    font-size: 17px;
     font-family: 'Oswald', sans-serif;
     color: #e2b86b;
 }
@@ -235,7 +234,7 @@ body{
 .main-details .product-details .information-product .option-detail > .option-color .color{
     width: 15%;
     padding: 5px 7px;
-    border-radius: 20px;
+    border-radius: 5px;
     outline: none;
     cursor: pointer;
 }
@@ -254,7 +253,7 @@ body{
 .main-details .product-details .information-product .option-detail > .option-size .size{
     width: 15%;
     padding: 5px 7px;
-    border-radius: 20px;
+    border-radius: 5px;
     outline: none;
     cursor: pointer;
 }
@@ -271,31 +270,41 @@ body{
     height: 6vh;
     cursor: pointer;
     border: none;
-    color: #fffbfb;
-    background: #0B1218;
+    color: rgb(31,31,31);
     outline: none;
     transition: 0.5s;
     padding: 5px 7px;
+    border: 4px solid rgb(31,31,31);
+    background: #ffffff;
+    font-weight: bold;
 }
 .main-details .product-details .information-product  .addToCart .add:hover {
-    background: #444447;
+    color: #ffffff;
+    background: rgb(31,31,31);
 }
 .main-details .product-details .information-product .description {
-    list-style: none;
     font-size: 14px;
     margin-bottom: 3%;
+    padding-bottom: 20px;
     line-height: 23px;
+    border-bottom: 1px solid #cecbcb;
 }
 
 
-
+.main-details .product-details .information-product .content-details{
+    margin-bottom: 3%;
+}
 .main-details .product-details .information-product .content-details > p{
     font-size: 15px;
 }
 
+.main-details .product-details .information-product .share{
+    display: flex;
+    justify-content: space-between;
+}
 .main-details .product-details .information-product .share > p{
     font-weight: bold;
-    margin-bottom: 2%;
+    margin: 0;
     text-transform: uppercase;
     font-size: 14px;
 }
@@ -690,7 +699,7 @@ body{
         height: 50vh;
     }
     .main-details .product-details .information-product {
-       border: none;
+        border: none;
         padding: 0;
         padding-left: 20px;
     }
@@ -702,8 +711,8 @@ body{
         width: 25%;
     }
     .main-details .product-details .information-product .option-detail > .option-color .color {
-         width: 25%;
-     }
+        width: 25%;
+    }
 }
 @media screen and (max-width: 500px){
     .related-product .list-related{

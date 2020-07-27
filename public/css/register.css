@@ -30,7 +30,25 @@ body{
 .form-control .form-login{
     width: 100%;
 }
-.form-control .form-login > span{
+.form-control .form-login .first-name > span{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.form-control .form-login .last-name > span{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.form-control .form-login .email-register > span{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.form-control .form-login .password-register > span{
     display: block;
     margin-bottom: 15px;
     font-weight: bold;

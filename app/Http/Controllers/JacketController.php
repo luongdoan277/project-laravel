@@ -13,7 +13,7 @@ class JacketController extends Controller
      */
     public function index()
     {
-        return view('jacketpage');
+        return view('category.jacketpage');
     }
 
     /**

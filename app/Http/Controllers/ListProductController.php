@@ -13,7 +13,7 @@ class ListProductController extends Controller
      */
     public function index()
     {
-        return view('productpage');
+        return view('category.productpage');
     }
 
     /**
