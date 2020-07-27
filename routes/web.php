@@ -13,34 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Home Page
-Route::get('/', function () {
+Route::get('/',function (){
     return view('homepage');
 });
 
-//Cart
-Route::get('cart', 'CartController@showCart');
-
-//Login & register
-Route::resource('user', 'UserController');
-
-
-//List Products
-Route::resource('listProducts','ListProductController');
-
-//Hats
-Route::resource('hats','HatController');
-
-//Jacket
-Route::resource('jacket','JacketController');
-
-//Men
-Route::resource('men','MenController');
-
-//Women
-Route::resource('women','WomenController');
-
-//Sneaker
-Route::resource('sneaker','SneakerController');
-
-//Details Product
-Route::resource('detail','DetailsController');

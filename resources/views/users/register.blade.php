@@ -43,7 +43,7 @@
             </form>
             <div class="question">
                 <span>You have a BerryBerri Account?</span>
-                <a href="{{route('user.index')}}">Sign In</a>
+                <a href="{{url('login')}}">Sign In</a>
             </div>
         </div>
         <div class="image-login">

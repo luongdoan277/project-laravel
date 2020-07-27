@@ -35,7 +35,7 @@
             </form>
             <div class="question">
                 <span>Do you have a BerryBerri Account?</span>
-                <a href="{{route('user.create')}}">Sign Up</a>
+                <a href="{{url('register')}}">Sign Up</a>
             </div>
         </div>
         <div class="image-login">
