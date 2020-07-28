@@ -1,8 +1,8 @@
 <header>
-    <div class="navbar-listproduct">
-        <div class="nav-links-product">
-            <div class="link-product">
-                <div class="logo-product">
+    <div class="navbar-details">
+        <div class="navlink-productdetails">
+            <div class="link-productdetails">
+                <div class="logo-productdetails">
                     <a href="/">
                         <img src="{{asset('images/logo1.png')}}" alt="">
                     </a>
@@ -36,12 +36,6 @@
                 <div class="line" id="line1"></div>
                 <div class="line" id="line2"></div>
                 <div class="line" id="line3"></div>
-            </div>
-        </div>
-        <div class="image-list-product">
-            @yield('image')
-            <div class="content-listproduct">
-                <p>Hats</p>
             </div>
         </div>
     </div>
