@@ -1,6 +1,6 @@
 const menuHamburgerProduct = () =>{
     const burger = document.querySelector('.menu-hamburger-product');
-    const linkPageProduct = document.querySelector('.link-page-product');
+    const linkPageProduct = document.querySelector('.link-layouts-product');
 
     burger.addEventListener("click", () => {
 

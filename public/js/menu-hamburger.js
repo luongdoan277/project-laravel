@@ -1,6 +1,6 @@
 const menuHamburgerHome = () => {
     const burger = document.querySelector('.menu-hamburger');
-    const linkPageHome = document.querySelector('.link-page');
+    const linkPageHome = document.querySelector('.link-layouts');
 
     burger.addEventListener("click", ()=>{
 

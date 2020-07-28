@@ -16,4 +16,29 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',function (){
     return view('welcome');
 });
+Route::get('cart','CartController@showCart');
+
+Route::get('admin',function (){
+    return view('Admin.productList');
+});
+//Login
+Route::resource('login', 'UserController');
+
+//List Products
+Route::resource('listProducts','ListProductController');
+
+//Hats
+Route::resource('hats','HatController');
+
+//Jacket
+Route::resource('jacket','JacketController');
+
+//Men
+Route::resource('men','MenController');
+
+//Women
+Route::resource('women','WomenController');
+
+//Sneaker
+Route::resource('sneaker','SneakerController');
 
