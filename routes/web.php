@@ -16,9 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',function (){
     return view('homepage');
 });
-Route::get('/cart','CartController@showCart');
-
-
+Route::get('cart','CartController@showCart');
+Route::get('admin','AdminController@showAdmin');
 //Login
 Route::resource('login', 'UserController');
 

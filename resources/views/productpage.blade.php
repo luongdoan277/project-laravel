@@ -1,4 +1,4 @@
-@extends('page.mainProducts')
+@extends('layouts.mainProducts')
 
 @section('image')
     <img src="{{asset('images/listproduct.jpeg')}}" alt="image list product">

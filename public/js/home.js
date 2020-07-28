@@ -32,7 +32,7 @@ $('.links-changepage').click(function() {
     if ($(this).hasClass('active-page')) {
         return;
     } else {
-        $('.active-page').removeClass('active-page');
+        $('.active-layouts').removeClass('active-page');
         $(this).addClass('active-page');
     }
 });
