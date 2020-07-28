@@ -9,6 +9,7 @@
 @section('content')
     @include('component.headerProduct')
     <main>
+>>>>>>>>> Temporary merge branch 2:resources/views/hatspage.blade.php
         <div class="product-details">
             <ul class="page">
                 <li><a href="#" class="links-details">Home</a></li>
