@@ -1,6 +1,6 @@
 @extends('layouts.mainDetails')
 
-@section('content')
+@section('main')
     @include('component.headerDetails')
     <main>
         <div class="main-details">
