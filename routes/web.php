@@ -17,7 +17,10 @@ Route::get('/',function (){
     return view('homepage');
 });
 Route::get('cart','CartController@showCart');
-Route::get('admin','AdminController@showAdmin');
+
+Route::get('admin',function (){
+    return view('Admin.productList');
+});
 //Login
 Route::resource('login', 'UserController');
 
