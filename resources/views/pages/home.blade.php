@@ -11,7 +11,7 @@
                 <div class="menu-items">
                     <img src="{{asset('images/hats.png')}}" alt="">
                     <div class="content">
-                        <a href="{{route('hats.index')}}">
+                        <a href="#">
                             <p>
                                 Hats
                             </p>
@@ -22,7 +22,7 @@
                 <div class="menu-items">
                     <img src="{{asset('images/jackets.jpeg')}}" alt="">
                     <div class="content">
-                        <a href="{{route('jacket.index')}}">
+                        <a href="#">
                             <p>
                                 Jackets
                             </p>
@@ -44,7 +44,7 @@
                 <div class="menu-items">
                     <img src="{{asset('images/men.png')}}" alt="">
                     <div class="content">
-                        <a href="{{route('men.index')}}">
+                        <a href="#">
                             <p>
                                 Mens
                             </p>
@@ -55,7 +55,7 @@
                 <div class="menu-items">
                     <img src="{{asset('images/womens.png')}}" alt="">
                     <div class="content">
-                        <a href="{{route('women.index')}}">
+                        <a href="#">
                             <p>
                                 Womens
                             </p>
@@ -76,7 +76,7 @@
                             <img src="{{asset('images/products.jpeg')}}" alt="">
                         </div>
                         <div class="check-product">
-                            <a href="{{route('detail.index')}}" class="check"><i class="fas fa-info-circle"></i></a>
+                            <a href="" class="check"><i class="fas fa-info-circle"></i></a>
                         </div>
                         <div class="addTo">
                             <a href="" class="add">Add To Cart</a>
@@ -93,7 +93,7 @@
                             <img src="{{asset('images/products.jpeg')}}" alt="">
                         </div>
                         <div class="check-product">
-                            <a href="{{route('detail.index')}}" class="check"><i class="fas fa-info-circle"></i></a>
+                            <a href="" class="check"><i class="fas fa-info-circle"></i></a>
                         </div>
                         <div class="addTo">
                             <a href="" class="add">Add To Cart</a>
@@ -110,7 +110,7 @@
                             <img src="{{asset('images/products.jpeg')}}" alt="">
                         </div>
                         <div class="check-product">
-                            <a href="{{route('detail.index')}}" class="check"><i class="fas fa-info-circle"></i></a>
+                            <a href="" class="check"><i class="fas fa-info-circle"></i></a>
                         </div>
                         <div class="addTo">
                             <a href="" class="add">Add To Cart</a>
@@ -127,7 +127,7 @@
                             <img src="{{asset('images/products.jpeg')}}" alt="">
                         </div>
                         <div class="check-product">
-                            <a href="{{route('detail.index')}}" class="check"><i class="fas fa-info-circle"></i></a>
+                            <a href="#" class="check"><i class="fas fa-info-circle"></i></a>
                         </div>
                         <div class="addTo">
                             <a href="" class="add">Add To Cart</a>
