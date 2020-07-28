@@ -1,4 +1,4 @@
-@extends('layouts.mainDetails')
+@extends('homepage')
 
 @section('main')
     @include('component.headerDetails')
