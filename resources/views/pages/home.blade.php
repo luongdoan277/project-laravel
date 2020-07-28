@@ -70,74 +70,25 @@
                 <p>Best Seller</p>
             </div>
             <div class="list-product">
-                <div class="product">
-                    <div class="them">
-                        <div class="image-product">
-                            <img src="{{asset('images/products.jpeg')}}" alt="">
+                @foreach($ProductSeller as $seller)
+                    <div class="product">
+                        <div class="them">
+                            <div class="image-product">
+                                <img src="images/{{$seller->url_image}}" alt="">
+                            </div>
+                            <div class="check-product">
+                                <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                            </div>
+                            <div class="addTo">
+                                <a href="" class="add">Add To Cart</a>
+                            </div>
                         </div>
-                        <div class="check-product">
-                            <a href="" class="check"><i class="fas fa-info-circle"></i></a>
-                        </div>
-                        <div class="addTo">
-                            <a href="" class="add">Add To Cart</a>
-                        </div>
-                    </div>
-                    <div class="price">
-                        <span>Air Jordan </span>
-                        <p>$36</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="them">
-                        <div class="image-product">
-                            <img src="{{asset('images/products.jpeg')}}" alt="">
-                        </div>
-                        <div class="check-product">
-                            <a href="" class="check"><i class="fas fa-info-circle"></i></a>
-                        </div>
-                        <div class="addTo">
-                            <a href="" class="add">Add To Cart</a>
+                        <div class="price">
+                            <span>{{$seller->product_name}}</span>
+                            <p>{{$seller->price}}</p>
                         </div>
                     </div>
-                    <div class="price">
-                        <span>Air Jordan </span>
-                        <p>$36</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="them">
-                        <div class="image-product">
-                            <img src="{{asset('images/products.jpeg')}}" alt="">
-                        </div>
-                        <div class="check-product">
-                            <a href="" class="check"><i class="fas fa-info-circle"></i></a>
-                        </div>
-                        <div class="addTo">
-                            <a href="" class="add">Add To Cart</a>
-                        </div>
-                    </div>
-                    <div class="price">
-                        <span>Air Jordan </span>
-                        <p>$36</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="them">
-                        <div class="image-product">
-                            <img src="{{asset('images/products.jpeg')}}" alt="">
-                        </div>
-                        <div class="check-product">
-                            <a href="#" class="check"><i class="fas fa-info-circle"></i></a>
-                        </div>
-                        <div class="addTo">
-                            <a href="" class="add">Add To Cart</a>
-                        </div>
-                    </div>
-                    <div class="price">
-                        <span>Air Jordan </span>
-                        <p>$36</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </main>

@@ -10,6 +10,6 @@ class CategoryController extends Controller
 {
     public function showAllCategory(){
         $AllCategory = Category::all();
-        return view('pages.category', compact('allcategory'));
+        return view('pages.category', compact('AllCategory'));
     }
 }

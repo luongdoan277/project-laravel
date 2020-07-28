@@ -9,7 +9,7 @@ class Customer extends Model
     protected $primaryKey = 'customer_id';
 
     protected $fillable = [
-        'user_id',
+        'id',
         'type',
         'phone',
         'first_name',
@@ -24,7 +24,7 @@ class Customer extends Model
 
     public function user()
     {
-        return $this->hasOne(User::class,'user_id');
+        return $this->hasOne(User::class,'id');
     }
 
     public function addresses()
