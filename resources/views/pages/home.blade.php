@@ -1,7 +1,7 @@
-@include('homepage')
+@extends('homepage')
 
 @section('main')
-    @include('component.headerDetails')
+    @include('component.headerHome')
     <main>
         <div class="main">
             <div class="title-body">
@@ -65,33 +65,33 @@
                 </div>
             </div>
         </div>
-        <div class="main-product">
-            <div class="title-body">
-                <p>Best Seller</p>
-            </div>
-            <div class="list-product">
-                @foreach($ProductSeller as $seller)
-                    @csrf
-                    <div class="product">
-                        <div class="them">
-                            <div class="image-product">
-                                <img src="images/{{$seller->url_image}}" alt="">
-                            </div>
-                            <div class="check-product">
-                                <a href="" class="check"><i class="fas fa-info-circle"></i></a>
-                            </div>
-                            <div class="addTo">
-                                <a href="" class="add">Add To Cart</a>
-                            </div>
-                        </div>
-                        <div class="price">
-                            <span>{{$seller->product_name}}</span>
-                            <p>{{$seller->price}}</p>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
+{{--        <div class="main-product">--}}
+{{--            <div class="title-body">--}}
+{{--                <p>Best Seller</p>--}}
+{{--            </div>--}}
+{{--            <div class="list-product">--}}
+{{--                @foreach($ProductSeller as $seller)--}}
+{{--                    @csrf--}}
+{{--                    <div class="product">--}}
+{{--                        <div class="them">--}}
+{{--                            <div class="image-product">--}}
+{{--                                <img src="images/{{$seller->url_image}}" alt="">--}}
+{{--                            </div>--}}
+{{--                            <div class="check-product">--}}
+{{--                                <a href="" class="check"><i class="fas fa-info-circle"></i></a>--}}
+{{--                            </div>--}}
+{{--                            <div class="addTo">--}}
+{{--                                <a href="" class="add">Add To Cart</a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="price">--}}
+{{--                            <span>{{$seller->product_name}}</span>--}}
+{{--                            <p>{{$seller->price}}</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                @endforeach--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </main>
     @include('component.footer')
 @endsection

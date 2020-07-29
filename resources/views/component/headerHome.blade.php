@@ -12,8 +12,8 @@
                     <li><a href="#" class="links ">About Us</a></li>
                     <li><a href="#" class="links">Contact</a></li>
                     <li><a href="#" class="links">Blogs</a></li>
-                    <li><a href="{{route('listProducts.index')}}" class="links">Product</a></li>
-                    <li><a href="{{route('user.index')}}" class="links links-hamburger">Sign In <i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href="#" class="links">Product</a></li>
+                    <li><a href="#" class="links links-hamburger">Sign In <i class="fas fa-sign-in-alt"></i></a></li>
                 </ul>
             </div>
             <div class="search-home">
@@ -28,7 +28,7 @@
                     <p>1</p>
                 </div>
                 <div class="sign-in">
-                    <a href="{{route('user.index')}}">Sign In</a>
+                    <a href="#">Sign In</a>
                 </div>
             </div>
             <div class="cart-checkout">
