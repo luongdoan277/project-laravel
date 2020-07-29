@@ -5,9 +5,6 @@ const menuHamburgerHome = () => {
     burger.addEventListener("click", ()=>{
 
         linkPageHome.classList.toggle("nav-actives");
-
-
-
         burger.classList.toggle("toggle");
 
     });

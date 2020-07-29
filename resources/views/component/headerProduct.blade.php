@@ -27,6 +27,7 @@
                     <a href="#">
                         <i class="fas fa-shopping-bag"></i>
                     </a>
+                    <p>1</p>
                 </div>
                 <div class="sign-in">
                     <a href="">Sign In</a>
@@ -39,10 +40,7 @@
             </div>
         </div>
         <div class="image-list-product">
-            @yield('image')
-            <div class="content-listproduct">
-                <p>Hats</p>
-            </div>
+            @yield('image-content')
         </div>
     </div>
 </header>

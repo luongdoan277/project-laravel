@@ -15,6 +15,7 @@ body{
     margin-bottom: 3%;
 }
 .nav-links{
+    position: relative;
     width: 100%;
     height: 10vh;
     display: flex;
@@ -28,7 +29,6 @@ body{
 }
 .black{
     background: rgb(31,31,31);
-    color: white;
     box-shadow: rgba(78, 78, 78, 0.59) 0px 0px 7px;
     z-index: 5;
 }
@@ -98,7 +98,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
+
 .nav-links .cart-in .cart > p{
     width: 17px;
     height: 16px;
@@ -114,7 +116,7 @@ body{
     font-size: 13px;
     margin: 0;
 }
-.nav-links .cart-in .cart > a > i{
+.nav-links .cart-in .cart > i{
     font-size: 23px;
     color: white;
     margin: 0;
@@ -142,6 +144,122 @@ body{
 .nav-links .cart-in .sign-in > a:hover{
     background: white;
     color: black;
+}
+
+.nav-links .cart-checkout.active-checkout{
+    display: block;
+}
+
+.nav-links .cart-checkout{
+    position: absolute;
+    top: 85px;
+    right: 3%;
+    width: 24%;
+    height: 63vh;
+    background: #ffffff;
+    display: none;
+}
+.nav-links .cart-checkout .square{
+    position: absolute;
+    top: -15px;
+    right: 43%;
+    transform: rotate(44deg);
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    z-index: -1;
+}
+.nav-links .cart-checkout .checkout{
+    padding: 0 20px;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
+    background: #ffffff;
+}
+.nav-links .cart-checkout .checkout .head-checkout{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.nav-links .cart-checkout .checkout .head-checkout > p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.nav-links .cart-checkout .checkout .head-checkout .out-check{
+    cursor: pointer;
+}
+.nav-links .cart-checkout .checkout .content-checkout{
+    overflow: auto;
+    width: 100%;
+    height: 39vh;
+    margin-bottom: 3%;
+}
+.nav-links .cart-checkout .checkout .content-checkout .items{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4%;
+}
+.nav-links .cart-checkout .checkout .content-checkout .items .image-items{
+    width: 40%;
+    height: 18vh;
+}
+.nav-links .cart-checkout .checkout .content-checkout .items .description{
+    padding: 0 7px;
+}
+.nav-links .cart-checkout .checkout .content-checkout .items .description > a{
+    text-decoration: none;
+    color: #0B1218;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 3%;
+}
+.nav-links .cart-checkout .checkout .content-checkout .items .description > p{
+    font-size: 15px;
+    color: #e2b86b;
+    font-weight: bold;
+    margin: 0;
+}
+.nav-links .cart-checkout .checkout .content-checkout .items .description .delete-items{
+    margin: 20px 0;
+}
+.nav-links .cart-checkout .checkout .content-checkout .items .description .delete-items > button{
+    border: none;
+    background: none;
+}
+.nav-links .cart-checkout .checkout .content-checkout .items .image-items > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-links .cart-checkout .checkout .total-price .total{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-links .cart-checkout .checkout .total-price .total > p{
+    font-size: 17px;
+    font-weight: 600;
+}
+.nav-links .cart-checkout .checkout .total-price .total > span{
+    font-size: 20px;
+    font-weight: 600;
+    color: #e2b86b;
+}
+.nav-links .cart-checkout .checkout .total-price .go-checkout{
+    width: 100%;
+}
+.nav-links .cart-checkout .checkout .total-price .go-checkout > a{
+    text-decoration: none;
+    background: #0B1218;
+    color: #fffbfb;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 600;
 }
 .nav-links .link .link-page > li > .links-hamburger{
     display: none;
@@ -782,4 +900,15 @@ body{
         width: 40%;
     }
     /**/
+}
+
+.toggle #line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle #line2{
+    opacity: 0;
+}
+
+.toggle #line3{
+    transform: rotate(45deg) translate(-5px,-6px);
 }
