@@ -71,6 +71,7 @@
             </div>
             <div class="list-product">
                 @foreach($ProductSeller as $seller)
+                    @csrf
                     <div class="product">
                         <div class="them">
                             <div class="image-product">
