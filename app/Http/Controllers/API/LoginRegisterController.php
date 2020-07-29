@@ -16,7 +16,6 @@ class LoginRegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6',
         ]);
-
         if ($validater->fails()){
             return response()->json($validater->errors()->toJson(),400);
         }
@@ -28,7 +27,6 @@ class LoginRegisterController extends Controller
             'email_verified_at' => now(),
             'email' => $request->get('email'),
             'password' => bcrypt($request->get('password')),
-            'reme'
         ]);
 
         return response()->json(compact('user', 'token'),201);
