@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','API\HomeController@index');
 Route::resource('product','API\ProductController');
 
+
