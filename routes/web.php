@@ -13,5 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Home Page
-Route::get('/','HomeController@index');
+Route::get('/','API\HomeController@index');
+Route::resource('product','API\ProductController');
 

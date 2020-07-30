@@ -5,15 +5,16 @@
     <main>
         <div class="main-details">
             <div class="product-details">
+                @csrf
                 <div class="image-details">
-                    <img src="{{asset('images/dogdetails.png')}}"  alt="">
+                    <img src="{{asset('images/'. $product->url_image)}}"  alt="">
                 </div>
                 <div class="information-product">
                     <div class="title-details">
-                        <p>Lancaster signature</p>
+                        <p>{{$product->name}}</p>
                     </div>
                     <div class="price-details">
-                        <p>$92.00</p>
+                        <p>$ {{$product->price}}</p>
                     </div>
                     <div class="option-detail">
                         <div class="option-color">
@@ -44,10 +45,9 @@
                         <button class="add">Add To Cart</button>
                     </div>
                     <div class="content-details">
-                        <p>Tatto Together: Said I'd never fall, I'd never fall
-                            I'd never fall, but then I fell for you, mm
-                            Back against the wall, against the wall
-                            Against the wall, that's how it felt with you, mm, mm</p>
+                        <p>
+                            {{$product->description}}
+                        </p>
                     </div>
                     <div class="share">
                         <p>Share</p>
@@ -60,32 +60,32 @@
                     </div>
                 </div>
             </div>
-            <div class="related-product">
-                <div class="title-related">
-                    <p>Related Product</p>
-                </div>
-                <div class="list-product">
-                    @foreach($TopProduct as $product)
-                        <div class="product">
-                            <div class="them">
-                                <div class="image-product">
-                                    <img src="images/{{$product->url_image}}" alt="">
-                                </div>
-                                <div class="check-product">
-                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>
-                                </div>
-                                <div class="addTo">
-                                    <a href="" class="add">Add To Cart</a>
-                                </div>
-                            </div>
-                            <div class="price">
-                                <span>{{$product->product_name}}</span>
-                                <p>{{$product->price}}</p>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
+{{--            <div class="related-product">--}}
+{{--                <div class="title-related">--}}
+{{--                    <p>Related Product</p>--}}
+{{--                </div>--}}
+{{--                <div class="list-product">--}}
+{{--                    @foreach($TopProduct as $product)--}}
+{{--                        <div class="product">--}}
+{{--                            <div class="them">--}}
+{{--                                <div class="image-product">--}}
+{{--                                    <img src="images/{{$product->url_image}}" alt="">--}}
+{{--                                </div>--}}
+{{--                                <div class="check-product">--}}
+{{--                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="addTo">--}}
+{{--                                    <a href="" class="add">Add To Cart</a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="price">--}}
+{{--                                <span>{{$product->product_name}}</span>--}}
+{{--                                <p>{{$product->price}}</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    @endforeach--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </main>
     @include('component.footer')
