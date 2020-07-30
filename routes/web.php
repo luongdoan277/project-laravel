@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 //Home Page
 Route::get('/','HomeController@index');
 
+
