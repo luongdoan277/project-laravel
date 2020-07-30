@@ -33,6 +33,64 @@
                     <a href="">Sign In</a>
                 </div>
             </div>
+            <div class="cart-checkout">
+                <div class="square"></div>
+                <div class="checkout">
+                    <div class="head-checkout">
+                        <p>Your Shopping Cart</p>
+                    </div>
+                    <div class="content-checkout" id="style-1">
+                        <div class="items">
+                            <div class="image-items">
+                                <img src="{{asset('images/dogdetails.png')}}" alt="">
+                            </div>
+                            <div class="description">
+                                <a href="">Ikana Loose Dress Grey</a>
+                                <p>$92.0</p>
+
+                                <form class="delete-items">
+                                    <button type="submit"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="image-items">
+                                <img src="{{asset('images/dogdetails.png')}}" alt="">
+                            </div>
+                            <div class="description">
+                                <a href="">Ikana Loose Dress Grey</a>
+                                <p>$92.0</p>
+
+                                <form class="delete-items">
+                                    <button type="submit"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="image-items">
+                                <img src="{{asset('images/dogdetails.png')}}" alt="">
+                            </div>
+                            <div class="description">
+                                <a href="">Ikana Loose Dress Grey</a>
+                                <p>$92.0</p>
+
+                                <form class="delete-items">
+                                    <button type="submit"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total-price">
+                        <div class="total">
+                            <p>Subtotal :</p>
+                            <span>$122.0</span>
+                        </div>
+                        <div class="go-checkout">
+                            <a href="">Go to Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="menu-hamburger-product">
                 <div class="line" id="line1"></div>
                 <div class="line" id="line2"></div>

@@ -24,7 +24,7 @@
             </div>
             <div class="cart-in">
                 <div class="cart">
-                        <i class="fas fa-shopping-bag"></i>
+                    <i class="fas fa-shopping-bag"></i>
                     <p>1</p>
                 </div>
                 <div class="sign-in">
@@ -37,7 +37,7 @@
                     <div class="head-checkout">
                         <p>Your Shopping Cart</p>
                     </div>
-                    <div class="content-checkout">
+                    <div class="content-checkout" id="style-1">
                         <div class="items">
                             <div class="image-items">
                                 <img src="{{asset('images/dogdetails.png')}}" alt="">
