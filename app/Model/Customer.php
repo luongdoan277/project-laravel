@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
 {
-    protected $primaryKey = 'customer_id';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
-        'id',
         'type',
         'phone',
         'first_name',
@@ -20,11 +19,6 @@ class Customer extends Model
 
     public function cart() {
         return $this->hasOne(Cart::class, 'customer_id');
-    }
-
-    public function user()
-    {
-        return $this->hasOne(User::class,'id');
     }
 
     public function addresses()

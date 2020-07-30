@@ -24,7 +24,6 @@ class CreateAddressesTable extends Migration
             $table->string('city')->nullable();
             $table->string('district')->nullable();
             $table->string('ward')->nullable();
-            $table->string('street');
             $table->boolean('is_default')->default(false);
             $table->timestamps();
         });
