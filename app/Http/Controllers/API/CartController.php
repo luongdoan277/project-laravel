@@ -1,9 +1,10 @@
 <?php
 
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 use App\Model\Product;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Cookie;
 
 class CartController extends BaseController
 {
@@ -20,7 +21,7 @@ class CartController extends BaseController
 
         }
 
-        $cart = cookie()->get('cart');
+        $cart = Cookie::get('cart');
 
         // if cart is empty then this the first product
         if(!$cart) {
@@ -33,7 +34,7 @@ class CartController extends BaseController
                 ]
             ];
 
-            cookie()->put('cart', $cart);
+            Cookie::put('cart', $cart);
 
             return redirect()->back()->with('success', 'Product added to cart successfully!');
         }
@@ -42,7 +43,7 @@ class CartController extends BaseController
 
             $cart[$id]['quantity']++;
 
-            cookie()->put('cart', $cart);
+            Cookie::put('cart', $cart);
 
             return redirect()->back()->with('success', 'Product added to cart successfully!');
 
@@ -55,7 +56,7 @@ class CartController extends BaseController
             "image" => $product->url_image
         ];
 
-        cookie()->put('cart', $cart);
+        Cookie::put('cart', $cart);
 
         return redirect()->back()->with('success', 'Product added to cart successfully!');
     }

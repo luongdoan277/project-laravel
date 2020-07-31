@@ -13,7 +13,7 @@
                     @foreach($AllCategory as $category)
                         <div class="title-body-product">
                             <p>{{$category->name}}</p>
-                            <a href="{{ route('category.edit', $category->category_id)}}">View All Products</a>
+                            <a href="{{ route('category.show', $category->category_id)}}">View All Products</a>
                         </div>
                         <div class="list-product">
                             @foreach($category->products->take(4) as $product)
@@ -23,10 +23,10 @@
                                         <img src="images/{{$product->url_image}}" alt="">
                                     </div>
                                     <div class="check-product">
-                                        <a href="" class="check"><i class="fas fa-info-circle"></i></a>
+                                        <a href="{{ route('product.show', $product->id)}}" class="check"><i class="fas fa-info-circle"></i></a>
                                     </div>
                                     <div class="addTo">
-                                        <a href="" class="add">Add To Cart</a>
+                                        <a href="{{ url('add-to-cart/'.$product->id) }}" class="add">Add To Cart</a>
                                     </div>
                                 </div>
                                 <div class="price">

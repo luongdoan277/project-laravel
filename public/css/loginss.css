@@ -20,6 +20,7 @@ body{
     padding: 0px 70px;
     display: flex;
     flex-direction: column;
+    border: none;
 }
 .form-control h1{
     font-size: 35px;

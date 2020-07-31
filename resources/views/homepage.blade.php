@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/homepage.css')}}">
     <link rel="stylesheet" href="{{asset('css/product.css')}}">
+    <link rel="stylesheet" href="{{asset('css/loginss.css')}}">
+    <link rel="stylesheet" href="{{asset('css/register.css')}}">
     <link rel="stylesheet" href="{{asset('css/productdetails.css')}}">
     <link rel="stylesheet" href="{{asset('FontAwesome/css/all.min.css')}}">
     <link rel="icon" href="{{asset('image/logo2.png')}}">

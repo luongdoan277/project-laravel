@@ -42,7 +42,9 @@
                         <li>Distribution: America,China,India,VietNam,...</li>
                     </ul>
                     <div class="addToCart">
-                        <button class="add">Add To Cart</button>
+                        <a href="{{ url('add-to-cart/'.$product->id) }}">
+                            <button class="add">Add To Cart</button>
+                        </a>
                     </div>
                     <div class="content-details">
                         <p>

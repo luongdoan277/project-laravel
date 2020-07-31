@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 //Home Page
 Route::get('/','API\HomeController@index');
+Route::get('/login','API\CustomerController@getLogin')->name('getlogin');
+Route::get('/register','API\CustomerController@getRegister')->name('getregister');
+Route::get('add-to-cart/{id}', 'API\CartController@addToCart');
 Route::resource('product','API\ProductController');
 Route::resource('category','API\CategoryController');
 
