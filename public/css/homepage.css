@@ -547,7 +547,7 @@ body{
     padding: 5px 10px;
     margin-bottom: 3%;
     cursor: pointer;
-    z-index: 2;
+    z-index: 1;
 }
 .main-product .list-product .product .them .addTo .add {
     border-radius: 3px;

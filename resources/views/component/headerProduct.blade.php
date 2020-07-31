@@ -24,9 +24,7 @@
             </div>
             <div class="cart-in">
                 <div class="cart">
-                    <a href="#">
-                        <i class="fas fa-shopping-bag"></i>
-                    </a>
+                    <i class="fas fa-shopping-bag"></i>
                     <p>1</p>
                 </div>
                 <div class="sign-in">

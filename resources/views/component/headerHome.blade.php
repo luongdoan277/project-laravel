@@ -103,7 +103,7 @@
                         <div class="d-none d-md-block slide-content">
                             <p>Make your style more fashionable in Raya Days with BerryBerri</p>
                             <span>Raya Hampers-May 2020</span>
-                            <a href="{{url('listproduct')}}">Shop Now</a>
+                            <a href="{{route('category.index')}}">Shop Now</a>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -111,7 +111,7 @@
                         <div class="d-none d-md-block slide-content" style="left: 52%">
                             <p>Make your style more fashionable in Raya Days with BerryBerri</p>
                             <span>Raya Hampers-May 2020</span>
-                            <a href="{{url('listproduct')}}">Shop Now</a>
+                            <a href="{{route('category.index')}}">Shop Now</a>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -119,7 +119,7 @@
                         <div class="d-none d-md-block slide-content" style="left: 35%">
                             <p>Make your style more fashionable in Raya Days with BerryBerri</p>
                             <span>Raya Hampers-May 2020</span>
-                            <a href="{{url('listproduct')}}">Shop Now</a>
+                            <a href="{{route('category.index')}}">Shop Now</a>
                         </div>
                     </div>
                 </div>

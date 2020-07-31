@@ -39,4 +39,8 @@ class Category extends Model
     {
         return $query->where('is_enabled', 1);
     }
+
+    public function products() {
+        return $this->hasMany(Product::class, 'category_id');
+    }
 }

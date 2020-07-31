@@ -40,7 +40,7 @@
                     <div class="content-checkout" id="style-1">
                         <div class="items">
                             <div class="image-items">
-                                <img src="{{asset('images/dogdetails.png')}}" alt="">
+                                <img src="{{asset('images/sneaker.jpeg')}}" alt="">
                             </div>
                             <div class="description">
                                 <a href="">Ikana Loose Dress Grey</a>
@@ -53,7 +53,7 @@
                         </div>
                         <div class="items">
                             <div class="image-items">
-                                <img src="{{asset('images/dogdetails.png')}}" alt="">
+                                <img src="{{asset('images/sneaker.jpeg')}}" alt="">
                             </div>
                             <div class="description">
                                 <a href="">Ikana Loose Dress Grey</a>
@@ -66,7 +66,7 @@
                         </div>
                         <div class="items">
                             <div class="image-items">
-                                <img src="{{asset('images/dogdetails.png')}}" alt="">
+                                <img src="{{asset('images/sneaker.jpeg')}}" alt="">
                             </div>
                             <div class="description">
                                 <a href="">Ikana Loose Dress Grey</a>
