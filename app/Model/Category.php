@@ -18,20 +18,8 @@ class Category extends Model
         'is_enabled',
         'url_image',
         'created_user',
-        'parent_id',
-        'updated_user',
-        'type'
+        'updated_user'
     ];
-
-
-    public function attributes()
-    {
-        return $this->belongsToMany(Attribute::class, 'category_attribute', 'category_id', 'attribute_id')->withTimestamps();
-    }
-
-    public function group() {
-        return $this->belongsTo(CategoryGroup::class, 'group_id');
-    }
 
     public function createdUser() {
         return $this->belongsTo(User::class, 'created_user');
@@ -39,25 +27,6 @@ class Category extends Model
 
     public function updatedUser() {
         return $this->belongsTo(User::class, 'updated_user');
-    }
-
-    public function parent() {
-        return $this->belongsTo(Category::class, 'parent_id');
-    }
-
-    public function children() {
-        return $this->hasMany(Category::class, 'parent_id');
-    }
-
-    public function posts() {
-        return $this->hasMany(Post::class, 'category_id');
-    }
-
-    /**
-     * @return string
-     */
-    public function breadCrumb(){
-        return $this->parent()->with('breadCrumb');
     }
 
     /**
@@ -69,5 +38,9 @@ class Category extends Model
     public function scopeActive($query)
     {
         return $query->where('is_enabled', 1);
+    }
+
+    public function products() {
+        return $this->hasMany(Product::class, 'category_id');
     }
 }

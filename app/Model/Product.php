@@ -9,16 +9,16 @@ class Product extends Model
 {
     use ElasticquentTrait;
 
-    protected $primaryKey = 'product_id';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
-        'shop_id',
-        'product_name',
-        'product_type',
+        'name',
+        'type',
         'description',
         'weight',
         'slug',
         'sku',
+        'url_image',
         'price',
         'discount_price',
         'quantity',
@@ -26,20 +26,9 @@ class Product extends Model
         'status'
     ];
 
-    public function variants()
-    {
-        return $this->hasMany(Product::class, 'parent_id')->where('product_type', '=', 'variant');
-    }
-
-    public function master()
-    {
-        return $this->belongsTo(Product::class, 'parent_id')->where('product_type', '=', 'master');
-    }
-
-
     public function getProductType()
     {
-        return $this->product_type;
+        return $this->type;
     }
 
     public function scopeRangePrice($query, $from, $to)

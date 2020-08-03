@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    protected $primaryKey = 'order_id';
+    protected $primaryKey = 'id';
     protected $fillable = [
         'order_number',
         'customer_id',
@@ -29,10 +29,6 @@ class Order extends Model
 
     public function address()
     {
-        return $this->belongsTo(Address::class, 'shipping_address');
-    }
-
-    public function shippingAddress() {
         return $this->belongsTo(Address::class, 'shipping_address');
     }
 

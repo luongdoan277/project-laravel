@@ -13,32 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Home Page
-Route::get('/',function (){
-    return view('homepage');
-});
-Route::get('cart','CartController@showCart');
+Route::get('/','API\HomeController@index');
+//Login and Register
+Route::get('/login','API\CustomerController@getLogin')->name('getlogin');
+Route::get('/register','API\CustomerController@getRegister')->name('getregister');
+//Cart
+Route::get('/checkout', 'API\CartController@getCheckout')->name('checkout');
+Route::get('add-to-cart/{id}', 'API\CartController@addToCart');
+Route::get('deleteItem/{id}', 'API\CartController@deleteItem');
+//Product
+Route::resource('product','API\ProductController');
+//Category
+Route::resource('category','API\CategoryController');
 
-Route::get('admin',function (){
-    return view('Admin.productList');
-});
-//Login
-Route::resource('login', 'UserController');
-
-//List Products
-Route::resource('listProducts','ListProductController');
-
-//Hats
-Route::resource('hats','HatController');
-
-//Jacket
-Route::resource('jacket','JacketController');
-
-//Men
-Route::resource('men','MenController');
-
-//Women
-Route::resource('women','WomenController');
-
-//Sneaker
-Route::resource('sneaker','SneakerController');
 

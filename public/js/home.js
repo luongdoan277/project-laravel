@@ -1,4 +1,4 @@
-$('.links-product').click(function() {
+$('.links-test').click(function() {
     if ($(this).hasClass('active')) {
         return;
     } else {
@@ -45,3 +45,16 @@ $('.links-details').click(function() {
         $(this).addClass('active-details');
     }
 });
+
+
+//Checkout
+
+function checkout() {
+    const cart = document.querySelector('.cart');
+    const checkout = document.querySelector('.cart-checkout');
+
+    cart.addEventListener('click', ()=>{
+        checkout.classList.toggle('active-checkout');
+    });
+}
+checkout();

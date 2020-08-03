@@ -92,8 +92,32 @@ body{
     z-index: 2;
 }
 
-.navlink-productdetails .cart-in .cart > a > i{
-    font-size: 25px;
+.navlink-productdetails .cart-in .cart{
+    position: relative;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navlink-productdetails .cart-in .cart > p{
+    width: 17px;
+    height: 16px;
+    background: #f5cb5f;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0B1218;
+    border-radius: 50%;
+    font-size: 13px;
+    margin: 0;
+}
+.navlink-productdetails .cart-in .cart > i{
+    font-size: 23px;
     color: white;
     margin: 0;
 }
@@ -152,6 +176,142 @@ body{
     outline: none;
     border: none;
     overflow: hidden;
+}
+
+.navlink-productdetails .cart-checkout.active-checkout{
+    display: block;
+}
+
+.navlink-productdetails .cart-checkout{
+    position: absolute;
+    top: 85px;
+    right: 3%;
+    width: 24%;
+    background: #ffffff;
+    display: none;
+}
+
+.navlink-productdetails .cart-checkout .square{
+    position: absolute;
+    top: -15px;
+    right: 43%;
+    transform: rotate(44deg);
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    z-index: -1;
+}
+.navlink-productdetails .cart-checkout .checkout{
+    padding: 0 20px;
+    display: inline-block;
+    width: 100%;
+    height: 570px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 8px 0, rgba(0, 0, 0, 0.19) 0 6px 20px 0;
+    background: #ffffff;
+}
+.navlink-productdetails .cart-checkout .checkout .head-checkout{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.navlink-productdetails .cart-checkout .checkout .head-checkout > p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.navlink-productdetails .cart-checkout .checkout .head-checkout .out-check{
+    cursor: pointer;
+}
+.navlink-productdetails .cart-checkout .checkout .content-checkout{
+    overflow: auto;
+    width: 100%;
+    height: 39vh;
+    margin-bottom: 3%;
+}
+.navlink-productdetails .cart-checkout .checkout .content-checkout .items{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4%;
+}
+.navlink-productdetails .cart-checkout .checkout .content-checkout .items .image-items{
+    width: 40%;
+    height: 18vh;
+}
+.navlink-productdetails .cart-checkout .checkout .content-checkout .items .description{
+    padding: 0 7px;
+}
+.navlink-productdetails .cart-checkout .checkout .content-checkout .items .description > a{
+    text-decoration: none;
+    color: #0B1218;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 3%;
+}
+.navlink-productdetails .cart-checkout .checkout .content-checkout .items .description > p{
+    font-size: 15px;
+    color: #e2b86b;
+    font-weight: bold;
+    margin: 0;
+}
+.navlink-productdetails .cart-checkout .checkout .content-checkout .items .description .delete-items{
+    margin: 20px 0;
+}
+.navlink-productdetails .cart-checkout .checkout .content-checkout .items .description .delete-items > button{
+    border: none;
+    background: none;
+}
+.navlink-productdetails .cart-checkout .checkout .content-checkout .items .image-items > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navlink-productdetails .cart-checkout .checkout .total-price .total{
+    display: flex;
+    justify-content: space-between;
+}
+.navlink-productdetails .cart-checkout .checkout .total-price .total > p{
+    font-size: 17px;
+    font-weight: 600;
+}
+.navlink-productdetails .cart-checkout .checkout .total-price .total > span{
+    font-size: 20px;
+    font-weight: 600;
+    color: #e2b86b;
+}
+.navlink-productdetails .cart-checkout .checkout .total-price .go-checkout{
+    width: 100%;
+}
+.navlink-productdetails .cart-checkout .checkout .total-price .go-checkout > a{
+    text-decoration: none;
+    background: #0B1218;
+    color: #fffbfb;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+#style-1::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
 }
 
 /*Menu-hamburger*/
@@ -269,12 +429,10 @@ body{
     width: 20%;
     height: 6vh;
     cursor: pointer;
-    border: none;
-    color: rgb(31,31,31);
     outline: none;
     transition: 0.5s;
     padding: 5px 7px;
-    border: 4px solid rgb(31,31,31);
+    border: 2px solid rgb(31,31,31);
     background: #ffffff;
     font-weight: bold;
 }

@@ -10,20 +10,18 @@ class Address extends Model
     protected $table = 'addresses';
 
     protected $fillable = [
-        'customer_id',
+        'id',
         'type',
         'first_name',
         'last_name',
         'phone',
-        'province',
         'city',
         'district',
         'ward',
-        'street',
         'is_default'
     ];
 
     public function customer() {
-        return $this->belongsTo(Customer::class, 'customer_id', 'customer_id');
+        return $this->belongsTo(Customer::class, 'id', 'id');
     }
 }
