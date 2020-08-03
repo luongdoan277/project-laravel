@@ -45,7 +45,7 @@ class CartItem extends Model
     }
 
     public function DeleteItem($id){
-        $this->totalQty =- $this->products[$id]["qty"];
+        $this->totalQty -= $this->products[$id]["qty"];
         $this->totalPrice -= $this->products[$id]["price"];
         unset($this->products[$id]);
     }

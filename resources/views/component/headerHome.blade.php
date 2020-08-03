@@ -27,7 +27,7 @@
                     <i class="fas fa-shopping-bag"></i>
                     @if(Session::has("Cart") != null)
                         <p id="total-quantity-show">{{Session::get("Cart")->totalQty}}</p>
-                    @elseif(Session::has("Cart") == null)
+                    @else
                         <p id="total-quantity-show">0</p>
                     @endif
                 </div>
