@@ -2,62 +2,42 @@
 
 
 namespace App\Http\Controllers\API;
+use App\Model\CartItem;
 use App\Model\Product;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Support\Facades\Cookie;
+use Session;
 
 class CartController extends BaseController
 {
-    public function showCart(){
-        return view('checkout');
+    public function getCheckout(){
+        return view('pages.checkout');
     }
-    public function addToCart($id)
+
+    public function addToCart(Request $request,$id)
     {
         $product = Product::find($id);
+        if ($product != null){
+            $oldCart = Session('Cart') ? Session('Cart') : null;
+            $newCart = new CartItem($oldCart);
+            $newCart->addToCart($product, $id);
 
-        if(!$product) {
-
-            abort(404);
-
+            $request->session()->put('Cart', $newCart);
         }
-
-        $cart = Cookie::get('cart');
-
-        // if cart is empty then this the first product
-        if(!$cart) {
-            $cart = [
-                $id => [
-                    "name" => $product->name,
-                    "quantity" => 1,
-                    "price" => $product->price,
-                    "image" => $product->url_image
-                ]
-            ];
-
-            Cookie::put('cart', $cart);
-
-            return redirect()->back()->with('success', 'Product added to cart successfully!');
+        return view('component.cart', compact('newCart'));
+    }
+    public function deleteItem(Request $request,$id)
+    {
+        $oldCart = Session('Cart') ? Session('Cart') : null;
+        $newCart = new CartItem($oldCart);
+        $newCart->DeleteItem($id);
+        if (Count($newCart->products)>0){
+            $request->session()->put('Cart', $newCart);
         }
-
-        if(isset($cart[$id])) {
-
-            $cart[$id]['quantity']++;
-
-            Cookie::put('cart', $cart);
-
-            return redirect()->back()->with('success', 'Product added to cart successfully!');
-
+        else
+        {
+            $request->session()->forget('Cart');
         }
-
-        $cart[$id] = [
-            "name" => $product->name,
-            "quantity" => 1,
-            "price" => $product->price,
-            "image" => $product->url_image
-        ];
-
-        Cookie::put('cart', $cart);
-
-        return redirect()->back()->with('success', 'Product added to cart successfully!');
+        return view('component.cart', compact('newCart'));
     }
 }

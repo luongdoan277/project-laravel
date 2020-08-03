@@ -1,18 +1,18 @@
-@extends('Cart.cart')
+@extends('homepage')
 
-@section('content')
-    @include('Cart.header')
-    <div class="container">
+@section('main')
+    @include('component.headerDetails')
+    <div class="">
         <div class="check-out text-center">
             Checkout
         </div>
-        <div class="col-md-9 border-left">
+        <div class="col-md-9 list-product-checkout">
             <div class="text">
-                <div class="product"><b>Products</b></div>
-                <div class="description"><b>Description</b></div>
-                <div class="quantity"><b>Quantity</b></div>
-                <div class="price"><b>Price</b></div>
-                <div class="remove"><b>Remove</b></div>
+                <div class="product-checkout"><b>Products</b></div>
+                <div class="description-checkout"><b>Description</b></div>
+                <div class="quantity-checkout"><b>Quantity</b></div>
+                <div class="price-checkout"><b>Price</b></div>
+                <div class="remove-checkout"><b>Remove</b></div>
             </div>
 
             <div class="cart">
@@ -21,9 +21,9 @@
                 </div>
                 <div class="title"><b>Besyana Tunic Blue</b></div>
                 <div class="count">
-                    <input type="button" onclick="plus()" value="+" class="input-button">
-                    <input type="text" value="1" id="textbox" style="width: 40px; padding: 3px 6px">
                     <input type="button" onclick="minus()" value="-" class="input-button">
+                    <input type="text" value="1" class="textbox" style="width: 40px; padding: 3px 6px">
+                    <input type="button" onclick="plus()" value="+" class="input-button">
                 </div>
                 <div class="price1"><b>Rp 195.000</b></div>
                 <div class="icon-remove"><a href=""><i class="fas fa-trash" style="color: black"></i></a></div>
@@ -33,9 +33,9 @@
                 <div class="img"><img src="{{asset('images/products.jpeg')}}" alt="" height="255px" width="220px"></div>
                 <div class="title"><b>Besyana Tunic Blue</b></div>
                 <div class="count">
-                    <input type="button" onclick="plus()" value="+" class="input-button">
-                    <input type="text" value="1" id="textbox" style="width: 40px; padding: 3px 6px">
                     <input type="button" onclick="minus()" value="-" class="input-button">
+                    <input type="text" value="1" class="textbox" style="width: 40px; padding: 3px 6px">
+                    <input type="button" onclick="plus()" value="+" class="input-button">
                 </div>
                 {{--            <div class="shopping-cart">--}}
                 {{--                <div>--}}

@@ -81,7 +81,7 @@
                                 <a href="{{ route('product.show', $product->id)}}" class="check"><i class="fas fa-info-circle"></i></a>
                             </div>
                             <div class="addTo">
-                                <a href="{{ url('add-to-cart/'.$product->id) }}" class="add">Add To Cart</a>
+                                <a onclick="addToCart({{$product->id}})" href="javascript:" class="add">Add To Cart</a>
                             </div>
                         </div>
                         <div class="price">

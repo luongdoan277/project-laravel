@@ -16,7 +16,7 @@ body{
     font-size: 40px;
     padding: 30px 0px;
 }
-.border-left{
+.list-product-checkout{
     float: left;
     margin-bottom: 5%;
 }
@@ -40,31 +40,31 @@ body{
     float: left;
     margin-bottom: 3%;
 }
-.product{
+.product-checkout{
     width: 30%;
     float: left;
     text-align: center;
     padding: 20px 0px;
 }
-.description{
+.description-checkout{
     width: 20%;
     float: left;
     text-align: center;
     padding: 20px 0px;
 }
-.quantity{
+.quantity-checkout{
     width: 20%;
     float: left;
     text-align: center;
     padding: 20px 0px;
 }
-.price{
+.price-checkout{
     width: 20%;
     float: left;
     text-align: center;
     padding: 20px 0px;
 }
-.remove{
+.remove-checkout{
     width: 10%;
     float: left;
     text-align: center;
