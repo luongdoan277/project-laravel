@@ -38,6 +38,20 @@ class CartController extends BaseController
         {
             $request->session()->forget('Cart');
         }
-        return view('component.cart', compact('newCart'));
+        return view('component.cart');
+    }
+    public function deleteListItem(Request $request,$id)
+    {
+        $oldCart = Session('Cart') ? Session('Cart') : null;
+        $newCart = new CartItem($oldCart);
+        $newCart->DeleteItem($id);
+        if (Count($newCart->products)>0){
+            $request->session()->put('Cart', $newCart);
+        }
+        else
+        {
+            $request->session()->forget('Cart');
+        }
+        return view('component.list-checkout');
     }
 }

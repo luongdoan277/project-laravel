@@ -21,6 +21,7 @@ Route::get('/register','API\CustomerController@getRegister')->name('getregister'
 Route::get('/checkout', 'API\CartController@getCheckout')->name('checkout');
 Route::get('add-to-cart/{id}', 'API\CartController@addToCart');
 Route::get('deleteItem/{id}', 'API\CartController@deleteItem');
+Route::get('deleteItemList/{id}', 'API\CartController@deleteListItem');
 //Product
 Route::resource('product','API\ProductController');
 //Category

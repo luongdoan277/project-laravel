@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{asset('FontAwesome/css/all.min.css')}}">
     <link rel="icon" href="{{asset('image/logo2.png')}}">
 </head>
-<body>
+<body id="style-2">
 
 @yield('main')
 
@@ -47,10 +47,29 @@
             type: 'GET'
         }).done(function (response) {
             RenderCart(response);
-            alertify.success('Delete product');
+            alertify.success('Delete product success');
         });
     })
+
+    function deleteItemList(id) {
+        $.ajax({
+            url: 'deleteItemList/' + id,
+            type: 'GET'
+        }).done(function (response) {
+            RenderCart(response);
+            alertify.success('Delete product success');
+        });
+    }
     function RenderCart(response){
+        $("#list-item-cart").empty();
+        $("#list-item-cart").html(response);
+        $("#change-item-cart").empty();
+        $("#change-item-cart").html(response);
+        $("#total-quantity-show").text($("#total_quantity").val())
+    }
+    function RenderItemList(response){
+        $("#list-item-cart").empty();
+        $("#list-item-cart").html(response);
         $("#change-item-cart").empty();
         $("#change-item-cart").html(response);
         $("#total-quantity-show").text($("#total_quantity").val())
