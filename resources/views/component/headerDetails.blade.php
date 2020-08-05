@@ -32,7 +32,11 @@
                     @endif
                 </div>
                 <div class="sign-in">
-                    <a href="">Sign In</a>
+                    @if(!Auth::user())
+                        <a href="{{route('getlogin')}}">Sign In</a>
+                    @elseif(Auth::user())
+                        <a href="{{route('logout')}}">Logout<i class="fas fa-sign-out-alt" style="padding-left: 6px"></i></a>
+                    @endif
                 </div>
             </div>
             <div class="cart-checkout">
@@ -48,10 +52,10 @@
                                 @foreach(Session::get("Cart")->products as $item)
                                     <div class="items">
                                         <div class="image-items">
-                                            <img src="images/{{$item['productInfo']->url_image}}" alt="">
+                                            <img src="/images/{{$item['productInfo']->url_image}}" alt="">
                                         </div>
                                         <div class="description">
-                                            <a href="{{ route('product.show', $item['productInfo']->id)}}">{{$item['productInfo']->name}}</a>
+                                            <a href="{{route('product.show', $item['productInfo']->id)}}">{{$item['productInfo']->name}}</a>
                                             <p>${{number_format($item['productInfo']->price)}}</p>
                                             <p>Amount: {{$item['qty']}}</p>
                                             <form class="delete-items">

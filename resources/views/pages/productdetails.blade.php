@@ -7,7 +7,7 @@
             <div class="product-details">
                 @csrf
                 <div class="image-details">
-                    <img src="{{asset('images/'. $product->url_image)}}"  alt="">
+                    <img src="/images/{{$product->url_image}}"  alt="">
                 </div>
                 <div class="information-product">
                     <div class="title-details">
@@ -42,7 +42,7 @@
                         <li>Distribution: America,China,India,VietNam,...</li>
                     </ul>
                     <div class="addToCart">
-                        <a href="{{ url('add-to-cart/'.$product->id) }}">
+                        <a onclick="addToCart({{$product->id}})" href="javascript:">
                             <button class="add">Add To Cart</button>
                         </a>
                     </div>

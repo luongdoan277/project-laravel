@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Model\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Auth;
 
 class LoginRegisterController extends Controller
 {
@@ -28,8 +29,7 @@ class LoginRegisterController extends Controller
             'email' => $request->get('email'),
             'password' => bcrypt($request->get('password')),
         ]);
-
-        return response()->json(compact('user', 'token'),201);
+        return redirect()->route('getlogin');
     }
     public function login(Request $request)
     {
@@ -42,8 +42,12 @@ class LoginRegisterController extends Controller
         {
             return redirect()->route('home');
         }else{
-            return redirect()->route('login')
+            return redirect()->route('getlogin')
                 ->with('error','Email-Address And Password Are Wrong.');
         }
+    }
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect()->route('home');
     }
 }

@@ -32,7 +32,11 @@
                     @endif
                 </div>
                 <div class="sign-in">
-                    <a href="{{route('getlogin')}}">Sign In</a>
+                    @if(!Auth::user())
+                        <a href="{{route('getlogin')}}">Sign In</a>
+                    @elseif(Auth::user())
+                        <a href="{{route('logout')}}">Logout<i class="fas fa-sign-out-alt" style="padding-left: 6px"></i></a>
+                    @endif
                 </div>
             </div>
             <div class="cart-checkout">

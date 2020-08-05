@@ -1,9 +1,7 @@
-
 function plus() {
     var t = document.getElementsByClassName('textbox').value;
     document.getElementsByClassName('textbox').value = parseInt(t) + 1;
 }
-
 plus();
 
 function minus() {

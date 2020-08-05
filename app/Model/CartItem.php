@@ -49,4 +49,14 @@ class CartItem extends Model
         $this->totalPrice -= $this->products[$id]["price"];
         unset($this->products[$id]);
     }
+    public function SaveItem($id, $qty){
+        $this->totalQty -= $this->products[$id]["qty"];
+        $this->totalPrice -= $this->products[$id]["price"];
+
+        $this->products[$id]["qty"] = $qty;
+        $this->products[$id]["price"] = $qty * $this->products[$id]["productInfo"]->price;
+
+        $this->totalQty += $this->products[$id]["qty"];
+        $this->totalPrice += $this->products[$id]["price"];
+    }
 }

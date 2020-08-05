@@ -5,7 +5,7 @@
     <div class="login">
         <div class="form-control">
             <h1>Sign In</h1>
-            <form action="" method="post" class="form-login">
+            <form action="{{route('postLogin')}}" method="post" class="form-login">
                 @csrf
                 <div class="email-login">
                     <span>Email</span>

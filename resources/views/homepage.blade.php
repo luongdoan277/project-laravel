@@ -34,7 +34,7 @@
 <script>
     function addToCart(id) {
         $.ajax({
-            url: 'add-to-cart/' + id,
+            url: '/add-to-cart/' + id,
             type: 'GET'
         }).done(function (response) {
             RenderCart(response);
@@ -43,7 +43,7 @@
     }
     $("#change-item-cart").on("click", ".delete-items i", function (){
         $.ajax({
-            url: 'deleteItem/' + $(this).data("id"),
+            url: '/deleteItem/' + $(this).data("id"),
             type: 'GET'
         }).done(function (response) {
             RenderCart(response);
@@ -53,11 +53,20 @@
 
     function deleteItemList(id) {
         $.ajax({
-            url: 'deleteItemList/' + id,
+            url: '/deleteItemList/' + id,
             type: 'GET'
         }).done(function (response) {
             RenderCart(response);
             alertify.success('Delete product success');
+        });
+    }
+    function saveItemList(id){
+        $.ajax({
+            url: '/saveItemList/' + id + '/' + $('#qty-item-'+id).val(),
+            type: 'GET'
+        }).done(function (response) {
+            RenderCart(response);
+            alertify.success('Update product success');
         });
     }
     function RenderCart(response){
@@ -65,14 +74,7 @@
         $("#list-item-cart").html(response);
         $("#change-item-cart").empty();
         $("#change-item-cart").html(response);
-        $("#total-quantity-show").text($("#total_quantity").val())
-    }
-    function RenderItemList(response){
-        $("#list-item-cart").empty();
-        $("#list-item-cart").html(response);
-        $("#change-item-cart").empty();
-        $("#change-item-cart").html(response);
-        $("#total-quantity-show").text($("#total_quantity").val())
+        $("#total-quantity-show").text($("#total_quantity").val());
     }
 </script>
 <script src="{{asset('js/menu-hamburger.js')}}"></script>

@@ -20,13 +20,13 @@
                             <div class="product">
                                 <div class="them">
                                     <div class="image-product">
-                                        <img src="images/{{$product->url_image}}" alt="">
+                                        <img src="/images/{{$product->url_image}}" alt="">
                                     </div>
                                     <div class="check-product">
                                         <a href="{{ route('product.show', $product->id)}}" class="check"><i class="fas fa-info-circle"></i></a>
                                     </div>
                                     <div class="addTo">
-                                        <a href="{{ url('add-to-cart/'.$product->id) }}" class="add">Add To Cart</a>
+                                        <a onclick="addToCart({{$product->id}})" href="javascript:" class="add">Add To Cart</a>
                                     </div>
                                 </div>
                                 <div class="price">

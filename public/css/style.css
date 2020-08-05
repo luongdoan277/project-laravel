@@ -63,8 +63,14 @@
     text-align: center;
     padding: 20px 0px;
 }
+.save-checkout{
+    width: 5%;
+    float: left;
+    text-align: center;
+    padding: 20px 0px;
+}
 .remove-checkout{
-    width: 10%;
+    width: 5%;
     float: left;
     text-align: center;
     padding: 20px 0px;
@@ -91,10 +97,19 @@
     font-weight: 700;
 }
 .count{
-    width: 20%;
+    margin: 0 80.5px;
+    width: 120px;
     float: left;
     text-align: center;
     padding: 105px 0px;
+    display: flex;
+}
+.count p{
+    margin: 0;
+    line-height: 34px;
+    padding: 0;
+    font-size: 13px;
+    text-align: center;
 }
 .price1{
     width: 20%;
@@ -106,8 +121,14 @@
 .price1 p{
     font-weight: 700 ;
 }
+.icon-save{
+    width: 5%;
+    float: left;
+    text-align: center;
+    padding: 110px 0px;
+}
 .icon-remove{
-    width: 10%;
+    width: 5%;
     float: left;
     text-align: center;
     padding: 110px 0px;
@@ -128,8 +149,79 @@
     margin: 20px 0px;
     border-radius: 5px;
     cursor: pointer;
+    padding: 0;
 }
 .payment h6{
     padding: 7px 0px;
-    font-size: 15px;
+    font-weight: 700;
+}
+
+.modal-dialog {
+    max-width: 1000px !important;
+}
+.dropdown{
+    float: left;
+    width: 100%;
+}
+.btn .btn-secondary .dropdown-toggle .dropdown-menu{
+    float: left;
+    width: 100%;
+}
+.btn .btn-secondary .dropdown-toggle{
+    width: 80%;
+    margin-left: 15px;
+    color:black;
+    border: 1px solid #d6cfcf;
+}
+.custom-select{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+.item .count .pro-qty {
+    width: 123px;
+    height: 46px;
+    border: 2px solid #ebebeb;
+    padding: 0 15px;
+    float: left;
+    margin-right: 14px;
+}
+
+.item .count .pro-qty .qtybtn {
+    font-size: 24px;
+    color: #b2b2b2;
+    float: left;
+    line-height: 38px;
+    cursor: pointer;
+    width: 18px;
+}
+
+.item .count .pro-qty .qtybtn.dec {
+    font-size: 30px;
+}
+
+.item .count .pro-qty input {
+    overflow: hidden;
+    text-align: center;
+    width: 52px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    color: #4c4c4c;
+    line-height: 40px;
+    float: left;
+}
+.bold{
+    font-weight: 700;
+}
+.margin-left-right{
+    margin: 0 30px;
+}
+.form-control1 {
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+    flex-direction: column;
+    border: 1px solid #949494 !important;
+    height: 32px;
+    border-radius: 5px;
 }

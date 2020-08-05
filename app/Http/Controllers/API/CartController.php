@@ -54,4 +54,14 @@ class CartController extends BaseController
         }
         return view('component.list-checkout');
     }
+    public function saveListItem(Request $request,$id,$qty)
+    {
+        $oldCart = Session('Cart') ? Session('Cart') : null;
+        $newCart = new CartItem($oldCart);
+        $newCart->SaveItem($id, $qty);
+
+        $request->session()->put('Cart', $newCart);
+
+        return view('component.list-checkout');
+    }
 }
