@@ -32,16 +32,6 @@ class Order extends Model
         return $this->belongsTo(Address::class, 'shipping_address');
     }
 
-    public function shippingMethod()
-    {
-        return $this->belongsTo(ShippingVendor::class, 'shipping_method');
-    }
-
-    public function payment()
-    {
-        return $this->belongsTo(Payment::class, 'payment_method');
-    }
-
     public function orderItems()
     {
         return $this->hasMany(OrderItem::class, 'order_id');

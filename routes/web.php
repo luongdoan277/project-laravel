@@ -26,6 +26,8 @@ Route::get('/add-to-cart/{id}', 'API\CartController@addToCart');
 Route::get('/deleteItem/{id}', 'API\CartController@deleteItem');
 Route::get('/deleteItemList/{id}', 'API\CartController@deleteListItem');
 Route::get('/saveItemList/{id}/{qty}', 'API\CartController@saveListItem');
+Route::get('/review-order', 'API\CartController@address')->name('review-order');
+Route::get('/review','API\OrderController@createOrder')->name('createOrder');
 //Product
 Route::resource('product','API\ProductController');
 //Category

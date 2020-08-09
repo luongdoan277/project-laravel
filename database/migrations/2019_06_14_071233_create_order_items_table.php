@@ -17,10 +17,9 @@ class CreateOrderItemsTable extends Migration
             $table->bigIncrements('item_id');
             $table->bigInteger('order_id');
             $table->bigInteger('product_id');
-            $table->string('sku',100);
             $table->integer('quantity');
             $table->double('price');
-            $table->string('product_type');
+            $table->string('product_type')->nullable();
             $table->integer('item_type')->nullable();
             $table->timestamps();
         });

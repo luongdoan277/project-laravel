@@ -69,6 +69,7 @@
             alertify.success('Update product success');
         });
     }
+
     function RenderCart(response){
         $("#list-item-cart").empty();
         $("#list-item-cart").html(response);

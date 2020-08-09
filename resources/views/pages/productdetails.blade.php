@@ -62,32 +62,33 @@
                     </div>
                 </div>
             </div>
-{{--            <div class="related-product">--}}
-{{--                <div class="title-related">--}}
-{{--                    <p>Related Product</p>--}}
-{{--                </div>--}}
-{{--                <div class="list-product">--}}
-{{--                    @foreach($TopProduct as $product)--}}
-{{--                        <div class="product">--}}
-{{--                            <div class="them">--}}
-{{--                                <div class="image-product">--}}
-{{--                                    <img src="images/{{$product->url_image}}" alt="">--}}
-{{--                                </div>--}}
-{{--                                <div class="check-product">--}}
-{{--                                    <a href="" class="check"><i class="fas fa-info-circle"></i></a>--}}
-{{--                                </div>--}}
-{{--                                <div class="addTo">--}}
-{{--                                    <a href="" class="add">Add To Cart</a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="price">--}}
-{{--                                <span>{{$product->product_name}}</span>--}}
-{{--                                <p>{{$product->price}}</p>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    @endforeach--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            <div class="related-product">
+                <div class="title-related">
+                    <p>Related Product</p>
+                </div>
+                <div class="list-product">
+                    @foreach($TopProduct as $products)
+                        @csrf
+                        <div class="product">
+                            <div class="them">
+                                <div class="image-product">
+                                    <img src="/images/{{$products->url_image}}" alt="">
+                                </div>
+                                <div class="check-product">
+                                    <a href="{{ route('product.show', $products->id)}}" class="check"><i class="fas fa-info-circle"></i></a>
+                                </div>
+                                <div class="addTo">
+                                    <a onclick="addToCart({{$products->id}})" href="javascript:" class="add">Add To Cart</a>
+                                </div>
+                            </div>
+                            <div class="price">
+                                <span><a href="{{route('product.show', $products->id)}}">{{$products->name}}</a></span>
+                                <p>{{$products->price}}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
     </main>
     @include('component.footer')

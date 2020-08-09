@@ -52,7 +52,7 @@
                                 @foreach(Session::get("Cart")->products as $item)
                                     <div class="items">
                                         <div class="image-items">
-                                            <img src="/images/{{$item['productInfo']->url_image}}" alt="">
+                                            <img src="{{asset('/images/'.$item['productInfo']->url_image)}}" alt="">
                                         </div>
                                         <div class="description">
                                             <a href="{{route('product.show', $item['productInfo']->id)}}">{{$item['productInfo']->name}}</a>

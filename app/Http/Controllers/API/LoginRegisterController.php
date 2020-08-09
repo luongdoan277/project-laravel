@@ -46,7 +46,7 @@ class LoginRegisterController extends Controller
                 ->with('error','Email-Address And Password Are Wrong.');
         }
     }
-    public function logout(Request $request) {
+    public function logout() {
         Auth::logout();
         return redirect()->route('home');
     }

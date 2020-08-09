@@ -2,10 +2,13 @@
 
 
 namespace App\Http\Controllers\API;
+use App\Model\Address;
 use App\Model\CartItem;
 use App\Model\Product;
+use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Validator;
 use Session;
 
 class CartController extends BaseController
@@ -63,5 +66,29 @@ class CartController extends BaseController
         $request->session()->put('Cart', $newCart);
 
         return view('component.list-checkout');
+    }
+    public function address(Request $request){
+        $validate = Validator::
+        make(
+            $request->all(),
+            [
+                'name' => 'required|string|max:255',
+                'phone' => 'required|numeric',
+                'province' => 'required|string|max:255',
+                'cty' => 'required|string|max:255',
+                'address' => 'required|string|max:255',
+            ],
+            [
+                'required' => 'Please enter :attribute',
+            ]
+        );
+//        if ($validate->fails()){
+//
+//        }else{
+            $request->session()->put('Address', $request->all());
+            return view('pages.review-order');
+//        }
+//        $address = $request->all();
+//        dd($address);
     }
 }

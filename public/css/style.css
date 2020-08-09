@@ -7,13 +7,15 @@
 }
 .check-out-list{
     min-height: 500px;
+    padding: 0 30px;
 }
 .container{
     /*border: 1px solid black;*/
 }
 .check-out{
+    font-weight: 700;
     font-size: 40px;
-    padding: 30px 0px;
+    padding: 30px 0;
 }
 .list-product-checkout{
     float: left;
@@ -32,9 +34,10 @@
     background-color: #E0E0E0;
     width: 100%;
     float: left;
-    margin: 30px 0;
+    margin-top: 30px;
 }
-.cart{
+.cart1{
+    padding-top: 30px;
     width: 100%;
     float: left;
     margin-bottom: 3%;
@@ -43,37 +46,70 @@
     width: 30%;
     float: left;
     text-align: center;
-    padding: 20px 0px;
+    padding: 20px 0;
 }
 .description-checkout{
     width: 20%;
     float: left;
     text-align: center;
-    padding: 20px 0px;
+    padding: 20px 0;
 }
 .quantity-checkout{
     width: 20%;
     float: left;
     text-align: center;
-    padding: 20px 0px;
+    padding: 20px 0;
 }
 .price-checkout{
     width: 20%;
     float: left;
     text-align: center;
-    padding: 20px 0px;
+    padding: 20px 0;
 }
 .save-checkout{
     width: 5%;
     float: left;
     text-align: center;
-    padding: 20px 0px;
+    padding: 20px 0;
 }
 .remove-checkout{
     width: 5%;
     float: left;
     text-align: center;
-    padding: 20px 0px;
+    padding: 20px 0;
+}
+.product-payment{
+    width: 30%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.description2-payment{
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.description1-payment{
+    width: 30%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.quantity-payment{
+    width: 10%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.price-payment{
+    width: 10%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.item{
+    height: 255px;
 }
 .img{
     width: 30%;
@@ -81,8 +117,9 @@
     height: 255px;
 }
 .img > img{
-    width: 100%;
-    height: 100%;
+    padding: 0 10px;
+    width: 95%;
+    height: 95%;
     object-fit: cover;
 }
 .title{
@@ -90,18 +127,27 @@
     float: left;
     text-align: center;
     font-size: 15px;
-    padding: 110px 0px;
+    padding: 110px 0;
 }
 .title a{
     color: #000000;
     font-weight: 700;
 }
+.description-payment{
+    height: 100%;
+    width: 30%;
+    float: left;
+    display: grid;
+}
+.description-payment p{
+    margin-top: auto;
+    margin-bottom: auto;
+}
 .count{
-    margin: 0 80.5px;
-    width: 120px;
+    padding: 105px 50px;
+    width: 20%;
     float: left;
     text-align: center;
-    padding: 105px 0px;
     display: flex;
 }
 .count p{
@@ -116,7 +162,7 @@
     float: left;
     font-size: 15px;
     text-align: center;
-    padding: 110px 0px;
+    padding: 110px 0;
 }
 .price1 p{
     font-weight: 700 ;
@@ -125,13 +171,13 @@
     width: 5%;
     float: left;
     text-align: center;
-    padding: 110px 0px;
+    padding: 110px 0;
 }
 .icon-remove{
     width: 5%;
     float: left;
     text-align: center;
-    padding: 110px 0px;
+    padding: 110px 0;
 }
 .input-button{
     width: 40px;
@@ -146,13 +192,13 @@
     width: 100%;
     float: left;
     height: 40px;
-    margin: 20px 0px;
+    margin: 20px 0;
     border-radius: 5px;
     cursor: pointer;
     padding: 0;
 }
 .payment h6{
-    padding: 7px 0px;
+    padding: 7px 0;
     font-weight: 700;
 }
 
@@ -216,6 +262,27 @@
 .margin-left-right{
     margin: 0 30px;
 }
+.margin-top{
+    margin-top: 20px;
+}
+.padding-top{
+    padding-top: 1rem;
+}
+.padding-left{
+    padding-left: 1rem;
+}
+.padding-right{
+    padding-right: 1rem;
+}
+.padding-bottom{
+    padding-bottom: 1rem;
+}
+.no-padding-bottom{
+    padding-bottom: 0;
+}
+.no-margin-bottom{
+    margin-bottom: 0;
+}
 .form-control1 {
     width: 100%;
     display: flex;
@@ -224,4 +291,62 @@
     border: 1px solid #949494 !important;
     height: 32px;
     border-radius: 5px;
+}
+.title-payment{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.address p{
+    font-size: 22px;
+    font-weight: 600;
+}
+.count1{
+    padding: 105px 50px;
+    width: 10%;
+    float: left;
+    text-align: center;
+    display: flex;
+}
+.count1 p{
+    margin: 0;
+    line-height: 34px;
+    padding: 0;
+    font-size: 13px;
+    text-align: center;
+}
+.price2{
+    width: 10%;
+    float: left;
+    font-size: 15px;
+    text-align: center;
+    padding: 110px 0;
+}
+.price2 p{
+    font-weight: 700 ;
+}
+.left-payment .form-block{
+    margin: 20px 0;
+}
+.left-payment .form-block label{
+    font-size: 18px;
+    width: 25%;
+    padding-left: 25px;
+}
+.left-payment .form-block input{
+    width: 72%;
+    height: 36px;
+    padding-left: 15px;
+}
+.left-payment .form-block .textarea{
+    width: 72%;
+    height: 100px;
+    padding-left: 15px;
+}
+.payments-method li{
+    list-style: none;
+}
+.Payment_box{
+    padding: 20px;
+    background-color: white;
 }
