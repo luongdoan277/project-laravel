@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Home Page
+Route::get('highchart','HightChartController@show');
 Route::get('/','API\HomeController@index');
 //Login and Register
 Route::get('/login','API\CustomerController@getLogin')->name('getlogin');
