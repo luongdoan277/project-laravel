@@ -17,10 +17,10 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->string('order_number',50)->unique();
             $table->bigInteger('customer_id');
-            $table->bigInteger('shipping_address');
+            $table->text('shipping_address');
             $table->integer('shipping_method');
             $table->string('tracking_number', 50)->nullable();
-            $table->integer('payment_method')->nullable(1);
+            $table->integer('payment_method')->nullable(1)->comment('1: Payment on delivery, 2:ATM');
             $table->integer('status_payment')->default(0);
             $table->double('total')->nullable();
             $table->double('sub_total')->nullable();

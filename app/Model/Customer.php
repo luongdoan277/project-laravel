@@ -9,10 +9,10 @@ class Customer extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
+        'email',
+        'password',
         'type',
-        'phone',
-        'first_name',
-        'last_name',
+        'name',
         'last_purchase_at',
         'is_active'
     ];

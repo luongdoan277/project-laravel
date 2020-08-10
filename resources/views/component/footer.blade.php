@@ -45,7 +45,7 @@
         <div class="news">
             <p>New To BerryBerri</p>
             <span>
-            Get a <strong style="color: #f5cb5f">Rp 75.000</strong> Voucher (plus the latest fashion news and product launches) just by subscribing to our newsletter.
+            Get a <strong style="color: #f5cb5f">$100</strong> Voucher (plus the latest fashion news and product launches) just by subscribing to our newsletter.
         </span>
             <div class="form">
                 <div class="title-address">

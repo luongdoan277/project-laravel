@@ -15,10 +15,8 @@ class CreateAddressesTable extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->bigIncrements('address_id');
-            $table->bigInteger('customer_id');
             $table->string('type')->default('shipping');
-            $table->string('first_name', 50)->nullable();
-            $table->string('last_name', 50)->nullable();
+            $table->string('name', 50)->nullable();
             $table->string('phone', 30)->nullable();
             $table->string('province')->nullable();
             $table->string('city')->nullable();

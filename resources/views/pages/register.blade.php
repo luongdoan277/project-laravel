@@ -7,7 +7,8 @@
 {{--            Title--}}
             <h1>Sign Up</h1>
 {{--            form nhap du lieu--}}
-            <form action="" method="post" class="form-login">
+            <form action="{{route('postRegister')}}" method="post" class="form-login">
+                @csrf
 {{--                first name--}}
                 <div class="first-name">
                     <span>First Name</span>

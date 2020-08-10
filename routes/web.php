@@ -15,13 +15,21 @@ use Illuminate\Support\Facades\Route;
 //Home Page
 Route::get('highchart','HightChartController@show');
 Route::get('/','API\HomeController@index');
+Route::get('/','API\HomeController@index')->name('home');
 //Login and Register
 Route::get('/login','API\CustomerController@getLogin')->name('getlogin');
 Route::get('/register','API\CustomerController@getRegister')->name('getregister');
+Route::post('login', 'API\LoginRegisterController@login')->name('postLogin');
+Route::post('register', 'API\LoginRegisterController@register')->name('postRegister');
+Route::get('logout', 'API\LoginRegisterController@logout')->name('logout');
 //Cart
 Route::get('/checkout', 'API\CartController@getCheckout')->name('checkout');
-Route::get('add-to-cart/{id}', 'API\CartController@addToCart');
-Route::get('deleteItem/{id}', 'API\CartController@deleteItem');
+Route::get('/add-to-cart/{id}', 'API\CartController@addToCart');
+Route::get('/deleteItem/{id}', 'API\CartController@deleteItem');
+Route::get('/deleteItemList/{id}', 'API\CartController@deleteListItem');
+Route::get('/saveItemList/{id}/{qty}', 'API\CartController@saveListItem');
+Route::get('/review-order', 'API\CartController@address')->name('review-order');
+Route::get('/review','API\OrderController@createOrder')->name('createOrder');
 //Product
 Route::resource('product','API\ProductController');
 //Category

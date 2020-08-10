@@ -8,6 +8,22 @@
 body{
     font-family: 'Lato', sans-serif;
 }
+#style-2::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+    background-color: #000000;
+}
 .navbars{
     width: 100%;
     height: 100vh;
@@ -106,8 +122,8 @@ body{
     height: 16px;
     background: #f5cb5f;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -7px;
+    right: 9px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -932,4 +948,39 @@ body{
 
 .toggle #line3{
     transform: rotate(45deg) translate(-5px,-6px);
+}
+/*-----------------------------------------------------------*/
+.IncrementButtonContainer{
+    width: 120px;
+    height: 34px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.IncrementButtonContainer p{
+    margin: 0;
+    line-height: 34px;
+    padding: 0;
+    font-size: 13px;
+    text-align: center;
+}
+.DecrementContainer{
+    flex: 1;
+    background-color: #cac5c54d;
+    cursor: pointer;
+    border: 1px solid #dadada82;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.TotalContainer{
+    flex: 1.5;
+    border: 1px solid #dadada82;
+}
+.IncrementContainer{
+    flex: 1;
+    background-color: #cac5c54d;
+    cursor: pointer;
+    border: 1px solid #dadada82;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }

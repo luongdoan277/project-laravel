@@ -8,61 +8,63 @@
                 <p>Shop By Categories</p>
             </div>
             <div class="directory-menu">
+                @foreach($Category as $category)
                 <div class="menu-items">
-                    <img src="{{asset('images/hats.png')}}" alt="">
+                    <img src="images/{{$category->url_image}}" alt="">
                     <div class="content">
-                        <a href="#">
+                        <a href="{{ route('category.show', $category->category_id)}}">
                             <p>
-                                Hats
+                                {{$category->name}}
                             </p>
                             <span>Shop Now</span>
                         </a>
                     </div>
                 </div>
-                <div class="menu-items">
-                    <img src="{{asset('images/jackets.jpeg')}}" alt="">
-                    <div class="content">
-                        <a href="#">
-                            <p>
-                                Jackets
-                            </p>
-                            <span>Shop Now</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="menu-items">
-                    <img src="{{asset('images/sneaker.jpeg')}}" alt="">
-                    <div class="content">
-                        <a href="{{url('sneaker')}}">
-                            <p>
-                                Sneaker
-                            </p>
-                            <span>Shop Now</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="menu-items">
-                    <img src="{{asset('images/men.png')}}" alt="">
-                    <div class="content">
-                        <a href="#">
-                            <p>
-                                Mens
-                            </p>
-                            <span>Shop Now</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="menu-items">
-                    <img src="{{asset('images/womens.png')}}" alt="">
-                    <div class="content">
-                        <a href="#">
-                            <p>
-                                Womens
-                            </p>
-                            <span>Shop Now</span>
-                        </a>
-                    </div>
-                </div>
+                @endforeach
+{{--                <div class="menu-items">--}}
+{{--                    <img src="{{asset('images/jackets.jpeg')}}" alt="">--}}
+{{--                    <div class="content">--}}
+{{--                        <a href="#">--}}
+{{--                            <p>--}}
+{{--                                Jackets--}}
+{{--                            </p>--}}
+{{--                            <span>Shop Now</span>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="menu-items">--}}
+{{--                    <img src="{{asset('images/sneaker.jpeg')}}" alt="">--}}
+{{--                    <div class="content">--}}
+{{--                        <a href="{{url('sneaker')}}">--}}
+{{--                            <p>--}}
+{{--                                Sneaker--}}
+{{--                            </p>--}}
+{{--                            <span>Shop Now</span>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="menu-items">--}}
+{{--                    <img src="{{asset('images/men.png')}}" alt="">--}}
+{{--                    <div class="content">--}}
+{{--                        <a href="#">--}}
+{{--                            <p>--}}
+{{--                                Mens--}}
+{{--                            </p>--}}
+{{--                            <span>Shop Now</span>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="menu-items">--}}
+{{--                    <img src="{{asset('images/womens.png')}}" alt="">--}}
+{{--                    <div class="content">--}}
+{{--                        <a href="#">--}}
+{{--                            <p>--}}
+{{--                                Womens--}}
+{{--                            </p>--}}
+{{--                            <span>Shop Now</span>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
         <div class="main-product">

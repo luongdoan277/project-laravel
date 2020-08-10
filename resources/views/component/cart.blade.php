@@ -23,4 +23,5 @@
     </div>
 @elseif(Session::has("Cart") == null)
     <p style="height: 431px; text-align: center; padding-top: 50%"><b style="color: #949494">Your cart is empty</b></p>
+    <input hidden id="total_quantity" type="number" value="0">
 @endif

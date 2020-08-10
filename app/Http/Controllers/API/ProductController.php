@@ -52,7 +52,8 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::findOrFail($id);
-        return view('pages.productdetails', compact('product'));
+        $TopProduct = Product::all()->random(4);
+        return view('pages.productdetails', compact(['product', 'TopProduct']));
     }
 
     /**
