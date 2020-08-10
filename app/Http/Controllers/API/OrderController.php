@@ -18,7 +18,7 @@ class OrderController extends Controller
             'name' => $request->get('name'),
             'email' => $request->get('email'),
             'password' => 123456,
-            'phone' => $request->phone,
+            'phone' => $request->get('phone'),
         ]);
         $order = Order::create([
             'order_number' => random_bytes(12),

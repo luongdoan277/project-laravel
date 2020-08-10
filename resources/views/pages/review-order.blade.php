@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-block">
                             <label for="phone">Phone number</label>
-                            <input type="text" name="phone" id="phone" placeholder="Phone number" />
+                            <input type="text" name="phone" id="phone" placeholder="Phone number"/>
                         </div>
                         <div class="form-block">
                             <label for="email">Email</label>
