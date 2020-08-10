@@ -20,7 +20,7 @@
                         </div>
                         <div class="form-block">
                             <label for="phone">Phone number</label>
-                            <input type="text" id="phone" name="phone_number" placeholder="Phone number" />
+                            <input type="text" id="phone" name="phone" placeholder="Phone number" />
                         </div>
                         <div class="form-block">
                             <label for="email">Email</label>

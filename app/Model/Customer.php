@@ -12,6 +12,7 @@ class Customer extends Model
         'email',
         'password',
         'type',
+        'phone',
         'name',
         'last_purchase_at',
         'is_active'

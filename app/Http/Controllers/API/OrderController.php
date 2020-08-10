@@ -8,6 +8,7 @@ use App\Model\Order;
 use App\Model\OrderItem;
 use Illuminate\Http\Request;
 use Session;
+use function Sodium\randombytes_buf;
 
 class OrderController extends Controller
 {
@@ -21,7 +22,7 @@ class OrderController extends Controller
             'phone' => $request->get('phone'),
         ]);
         $order = Order::create([
-            'order_number' => random_bytes(12),
+            'order_number' => random_int(00000001,99999999),
             'customer_id' => $customer->id,
             'shipping_address' => $request->get('address'),
             'shipping_method' => 1,

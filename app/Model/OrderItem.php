@@ -9,6 +9,7 @@ class OrderItem extends Model
     protected $primaryKey = 'item_id';
     protected $fillable = [
         'order_id',
+        'product_id',
         'sku',
         'quantity',
         'price',
