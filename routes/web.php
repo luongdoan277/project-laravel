@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Home Page
-Route::get('highchart','HightChartController@show');
 Route::get('/','API\HomeController@index');
 Route::get('/','API\HomeController@index')->name('home');
 //Login and Register
@@ -34,5 +33,6 @@ Route::get('/review','API\OrderController@createOrder')->name('createOrder');
 Route::resource('product','API\ProductController');
 //Category
 Route::resource('category','API\CategoryController');
+Route::get('chart','HightChartController@index');
 
 
