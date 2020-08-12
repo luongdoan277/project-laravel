@@ -17,6 +17,7 @@ body{
 }
 .form-control{
     width: 50%;
+    height: 100%;
     padding: 0px 70px;
     display: flex;
     flex-direction: column;

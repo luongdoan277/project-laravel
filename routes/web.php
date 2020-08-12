@@ -35,4 +35,28 @@ Route::resource('product','API\ProductController');
 Route::resource('category','API\CategoryController');
 Route::get('chart','HightChartController@index');
 
+//----------------------------admin----------------------------------//
 
+//product list
+Route::get('product-admin','PageController@index');
+
+//Edit Product
+Route::get('products','ProductAdminController@index');
+Route::get('/delete/{id}','ProductAdminController@destroy');
+Route::resource('product','ProductAdminController');
+Route::put('/update/{id}','ProductAdminController@update');
+
+
+//Login and Register admin
+
+//view
+Route::get('get-register','AdminController@getRegister');
+Route::get('get-login','AdminController@getLogin');
+//method
+Route::post('login-admin','AdminController@postLogin');
+Route::post('/register-admin','AdminController@postRegister');
+Route::get('logout-admin','AdminController@logout');
+
+//order
+Route::get('order','OrderAdminController@index');
+Route::get('orderDetails','OrderAdminController@orderDetails');

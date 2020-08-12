@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.box-background{
+    width: 100%;
+    height: 722px;
+    background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/*Login*/
+.manipulation{
+    position: absolute;
+    width: 60%;
+    height: 70%;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: -8px 8px 14px 0 rgba(25,42,70,.11);
+    display: flex;
+}
+
+.img-login-admin{
+    width: 50%;
+    height: 100%;
+}
+.img-login-admin > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-admin{
+    width: 50%;
+    height: 100%;
+    padding: 30px 40px;
+}
+.content-admin .title-admin{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-admin .title-admin > span{
+    font-size: 23px;
+}
+
+.group-admin{
+    width: 100%;
+    height: 65%;
+}
+.group-admin .admin-info{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.group-admin .admin-info > input {
+    width: 100%;
+    height: 45px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    border: 1.5px solid #00000030;
+    padding: 10px 15px;
+}
+.group-admin .remember-password{
+    width: 100%;
+    padding: 15px 0;
+}
+.group-admin .admin-info > input:focus{
+    background: #0c348317;
+}
+
+.group-admin .submit-admin{
+    width: 100%;
+    height: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3%;
+    border-bottom: 1px solid #636b6f5e;
+}
+.group-admin .submit-admin > button {
+    width: 100%;
+    height: 43px;
+    background: #1f4daa;
+    border: none;
+    color: white;
+    font-size: 14px;
+    border-radius: 15px;
+    outline: none;
+    cursor: pointer;
+}
+.question{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.question > a{
+    text-decoration: none;
+    margin-bottom: 3%;
+    color: #0c3483;
+}
+
+/*Register*/
+.manipulation-register{
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: -8px 8px 14px 0 rgba(25,42,70,.11);
+    display: flex;
+}
+.img-register-admin{
+    width: 40%;
+    height: 100%;
+}
+.img-register-admin > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-register{
+    width: 60%;
+    height: 100%;
+    padding: 20px 50px;
+}
+
+.content-register .title-register{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-register .title-register > span{
+    font-size: 21px;
+}
+.group-admin-register{
+    width: 100%;
+    height: 65%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.group-admin-register .information{
+    width: 100%;
+    height: 100%;
+    display: flex; align-items: center;
+    justify-content: space-between;
+}
+.group-admin-register .information > input{
+    width: 94%;
+    height: 45px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    border: 1.5px solid #00000030;
+    padding: 10px 15px;
+}
+
+.group-admin-register .info-password{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.group-admin-register .info-password .password{
+    width: 100%;
+    height: 30%;
+}
+.group-admin-register .info-password .password > input{
+    width: 94%;
+    height: 45px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    border: 1.5px solid #00000030;
+    padding: 10px 15px;
+}
+.group-admin-register .information > input:focus{
+    background: #0c348317;
+}
+
+.group-admin-register .submit-register{
+    width: 93%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.group-admin-register .submit-register > button{
+    outline: none;
+    background: none;
+    width: 100%;
+    height: 43px;
+    background: #1f4daa;
+    border: none;
+    color: white;
+    font-size: 14px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.error-group{
+    display: flex;
+}
+.error-group > span{
+    color: red;
+}

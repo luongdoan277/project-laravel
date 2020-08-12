@@ -1,0 +1,394 @@
+.listproduct-shoppingcart{
+    background: #ffffff;
+    box-shadow: -8px 8px 14px 0 rgba(25,42,70,.11);
+    border-radius: 15px;
+    width: 60%;
+    float: right;
+}
+
+.highchart{
+    width: 38%;
+    border-radius: 10px;
+    float: left;
+    height: 690px;
+    background: #ffffff;
+    box-shadow: -8px 8px 14px 0 rgba(25,42,70,.11);
+}
+.product-shoppingcart{
+    width: 100%;
+    background: #ffffff;
+    box-shadow: -8px 8px 14px 0 rgba(25,42,70,.11);
+    border-radius: 15px;
+}
+.form-group-admin{
+    position: relative;
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.form-control-admin{
+    width: 100%;
+    position: absolute;
+    right: 0;
+}
+.form-control-admin > input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding: 7px 10px;
+    outline: none;
+}
+.form-group-admin .submit-product{
+    position: absolute;
+    right: 0;
+}
+.form-group-admin .submit-product > button{
+    padding: 7px 10px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.cart-header{
+    width: 100%;
+    padding: 17px 12px;
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    letter-spacing: 1px;
+
+}
+.cart-content .table-product{
+    width: 100%;
+}
+.cart-content .table-product > tbody > tr > th{
+    width: 13%;
+    padding: 17px 12px;
+}
+.cart-content .table-product > tbody > tr > td {
+    padding: 14px 8px;
+    font-size: 14px;
+}
+.cart-content .table-product > tbody > tr > td .image-product{
+    width: 100%;
+    height: 100px;
+}
+.cart-content .table-product > tbody > tr > td .image-product > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bt{
+    border-top: 1px solid #d5b8b8cc;
+}
+
+.cart-content .table-product > tbody > tr > td > select{
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 7px 10px;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    cursor: pointer;
+}
+
+.cart-content .table-product > tbody > tr > td > a{
+    color: black;
+    text-decoration: none;
+}
+.ct{
+    text-align: center;
+}
+
+/*Form control update*/
+.form-control-update{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    background: #ffffff;
+    padding: 10px;
+    box-shadow: -8px 8px 14px 0 rgba(25,42,70,.11);
+    margin-top: 1%;
+    border-radius: 15px;
+}
+.form-control-update .product-info{
+    padding: 10px 5px;
+}
+.form-control-update .product-info > label{
+    margin-bottom: 3%;
+}
+.form-control-update .product-info > input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+    outline: none;
+    border: 1px solid #00000021;
+    box-shadow: -8px 8px 14px 0 rgba(25,42,70,.11);
+}
+
+.form-control-update .product-info > input:focus {
+    background: #0c34830f;
+}
+.form-control-update .submit-insert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 138px;
+}
+.form-control-update .submit-insert > button{
+    width: 100px;
+    height: 44px;
+    border: none;
+    padding: 5px 7px;
+    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+    border-radius: 15px;
+    color: white;
+    box-shadow: -8px 8px 14px 0 rgba(25,42,70,.11);
+    outline: none;
+}
+
+
+.message-success{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.message-success .box-success{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    background: #636b6f1c;
+}
+.message-success .box-success > span{
+    margin-right: 10px;
+    font-size: 17px;
+}
+.message-success .box-success > i{
+    color: #18cd55;
+    font-size: 20px;
+}
+
+
+.your-update{
+    padding: 10px 5px;
+    margin: 3% 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background: #00000014;
+}
+.your-update > p{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.order-page-content{
+    background: #ffffff;
+    padding: 10px 15px;
+}
+.order-page-content .search-order{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.order-page-content .search-order .form-order{
+    width: 28%;
+}
+.order-page-content .search-order .form-order > input{
+    width: 72%;
+    height: 33px;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 14px;
+    outline: none;
+    border: 1px solid #0000004f;
+}
+.order-page-content .search-order .form-order > button{
+    width: 88px;
+    height: 31px;
+    border: none;
+    padding: 5px 7px;
+    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+    border-radius: 15px;
+    color: white;
+    outline: none;
+}
+
+.order-page-content .search-order .month-option{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.order-page-content .search-order .month-option > label{
+    margin-right: 10px;
+}
+.order-page-content .search-order .month-option .select-month{
+    width: 76%;
+    height: 33px;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 14px;
+    outline: none;
+    border: 1px solid #0000004f;
+}
+
+.header-order{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #00000047;
+}
+.header-order > span{
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.order-content{
+    width: 100%;
+    margin-top: 2%;
+}
+.order-content > table{
+    width: 100%;
+}
+.order-content > table >tbody>tr>th{
+    width: 15%;
+    background: rgb(50, 73, 85);
+    color: #ffffff;
+    border-right: 1px solid #ffffff;
+    text-align: center;
+    padding: 16px 7px;
+}
+.order-content > table >tbody>tr>td{
+    padding: 16px 7px;
+    text-align: center;
+}
+
+.status{
+    width: 100%;
+}
+.status > span{
+    padding: 6px 20px;
+    background: #00a6b2;
+    color: #ffffff;
+    border-radius: 15px;
+}
+.bb{
+    border-bottom: 1px solid #00000024;
+}
+.content-orderdetails{
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-order .header-title{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 10px 12px;
+    margin-bottom: 5%;
+}
+.details-order .header-title > span{
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.customer-info-order{
+    width: 40%;
+    height: 250px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.customer-info-order > ul > li{
+    display: flex;
+    padding: 10px 12px;
+}
+.customer-info-order > ul > li .title-info-customer > p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.customer-info-order > ul > li > span{
+    color: #2f2f2f;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.product-info-order{
+    background: #ffffff;
+}
+
+.product-info-order > table{
+    width: 100%;
+}
+
+.product-info-order > table > tbody > tr > th{
+    padding: 10px 12px;
+    width: 15%;
+    text-align: center;
+    height: 70px;
+
+}
+.product-info-order > table > tbody > tr > td{
+    padding: 10px 12px;
+    width: 15%;
+    text-align: center;
+}
+.product-info-order > table > tbody > tr > td > p{
+    font-size: 19px;
+    color: #b10000;
+    font-weight: 600;
+}
+.product-info-order > table > tbody > tr > td .image-product-order{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+.product-info-order > table > tbody > tr > td .image-product-order > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.payment{
+    width: 58%;
+    height: 250px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+}
+.payment > ul >li{
+    list-style: none;
+    display: flex;
+    padding: 10px 12px;
+}
+
+.payment > ul >li .title-info-shipment > p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.payment > ul > li > span {
+    color: #2f2f2f;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.bb-blue{
+   border-bottom: 3px solid rgb(67 139 211);
+}
