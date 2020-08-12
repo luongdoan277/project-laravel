@@ -1,5 +1,5 @@
-header>
-<div class="navbar-details">
+<header>
+<div class="navbar-detail">
     <div class="navlink-productdetails">
         <div class="link-productdetails">
             <div class="logo-productdetails">
@@ -11,8 +11,8 @@ header>
                 <li><a href="{{url('/')}}" class="links-product">Home</a></li>
                 <li><a href="#" class="links-product ">About Us</a></li>
                 <li><a href="#" class="links-product">Contact</a></li>
-                <li><a href="#" class="links-product">Blogs</a></li>
-                <li><a href="#" class="links-product active">Product</a></li>
+                <li><a href="{{route('searchOrder')}}" class="links-product active">My Order</a></li>
+                <li><a href="#" class="links-product ">Product</a></li>
                 <li><a href="#" class="links-product links-hamburger">Sign In <i class="fas fa-sign-in-alt"></i></a></li>
             </ul>
         </div>

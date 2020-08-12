@@ -296,7 +296,10 @@
     font-size: 40px;
     font-weight: 700;
 }
-
+.title-search{
+    font-size: 40px;
+    font-weight: 700;
+}
 .address p{
     font-size: 22px;
     font-weight: 600;
@@ -350,3 +353,12 @@
     padding: 20px;
     background-color: white;
 }
+.search-order{
+    background-image: url("../images/background-search.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 350px;
+    padding-top: 60px;
+}
+

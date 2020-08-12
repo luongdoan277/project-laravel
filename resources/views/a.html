@@ -2,10 +2,142 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('css/homepage.css')}}">
+    <link rel="stylesheet" href="{{asset('css/product.css')}}">
+    <link rel="stylesheet" href="{{asset('css/loginss.css')}}">
+    <link rel="stylesheet" href="{{asset('css/register.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/productdetails.css')}}">
+    <link rel="stylesheet" href="{{asset('FontAwesome/css/all.min.css')}}">
+    <link rel="icon" href="{{asset('image/logo2.png')}}">
 </head>
 <body>
-<div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5f22874f61169013605906-1"><span class="crayon-m">public</span><span class="crayon-h"> </span><span class="crayon-t">function</span><span class="crayon-h"> </span><span class="crayon-e">addToCart</span><span class="crayon-sy">(</span><span class="crayon-sy">$</span><span class="crayon-v">id</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-2"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-5f22874f61169013605906-3"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">$</span><span class="crayon-v">product</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">Product</span><span class="crayon-o">::</span><span class="crayon-e">find</span><span class="crayon-sy">(</span><span class="crayon-sy">$</span><span class="crayon-v">id</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-4">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-sy">(</span><span class="crayon-o">!</span><span class="crayon-sy">$</span><span class="crayon-v">product</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-6">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">abort</span><span class="crayon-sy">(</span><span class="crayon-cn">404</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-8">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-10">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-11"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">$</span><span class="crayon-v">cart</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">session</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-o">-&gt;</span><span class="crayon-e">get</span><span class="crayon-sy">(</span><span class="crayon-s">'cart'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-12">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-13"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-c">// if cart is empty then this the first product</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-14"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-sy">(</span><span class="crayon-o">!</span><span class="crayon-sy">$</span><span class="crayon-v">cart</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-5f22874f61169013605906-15">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-16"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">$</span><span class="crayon-v">cart</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">[</span></div><div class="crayon-line" id="crayon-5f22874f61169013605906-17"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">$</span><span class="crayon-v">id</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">[</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-18"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"name"</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-v">product</span><span class="crayon-o">-&gt;</span><span class="crayon-v">name</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-5f22874f61169013605906-19"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"quantity"</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-20"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"price"</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-v">product</span><span class="crayon-o">-&gt;</span><span class="crayon-v">price</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-5f22874f61169013605906-21"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"photo"</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-v">product</span><span class="crayon-o">-&gt;</span><span class="crayon-i">photo</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-22"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">]</span></div><div class="crayon-line" id="crayon-5f22874f61169013605906-23"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">]</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-24">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-25"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">session</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-o">-&gt;</span><span class="crayon-e">put</span><span class="crayon-sy">(</span><span class="crayon-s">'cart'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-v">cart</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-26">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-27"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-e">redirect</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-o">-&gt;</span><span class="crayon-e">back</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-o">-&gt;</span><span class="crayon-e">with</span><span class="crayon-sy">(</span><span class="crayon-s">'success'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">'Product added to cart successfully!'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-28"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-5f22874f61169013605906-29">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-30"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-c">// if cart not empty then check if this product exist then increment quantity</span></div><div class="crayon-line" id="crayon-5f22874f61169013605906-31"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-sy">(</span><span class="crayon-e">isset</span><span class="crayon-sy">(</span><span class="crayon-sy">$</span><span class="crayon-v">cart</span><span class="crayon-sy">[</span><span class="crayon-sy">$</span><span class="crayon-v">id</span><span class="crayon-sy">]</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-32">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-33"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">$</span><span class="crayon-v">cart</span><span class="crayon-sy">[</span><span class="crayon-sy">$</span><span class="crayon-v">id</span><span class="crayon-sy">]</span><span class="crayon-sy">[</span><span class="crayon-s">'quantity'</span><span class="crayon-sy">]</span><span class="crayon-o">++</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-34">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-35"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">session</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-o">-&gt;</span><span class="crayon-e">put</span><span class="crayon-sy">(</span><span class="crayon-s">'cart'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-v">cart</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-36">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-37"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-e">redirect</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-o">-&gt;</span><span class="crayon-e">back</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-o">-&gt;</span><span class="crayon-e">with</span><span class="crayon-sy">(</span><span class="crayon-s">'success'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">'Product added to cart successfully!'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-38">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-39"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-40">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-41"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-c">// if item not exist in cart then add to cart with quantity = 1</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-42"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">$</span><span class="crayon-v">cart</span><span class="crayon-sy">[</span><span class="crayon-sy">$</span><span class="crayon-v">id</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">[</span></div><div class="crayon-line" id="crayon-5f22874f61169013605906-43"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"name"</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-v">product</span><span class="crayon-o">-&gt;</span><span class="crayon-v">name</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-44"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"quantity"</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-5f22874f61169013605906-45"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"price"</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-v">product</span><span class="crayon-o">-&gt;</span><span class="crayon-v">price</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-46"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"photo"</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-v">product</span><span class="crayon-o">-&gt;</span><span class="crayon-i">photo</span></div><div class="crayon-line" id="crayon-5f22874f61169013605906-47"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">]</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-48">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-49"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">session</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-o">-&gt;</span><span class="crayon-e">put</span><span class="crayon-sy">(</span><span class="crayon-s">'cart'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-v">cart</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-50">&nbsp;</div><div class="crayon-line" id="crayon-5f22874f61169013605906-51"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-e">redirect</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-o">-&gt;</span><span class="crayon-e">back</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-o">-&gt;</span><span class="crayon-e">with</span><span class="crayon-sy">(</span><span class="crayon-s">'success'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">'Product added to cart successfully!'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5f22874f61169013605906-52"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div></div>
+<div>
+    <div class="m_-7557731890359634491section" style="padding-top:0px">
+        <div class="m_-7557731890359634491section-content">
+            <h2>Hi Đoàn Duy Lương  ,</h2>
+            <div class="m_-7557731890359634491hide">
+            </div>
 
+            <p>Thank you for trusting us.</p>
+            <p>Your order&nbsp;has been received and is being processed. We will notify you when the parcel is ready</p>
+
+            <div class="m_-7557731890359634491two_col" align="center" style="padding-top:10px">
+                <div align="center">
+                    <a href="https://email.lazada.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlYQGkkEXzdSYwzfk3unrhHlubfs7trljwyePvbcMDYoejI9lN8PspTPHC5M8CVXtpKX%3DCBRTBAWY&amp;_ei_=EidnsdN_RVCFMKwnGHhZHU36T3C4jeQBnE6ULgokJ0kH1d00M3z3hRck8GJ0IOjzUEcuNuWlBSOeDatduCd6I3_OFAWvoylGr4c6535RCysR0wMfLOeKB707ZqM-ufPi7CikjGvk3xnZzPh-pq1BneMTKONgofvvozY.&amp;_di_=0fm32vpisv0k24gajd0md757gib27ah9i5igit6chu5qmli7e7qg" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://email.lazada.com/pub/cc?_ri_%3DX0Gzc2X%253DAQpglLjHJlYQGkkEXzdSYwzfk3unrhHlubfs7trljwyePvbcMDYoejI9lN8PspTPHC5M8CVXtpKX%253DCBRTBAWY%26_ei_%3DEidnsdN_RVCFMKwnGHhZHU36T3C4jeQBnE6ULgokJ0kH1d00M3z3hRck8GJ0IOjzUEcuNuWlBSOeDatduCd6I3_OFAWvoylGr4c6535RCysR0wMfLOeKB707ZqM-ufPi7CikjGvk3xnZzPh-pq1BneMTKONgofvvozY.%26_di_%3D0fm32vpisv0k24gajd0md757gib27ah9i5igit6chu5qmli7e7qg&amp;source=gmail&amp;ust=1597218683440000&amp;usg=AFQjCNErsRCDZmjeRgpwSwgToee0hGaYcg">
+                        <img src="https://ci5.googleusercontent.com/proxy/pT40pd5Fm81RuqzRRpJEQzHe1s-8wU_fp1Hti29e0uH4zgDxpsDmE4CMbyHBrrDCdZpJf-z-xM8zqvapH0iYX_hLUgqblskqaBGNlOrXu5nXvHXWE7Q4yha6T4sDnQr-VoB79AIS9DQjWQqh=s0-d-e1-ft#http://static.cdn.responsys.net/i5/responsysimages/content/lazada/btn_Order_Status_en.png" border="0" class="CToWUd"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m_-7557731890359634491section">
+        <div class="m_-7557731890359634491section-header m_-7557731890359634491section-header--deliveredTo">Delivery Details</div>
+        <div class="m_-7557731890359634491section-content">
+
+            <table cellpadding="2" cellspacing="0" width="100%">
+                <tbody>
+                <tr>
+                    <td width="25%" valign="top" style="color:#0f146d;font-weight:bold">Name:</td>
+                    <td width="75%" valign="top">Đoàn Duy Lương  </td>
+                </tr>
+                <tr>
+                    <td valign="top" style="color:#0f146d;font-weight:bold">Address:</td>
+                    <td valign="top">Quận Bắc Từ Liêm, Hà Nội, Phường Cổ Nhuế 1, số 44 ngõ 119  - </td>
+                </tr>
+                <tr>
+                    <td valign="top" style="color:#0f146d;font-weight:bold">Phone:</td>
+                    <td valign="top">0977034125</td>
+                </tr>
+                <tr>
+                    <td valign="top" style="color:#0f146d;font-weight:bold">Email:</td>
+                    <td valign="top"><a href="mailto:luongdoan277@gmail.com" target="_blank">luongdoan277@gmail.com</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="m_-7557731890359634491section" style="padding-bottom:0px">
+        <div class="m_-7557731890359634491section-content">
+            <div class="m_-7557731890359634491section-header m_-7557731890359634491section-header--yourPackage">Package 1</div>
+            <p style="padding-left:10px;margin-top:0px;margin-bottom:0px;color:#585858">
+                Sold by: Đại việt Computer
+                <br>
+                Delivered on: 08 Apr - 14 Apr, 2020
+            </p>
+            <div class="m_-7557731890359634491product" style="border-bottom:0px none">
+                <table cellpadding="0" cellspacing="0" style="width:100%">
+                    <tbody><tr>
+                        <td style="width:40%">
+                            <div style="padding-right:10px">
+                                <a href="https://www.lazada.vn/products/i284164131.html?urlFlag=true&amp;mp=1?" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.lazada.vn/products/i284164131.html?urlFlag%3Dtrue%26mp%3D1?&amp;source=gmail&amp;ust=1597218683440000&amp;usg=AFQjCNGUhXRyq6Mnb-DxNJJML1eBxm_dEw"><img src="https://ci3.googleusercontent.com/proxy/ue3bejeMaPfo79XM-0OQbpe6YdCVkut3NBzng0jZMYCdPYkxix4VhAZ2IfCt4CwHWB4yP0lOETDS9jsEkfiSSu8ObXg1ZO9jBQ50qQxxPbAlMwU=s0-d-e1-ft#http://vn-live.slatic.net/p/bcfcc0d3d8da9a5c4f50ad7761ef231a.jpg" style="width:100%;max-width:160px" class="CToWUd"></a>
+                            </div>
+                        </td>
+                        <td style="width:60%">
+                            <div class="m_-7557731890359634491product-productInfo-name">
+                                <a href="https://www.lazada.vn/products/i284164131.html?urlFlag=true&amp;mp=1?" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.lazada.vn/products/i284164131.html?urlFlag%3Dtrue%26mp%3D1?&amp;source=gmail&amp;ust=1597218683440000&amp;usg=AFQjCNGUhXRyq6Mnb-DxNJJML1eBxm_dEw"><span style="font-size:14px">Ram Laptop DDR3 4GB bus 1333 ( nhiều hãng) Samsung / Hynix/kingston/micron... PC3 10600s</span></a>
+                            </div>
+                            <div class="m_-7557731890359634491product-productInfo-price"><span style="font-size:14px">VND 309,000.00</span></div>
+                            <div class="m_-7557731890359634491product-productInfo-subInfo"><span style="font-size:14px">Quantity: 2</span></div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="m_-7557731890359634491section" style="padding-top:0px">
+        <div class="m_-7557731890359634491section-content">
+            <div class="m_-7557731890359634491checkout">
+                <div class="m_-7557731890359634491two_col">
+                    <table cellpadding="0" cellspacing="0" class="m_-7557731890359634491checkout-amount" style="border-bottom:1px solid #d8d8d8">
+                        <tbody><tr>
+                            <td valign="top" style="color:#585858;width:49%">Subtotal:</td>
+                            <td align="right" valign="top">VND</td>
+                            <td align="right" valign="top">618,000.00</td>
+                        </tr>
+                        <tr>
+                            <td valign="top" style="color:#585858;width:49%">Shipping fee:</td>
+                            <td align="right" valign="top">VND</td>
+                            <td align="right" valign="top">9,900.00</td>
+                        </tr>
+                        <tr>
+                            <td valign="top" style="color:#585858;width:49%">Discount:</td>
+                            <td align="right" valign="top">VND</td>
+                            <td align="right" valign="top">(0.00)</td>
+                        </tr>
+                        <tr>
+                            <td valign="top" style="color:#585858">Total (VAT included):</td>
+                            <td align="right" valign="top"><div style="color:#f27c24;font-weight:bold">VND</div></td>
+                            <td align="right" valign="top"><div style="color:#f27c24;font-weight:bold">627,900.00</div></td>
+                        </tr>
+                        </tbody></table>
+                    <br>
+                    <table cellpadding="0" cellspacing="0" class="m_-7557731890359634491checkout-amount">
+                        <tbody><tr>
+                            <td valign="top" style="color:#585858;width:49%">Delivery Type:</td>
+                            <td align="right" valign="top" colspan="2">Standard</td>
+                        </tr>
+                        <tr>
+                            <td valign="top" style="color:#585858;width:49%">Payment Method:</td>
+                            <td align="right" valign="top" colspan="2">Cash On Delivery</td>
+                        </tr>
+                        </tbody></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
