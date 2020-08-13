@@ -6,9 +6,8 @@
         <div class="title-payment text-center">
             Payment
         </div>
-        <form action="{{route('createOrder')}}" method="post">
+        <form action="{{route('createOrder')}}">
             @csrf
-            @method('POST')
             <div class="row" style="padding: 0 40px">
                 <div class="col-lg-5 left-payment">
                     <div class="list-product-payment">
