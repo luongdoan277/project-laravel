@@ -123,16 +123,9 @@
                                         <p>{{$item['productInfo']->description}}</p>
                                     </div>
                                     <div class="count1">
-                                        {{--                <input type="button" onclick="minus()" value="-" class="input-button">--}}
-                                        {{--                <input type="text" value="1" class="textbox" style="width: 40px; padding: 3px 6px">--}}
-                                        {{--                <input type="button" onclick="plus()" value="+" class="input-button">--}}
-
                                         <div class="TotalContainer" style="border: none">
-                                            {{--                    <span class="dec qtybtn">-</span>--}}
                                             <p>{{$item['qty']}}</p>
-                                            {{--                    <span class="inc qtybtn">+</span>--}}
                                         </div>
-
                                     </div>
                                     <div class="price2"><p>${{number_format($item['productInfo']->price)}}</p></div>
                                 </div>
