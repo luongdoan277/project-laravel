@@ -11,7 +11,7 @@
                     <li><a href="{{url('/')}}" class="links active">Home</a></li>
                     <li><a href="#" class="links ">About Us</a></li>
                     <li><a href="#" class="links">Contact</a></li>
-                    <li><a href="#" class="links">Blogs</a></li>
+                    <li><a href="{{route('searchOrder')}}" class="links">My Order</a></li>
                     <li><a href="#" class="links">Product</a></li>
                     <li><a href="#" class="links links-hamburger">Space<i class="fas fa-sign-in-alt"></i></a></li>
                 </ul>

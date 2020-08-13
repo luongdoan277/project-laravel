@@ -7,8 +7,8 @@ use App\Model\Customer;
 use App\Model\Order;
 use App\Model\OrderItem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Session;
-use function Sodium\randombytes_buf;
 
 class OrderController extends Controller
 {
@@ -31,18 +31,46 @@ class OrderController extends Controller
             'note'=>$request->get('note'),
         ]);
         foreach ($cart->products as $key => $value){
+            $quantity = $value['qty'];
+            $price = $value['price']/$value['qty'];
+            $product_type = $value['productInfo']->name;
+            $item_type = $value['productInfo']->url_image;
             OrderItem::create([
                 'order_id' => $order->id,
                 'product_id' => $key,
-                'quantity' => $value['qty'],
-                'price' => $value['price']/$value['qty'],
-                'product_type' => $request->get('note')
+                'quantity' => $quantity,
+                'price' => $price,
+                'product_type' => $product_type,
+                'item_type' => $item_type,
             ]);
         }
+        Mail::send('pages.mailorderdetail',[
+            'name' => $request->get('name'),
+            'items' => $cart->products,
+            'address' => $request->get('address'),
+            'phone' => $request->get('phone'),
+            'email' => $request->get('email'),
+            'order' => $order,
+        ], function ($mail) use ($request, $order){
+            $mail->from('luongdoan277@gmail.com');
+            $mail->to($request->get('email'));
+            $mail->subject('Order '.$order['order_number']);
+        });
         Session::forget('Cart');
         return redirect()->route('home');
     }
-    public function SearchOrder($order_number){
-
+    public function getSearchOrder(){
+        return view('pages.searchOrder');
+    }
+    public function SearchOrder(Request $request){
+        $order_number=$request->get('order_number');
+        $order = Order::all()->where('order_number','=', $order_number);
+        foreach ($order as $key => $value){
+            $customer_id = $value['customer_id'];
+            $order_id = $value['id'];
+        }
+        $customer = Customer::find($customer_id);
+        $order_item = OrderItem::all()->where('order_id','=', $order_id);
+        return view('pages.order-detail',compact(['order','customer','order_item']));
     }
 }

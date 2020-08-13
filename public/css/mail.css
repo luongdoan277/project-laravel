@@ -1,0 +1,58 @@
+.section-header--deliveredTo {
+    background-image: url(https://ci6.googleusercontent.com/proxy/kozFd-5wBSeG9k44hZTE7pLKg4r8Z85tWseOPIxlSjwYda1_vWGOHoUQHcYs2LwodwY9TMwl1of_hZkUwN7gv05aOJTDC1hqoV7ocwrtZz1ZiloVuEClVMF3p3q-KNR4Rsnay1QUHVUv_rfKQf3aag6kmogX=s0-d-e1-ft#http://static.cdn.responsys.net/i5/responsysimages/lazada/contentlibrary/!images/ic-your-order.png);
+}
+.section-header--yourPackage {
+    background-image: url(https://ci5.googleusercontent.com/proxy/MtS59kqNX0mbRIBTLQHaNLX-cKCe4V5vNSZZ3PxX3rhFNpVRAwxkRxjuJYKUto3Ph3qtyRUskJPVrVtICjjao6VbSZphfUu_rYsx8DQCuptl5VDQLrpdghxlVPkWP7uLcCHAeLt1lDH48jzyBsgfOPgP=s0-d-e1-ft#http://static.cdn.responsys.net/i5/responsysimages/lazada/contentlibrary/!images/ic-package.png);
+}
+.section{
+    padding: 30px;
+    background: #fff;
+    border-bottom: 10px solid #f0f0f0;
+}
+.section-end{
+    padding: 30px;
+    background: #fff;
+}
+.section-header {
+    background-size: 30px;
+    background-repeat: no-repeat;
+    padding: 5px 0 15px 45px;
+    font-size: 18px;
+}
+.product {
+    border-bottom: 1px solid #d8d8d8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+}
+.product-productInfo-name {
+    margin-bottom: 7px;
+}
+.product-productInfo-name a {
+    color: #173948!important;
+    font-size: 16px!important;
+    text-decoration: none!important;
+}
+.product-productInfo-price {
+    color: #dd3937;
+    font-size: 16px;
+}
+.section-content {
+    display: inline-block;
+    width: 100%;
+}
+.checkout {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+}
+.two_col {
+    width: 100%!important;
+    float: none!important;
+    max-width: none!important;
+}
+.checkout-amount {
+    width: 100%;
+    line-height: 24px;
+}

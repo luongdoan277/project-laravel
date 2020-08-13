@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('test', function (){
+    return view('pages.mailorderdetail');
+});
 //Home Page
 Route::get('/','API\HomeController@index');
 Route::get('/','API\HomeController@index')->name('home');
@@ -27,8 +30,11 @@ Route::get('/add-to-cart/{id}', 'API\CartController@addToCart');
 Route::get('/deleteItem/{id}', 'API\CartController@deleteItem');
 Route::get('/deleteItemList/{id}', 'API\CartController@deleteListItem');
 Route::get('/saveItemList/{id}/{qty}', 'API\CartController@saveListItem');
+//Order
 Route::get('/review-order', 'API\CartController@address')->name('review-order');
 Route::get('/review','API\OrderController@createOrder')->name('createOrder');
+Route::get('/searchOrder','API\OrderController@getSearchOrder')->name('searchOrder');
+Route::get('/order-detail', 'API\OrderController@SearchOrder')->name('order-detail');
 //Product
 Route::resource('product','API\ProductController');
 //Category
