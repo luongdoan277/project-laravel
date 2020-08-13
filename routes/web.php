@@ -42,7 +42,6 @@ Route::resource('category','API\CategoryController');
 Route::get('chart','HightChartController@index');
 
 //----------------------------admin----------------------------------//
-
 //product list
 Route::get('product-admin','PageController@index');
 

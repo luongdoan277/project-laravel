@@ -357,3 +357,15 @@
     height: 350px;
     padding-top: 60px;
 }
+.customer-info-order > ul > li {
+    display: flex;
+    padding: 10px 12px;
+}
+.customer-info-order > ul > li p {
+    display: flex;
+}
+.customer-info-order > ul > li .title-info-customer > p {
+    font-size: 20px;
+    font-weight: 600;
+}
+

@@ -65,12 +65,14 @@ class OrderController extends Controller
     public function SearchOrder(Request $request){
         $order_number=$request->get('order_number');
         $order = Order::all()->where('order_number','=', $order_number);
-        foreach ($order as $key => $value){
-            $customer_id = $value['customer_id'];
-            $order_id = $value['id'];
+        foreach ($order as $key){
+            $customer_id = $key['customer_id'];
+            $order_id = $key['id'];
         }
         $customer = Customer::find($customer_id);
         $order_item = OrderItem::all()->where('order_id','=', $order_id);
+//        dd($customer->name);
+//        dd($order,$customer,$order_item);
         return view('pages.order-detail',compact(['order','customer','order_item']));
     }
 }
