@@ -51,12 +51,13 @@ class OrderController extends Controller
             'phone' => $request->get('phone'),
             'email' => $request->get('email'),
             'order' => $order,
-        ], function ($mail) use ($request){
+        ], function ($mail) use ($request, $order){
             $mail->from('luongdoan277@gmail.com');
             $mail->to($request->get('email'));
-            $mail->subject('Order');
+            $mail->subject('Order '.$order['order_number']);
         });
-        return view('pages.mailorderdetail');
+        Session::forget('Cart');
+        return redirect()->route('home');
     }
     public function getSearchOrder(){
         return view('pages.searchOrder');

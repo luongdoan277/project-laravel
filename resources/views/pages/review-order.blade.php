@@ -98,7 +98,11 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="list-product-payment">
-                        <p style="font-size: 22px; font-weight: 600">List Product ({{Session::get("Cart")->totalQty}})</p>
+                        @if(Session::has("Cart") != null)
+                            <p style="font-size: 22px; font-weight: 600">List Product ({{Session::get("Cart")->totalQty}})</p>
+                        @else
+                            <p style="font-size: 22px; font-weight: 600">List Product (0)</p>
+                        @endif
                     </div>
                     <div class="text">
                         <div class="product-payment"><b>Products</b></div>
