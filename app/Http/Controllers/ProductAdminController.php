@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Model\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Psy\Util\Str;
 
@@ -39,40 +40,44 @@ class ProductAdminController extends Controller
      */
     public function store(Request $request)
     {
-
-        $this->validate($request,[
-            'name' => 'required|string|max:255',
-            'type' => 'required|string|max:255',
-            'slug' => 'required|string|max:255',
-            'url_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'description' => 'required|string',
-            'sku' => 'required|string|max:255',
-            'price' => 'required|integer',
-            'quantity' => 'required|integer',
-            'status' => 'required|integer',
-            'category_id' => 'required|integer',
-        ]);
+        if (Auth::check()){
+            $this->validate($request,[
+                'name' => 'required|string|max:255',
+                'type' => 'required|string|max:255',
+                'slug' => 'required|string|max:255',
+                'url_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+                'description' => 'required|string',
+                'sku' => 'required|string|max:255',
+                'price' => 'required|integer',
+                'quantity' => 'required|integer',
+                'status' => 'required|integer',
+                'category_id' => 'required|integer',
+            ]);
 
 //        Upload gallery
-        $image = $request->file('url_image');
-        $new_name = rand() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path("images"),$new_name);
+            $image = $request->file('url_image');
+            $new_name = rand() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path("images"),$new_name);
 //
 
-        $product = Product::create([
-             'name' => $request->get('name'),
-             'type' => $request->get('type'),
-             'slug' => $request->get('slug'),
-             'url_image' => $new_name,
-             'description' => $request->get('description'),
-             'sku' => $request->get('sku'),
-             'price' => $request->get('price'),
-             'quantity' => $request->get('quantity'),
-             'status' => $request->get('status'),
-             'category_id' => $request->get('category_id'),
-         ]);
+            $product = Product::create([
+                'name' => $request->get('name'),
+                'type' => $request->get('type'),
+                'slug' => $request->get('slug'),
+                'url_image' => $new_name,
+                'description' => $request->get('description'),
+                'sku' => $request->get('sku'),
+                'price' => $request->get('price'),
+                'quantity' => $request->get('quantity'),
+                'status' => $request->get('status'),
+                'category_id' => $request->get('category_id'),
+            ]);
 
-        return redirect()->back();
+            return redirect()->back()->with('success','Add Success');
+        }
+        else{
+            return redirect('get-login');
+        }
     }
 
     /**

@@ -87,7 +87,7 @@
                             <i id="icon-3" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">
-                            <li><a href="{{url('product-admin')}}">Product list</a></li>
+                            <li><a href="{{url('product-list')}}">Product list</a></li>
                             <li><a href="{{url('products')}}">Add new product</a></li>
                         </ul>
                     </li>
@@ -121,7 +121,6 @@
                         </a>
                         <ul class="sub">
                             <li><a href="{{url('order')}}">Order list</a></li>
-                            <li><a href="{{url('orderDetails')}}">List of orders</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -140,6 +139,54 @@
 <script src="{{asset('js/jquery.slimscroll.js')}}"></script>
 <script src="{{asset('js/jquery.nicescroll.js')}}"></script>
 <script src="{{asset('js/jquery.scrollTo.js')}}"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        const chart = Highcharts.chart('chart', {
+
+            title: {
+                text: 'BIỂU ĐỒ TỔNG DOANH THU HÀNG THÁNG'
+            },
+
+            subtitle: {
+                text: '.......'
+            },
+
+            xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+
+            series: [{
+                type: 'column',
+                colorByPoint: true,
+                data: [30, 80, 100, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+                showInLegend: false
+            }]
+        });
+        $('#plain').click(function () {
+            chart.update({
+                chart: {
+                    inverted: false,
+                    polar: false
+                },
+                subtitle: {
+                    text: 'Plain'
+                }
+            });
+        });
+        $('#polar').click(function () {
+            chart.update({
+                chart: {
+                    inverted: false,
+                    polar: true
+                },
+                subtitle: {
+                    text: 'Polar'
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
 

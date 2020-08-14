@@ -10,7 +10,7 @@
                 <div class="email-login">
                     <span>Email</span>
                     <input type="text" name="email">
-                    @if($errors->has('email'))
+                   php
                         <span>{{$errors->first('email')}}</span>
                     @endif
                 </div>

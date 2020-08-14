@@ -33,7 +33,7 @@ body{
 .nav-links{
     position: relative;
     width: 100%;
-    height: 10vh;
+    height: 78px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,8 +122,8 @@ body{
     height: 16px;
     background: #f5cb5f;
     position: absolute;
-    top: -7px;
-    right: 9px;
+    top: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
