@@ -31,4 +31,25 @@ class OrderAdminController extends Controller
 //          dd($order,$customer,$order_item);
             return view('Admin.orderDetails',compact(['order','customer','order_item']));
     }
+
+//    public function orderStatus($order_number){
+//        $orders = Order::find($order_number);
+//        return view('Admin.updateStatus',compact('orders'));
+//    }
+
+    public function updateStatus(Request $request,$order_id){
+        $this->validate($request,[
+           'status'=>'max:1',
+        ]);
+
+//        dd($order_number);
+        $orders = Order::find($order_id);
+
+        $orders->status = $request->input('status');
+
+        $orders->save();
+        return redirect()->back();
+
+    }
 }
+

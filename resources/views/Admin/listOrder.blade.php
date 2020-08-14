@@ -36,6 +36,7 @@
                         <th>Time</th>
                         <th>Total Price</th>
                         <th>Detail</th>
+                        <th>update Status</th>
                         <th>Delete</th>
                     </tr>
                     @foreach($OrderList as $orderlist)
@@ -44,7 +45,7 @@
                                 <td>{{$orderlist->name}}</td>
                             <td>
                                 <div class="status">
-                                    <span>new</span>
+                                    <span>{{$orderlist->status}}</span>
                                 </div>
                             </td>
                             <td>{{$orderlist->created_at}}</td>
@@ -54,7 +55,18 @@
                                     <i class="far fa-eye"></i>
                                 </a>
                             </td>
-                            <td><a href="">
+                            <td>
+                                <div class="update-status">
+                                    <form action="{{route('update-status', $orderlist->id)}}" class="control-status">
+                                        <input type="number" name="status" placeholder="Enter number..." min="1" max="3">
+                                        <input hidden type="submit">
+                                        <div>{{$errors->first('status')}}</div>
+                                    </form>
+
+                                </div>
+                            </td>
+                            <td>
+                                <a href="">
                                     <i class="fas fa-trash-alt"></i>
                                 </a>
                             </td>

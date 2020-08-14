@@ -146,7 +146,6 @@ class ProductAdminController extends Controller
         }
 
         $product->save();
-
         return redirect()->back();
     }
 
