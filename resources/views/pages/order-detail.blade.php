@@ -2,72 +2,70 @@
 @section('main')
     @include('component.headerProduct')
     <div>
-        @foreach($order as $orders => $value)
         <div class="details-order">
-            <div class="text-center margin-top" style="margin-bottom: 50px">
-                <span style="font-size: 26px; font-weight: 600">Order Detail ({{$value['id']}})</span>
+            @foreach($order as $orderdetails)
+            <div class="text-center margin-top" style="margin: 50px 0">
+                <span style="font-size: 26px; font-weight: 600">Order Detail ({{$orderdetails['order_number']}})</span>
             </div>
             <div class="content-orderdetails" style="margin: 0 100px">
-                <div class="customer-info-order" style="width: 40%; height: 250px; background: #ffffff; align-items: center; margin-bottom: 5%;">
-                    <ul>
+                <div class="customer-info-order">
+                    <ul style="margin-left: 20px">
                         <li>
                             <div class="title-info-customer">
-                                <p>Information Customer</p>
+                                <p style="padding-top: 10px">Information Customer</p>
                             </div>
                         </li>
-                        <li>
+                        <li class="padding-left">
                             <span>Customer name:</span>
                             <p>{{$customer->name}}</p>
                         </li>
-                        <li>
+                        <li class="padding-left">
                             <span>Number phone:</span>
                             <p>{{$customer->phone}}</p>
                         </li>
-                        <li>
+                        <li class="padding-left">
                             <span>Email:</span>
                             <p>{{$customer->email}}</p>
                         </li>
-                        <li>
+                        <li class="padding-left">
                             <span>Payments:</span>
-                            <p>Cash</p>
+                            <p>{{$orderdetails->payment_method}}</p>
                         </li>
-                        <li>
+                        <li class="padding-left">
                             <span>Transport fee:</span>
-                            <p>$10</p>
+                            <p>Free</p>
                         </li>
                     </ul>
                 </div>
-                <div class="payment">
-                    <ul>
+                <div class="payment-orderdetail">
+                    <ul style="margin-left: 20px">
                         <li>
                             <div class="title-info-shipment">
-                                <p>Shipment Details</p>
+                                <p style="padding-top: 10px">Shipment Details</p>
                             </div>
                         </li>
-                        <li>
+
+                        <li class="padding-left">
                             <span>Order date:</span>
-                            <p>{{$value['created_at']}}</p>
+                            <p>{{$orderdetails->created_at}}</p>
                         </li>
-                        <li>
+                        <li class="padding-left">
                             <span>Delivery date:</span>
-                            <p>25-7-2020</p>
+                            <p>{{$orderdetails->created_at}}</p>
                         </li>
-                        <li>
+                        <li class="padding-left">
                             <span>Date of receipt of goods:</span>
                             <p>28-7-2020</p>
                         </li>
-                        <li>
-                            <span>Gamete:</span>
-                            <p>Phú Diễn,Bắc Từ Liêm,Hà Nội</p>
-                        </li>
-                        <li>
+                        <li class="padding-left">
                             <span>Come:</span>
-                            <p>Lê Lợi,Kiến Xương,Thái Bình</p>
+                            <p>{{$orderdetails->shipping_address}}</p>
                         </li>
+
                     </ul>
                 </div>
             </div>
-            <div class="product-info-order">
+            <div class="product-info-order" style="margin: 0 100px">
                 <table>
                     <tr class="bb-blue">
                         <th>Id</th>
@@ -78,36 +76,37 @@
                         <th>Into money</th>
                         <th>Total Price</th>
                     </tr>
-                    @foreach($order_item as $value)
+                    @foreach($order_item as $product)
                         <tr class="bt">
-                            <td>{{$value['id']}}</td>
+                            <td>{{$product->id}}</td>
                             <td>
                                 <div class="image-product-order">
-                                    <img src="{{asset('images/'.$value['url_image'])}}" alt="">
+                                    <img src="images/{{$product->url_image}}" alt="">
                                 </div>
                             </td>
-                            <td>{{$value['name']}}</td>
-                            <td>2</td>
-                            <td>$350</td>
-                            <td>$350</td>
+                            <td>{{$product->name}}</td>
+                            <td>{{$product->quantity}}</td>
+                            <td>{{$product->price}}</td>
+                            <td>{{$product->price}}</td>
                             <td></td>
                         </tr>
                     @endforeach
-                    <tr class="bt" style="width: 100%">
+
+                    <tr class="bt" style="width: 100%; border-top: 3px solid #5a5a5a">
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
+                        <td><p>Total:</p></td>
                         <td>
-                            <p>$.1000</p>
+                            <p>${{$orderdetails->total}}</p>
                         </td>
                     </tr>
                 </table>
+                <div style="margin-bottom: 50px"></div>
             </div>
+            @endforeach
         </div>
-        @endforeach
-    </div>
     @include('component.footer')
 @endsection

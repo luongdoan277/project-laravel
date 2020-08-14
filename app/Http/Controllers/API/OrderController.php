@@ -7,6 +7,7 @@ use App\Model\Customer;
 use App\Model\Order;
 use App\Model\OrderItem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Session;
 
@@ -70,7 +71,7 @@ class OrderController extends Controller
             $order_id = $key['id'];
         }
         $customer = Customer::find($customer_id);
-        $order_item = OrderItem::all()->where('order_id','=', $order_id);
+        $order_item = DB::select('select * from orders,products,order_items where orders.id = ' . $order_id . ' ' . 'and products.id = order_items.product_id' . ' ' . 'and  order_items.order_id = ' . $order_id );
 //        dd($customer->name);
 //        dd($order,$customer,$order_item);
         return view('pages.order-detail',compact(['order','customer','order_item']));

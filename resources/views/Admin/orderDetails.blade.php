@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="details-order">
+        @foreach($order as $orderdetails)
         <div class="header-title">
             <span>Payment and delivery information</span>
         </div>
-        @foreach($order as $orderdetails)
         <div class="content-orderdetails">
             <div class="customer-info-order">
                 <ul>
