@@ -20,7 +20,7 @@ class CreateOrderItemsTable extends Migration
             $table->integer('quantity');
             $table->double('price');
             $table->string('product_type')->nullable();
-            $table->integer('item_type')->nullable();
+            $table->string('item_type')->nullable();
             $table->timestamps();
         });
     }
