@@ -15,7 +15,9 @@
         </div>
         <div class="content-shoppingcart">
             <div class="highchart">
-
+                <figure class="highcharts-figure">
+                    <div id="chart"></div>
+                </figure>
             </div>
             <div class="listproduct-shoppingcart">
                 <div class="cart-header">

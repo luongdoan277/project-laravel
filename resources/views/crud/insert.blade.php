@@ -2,15 +2,15 @@
 
 @section('content')
     <div class="form-update">
-{{--        @if($message == Session::get('success'))--}}
+        @if(Session::has('success'))
         <div class="message-success">
             <div class="box-success">
-                <span>Add Success</span>
-                <i class="fas fa-vote-yea"></i>
+                <span>{{Session::get('success')}}</span>
+                <i class="fab fa-vine"></i>
             </div>
         </div>
-{{--        @endif--}}
-        <form action="{{route('product.store')}}" class="form-control-update" method="post" enctype="multipart/form-data">
+        @endif
+        <form action="{{route('product-admin.store')}}" class="form-control-update" method="post" enctype="multipart/form-data">
             @csrf
             <div class="product-info">
                 <label>Name</label>

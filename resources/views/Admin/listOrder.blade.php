@@ -38,83 +38,28 @@
                         <th>Detail</th>
                         <th>Delete</th>
                     </tr>
-                    <tr class="bb">
-                        <td>1</td>
-                        <td>Khanh</td>
-                        <td>
-                            <div class="status">
-                                <span>new</span>
-                            </div>
-                        </td>
-                        <td>21-09-2020</td>
-                        <td>$350</td>
-                        <td><a href="">
-                                <i class="far fa-eye"></i>
-                            </a>
-                        </td>
-                        <td><a href="">
-                                <i class="fas fa-trash-alt"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class="bb">
-                        <td>1</td>
-                        <td>Khanh</td>
-                        <td>
-                            <div class="status">
-                                <span>new</span>
-                            </div>
-                        </td>
-                        <td>21-09-2020</td>
-                        <td>$350</td>
-                        <td><a href="">
-                                <i class="far fa-eye"></i>
-                            </a>
-                        </td>
-                        <td><a href="">
-                                <i class="fas fa-trash-alt"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class="bb">
-                        <td>1</td>
-                        <td>Khanh</td>
-                        <td>
-                            <div class="status">
-                                <span>new</span>
-                            </div>
-                        </td>
-                        <td>21-09-2020</td>
-                        <td>$350</td>
-                        <td><a href="">
-                                <i class="far fa-eye"></i>
-                            </a>
-                        </td>
-                        <td><a href="">
-                                <i class="fas fa-trash-alt"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class="bb">
-                        <td>1</td>
-                        <td>Khanh</td>
-                        <td>
-                            <div class="status">
-                                <span>new</span>
-                            </div>
-                        </td>
-                        <td>21-09-2020</td>
-                        <td>$350</td>
-                        <td><a href="">
-                                <i class="far fa-eye"></i>
-                            </a>
-                        </td>
-                        <td><a href="">
-                                <i class="fas fa-trash-alt"></i>
-                            </a>
-                        </td>
-                    </tr>
-
+                    @foreach($OrderList as $orderlist)
+                        <tr class="bb">
+                            <td>{{$orderlist->id}}</td>
+                                <td>{{$orderlist->name}}</td>
+                            <td>
+                                <div class="status">
+                                    <span>new</span>
+                                </div>
+                            </td>
+                            <td>{{$orderlist->created_at}}</td>
+                            <td>${{$orderlist->total}}</td>
+                            <td>
+                                <a href={{route('order-details', $orderlist->order_number)}}>
+                                    <i class="far fa-eye"></i>
+                                </a>
+                            </td>
+                            <td><a href="">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
                 </table>
             </div>
         </div>

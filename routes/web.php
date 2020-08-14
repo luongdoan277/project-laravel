@@ -16,7 +16,6 @@ Route::get('test', function (){
     return view('pages.mailorderdetail');
 });
 //Home Page
-Route::get('/','API\HomeController@index');
 Route::get('/','API\HomeController@index')->name('home');
 //Login and Register
 Route::get('/login','API\CustomerController@getLogin')->name('getlogin');
@@ -42,26 +41,27 @@ Route::resource('category','API\CategoryController');
 Route::get('chart','HightChartController@index');
 
 //----------------------------admin----------------------------------//
+
 //product list
-Route::get('product-admin','PageController@index');
+    Route::get('product-list','PageController@index');
 
 //Edit Product
-Route::get('products','ProductAdminController@index');
-Route::get('/delete/{id}','ProductAdminController@destroy');
-Route::resource('product','ProductAdminController');
-Route::put('/update/{id}','ProductAdminController@update');
-
-
-//Login and Register admin
-
-//view
-Route::get('get-register','AdminController@getRegister');
-Route::get('get-login','AdminController@getLogin');
-//method
-Route::post('login-admin','AdminController@postLogin');
-Route::post('/register-admin','AdminController@postRegister');
-Route::get('logout-admin','AdminController@logout');
+    Route::get('products','ProductAdminController@index');
+    Route::get('/delete/{id}','ProductAdminController@destroy');
+    Route::resource('product-admin','ProductAdminController');
+    Route::put('/update/{id}','ProductAdminController@update');
 
 //order
-Route::get('order','OrderAdminController@index');
-Route::get('orderDetails','OrderAdminController@orderDetails');
+    Route::get('order','OrderAdminController@index');
+    Route::get('/order-details/{order_number}','OrderAdminController@orderDetails')->name('order-details');
+
+//Login and Register admin
+//view
+    Route::get('get-register','AdminController@getRegister');
+    Route::get('get-login','AdminController@getLogin')->name('login');
+//method
+    Route::post('login-admin','AdminController@postLogin');
+    Route::post('/register-admin','AdminController@postRegister');
+    Route::get('logout-admin','AdminController@logout');
+
+

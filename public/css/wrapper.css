@@ -173,8 +173,15 @@
     font-size: 17px;
 }
 .message-success .box-success > i{
-    color: #18cd55;
     font-size: 20px;
+    width: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #18cd55e3;
+    color: #f0f0f0;
+    border-radius: 50%;
 }
 
 
