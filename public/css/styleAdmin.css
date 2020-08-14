@@ -3208,8 +3208,6 @@ div#graph1, div#graph4, div#graph5, div#graph6, div#graph7, div#graph8, div#grap
     border-radius:15px;
 }
 .highcharts-figure, .highcharts-data-table table {
-    min-width: 320px;
-    max-width: 600px;
     margin: 1em auto;
 }
 

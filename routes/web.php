@@ -43,7 +43,7 @@ Route::get('chart','HightChartController@index');
 //----------------------------admin----------------------------------//
 
 //product list
-    Route::get('product-list','PageController@index');
+    Route::get('product-list','PageController@index')->name('Dashboard');
 
 //Edit Product
     Route::get('products','ProductAdminController@index');

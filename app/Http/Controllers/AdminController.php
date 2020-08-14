@@ -55,7 +55,7 @@ class AdminController extends Controller
         );
 
         if (Auth::attempt($user_data)){
-            return redirect('product-admin');
+            return redirect()->route('Dashboard');
         }else{
             return back()->with('error','Email or password is incorrect');
         }
