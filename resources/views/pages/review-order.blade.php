@@ -6,7 +6,7 @@
         <div class="title-payment text-center">
             Payment
         </div>
-        <form action="{{route('createOrder')}}">
+        <form action="/review" method="post">
             @csrf
             <div class="row" style="padding: 0 40px">
                 <div class="col-lg-5 left-payment">
