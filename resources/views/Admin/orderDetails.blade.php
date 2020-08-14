@@ -5,10 +5,10 @@
         <div class="header-title">
             <span>Payment and delivery information</span>
         </div>
+        @foreach($order as $orderdetails)
         <div class="content-orderdetails">
             <div class="customer-info-order">
                 <ul>
-                    @foreach($order as $orderdetails)
                     <li>
                         <div class="title-info-customer">
                             <p>Information Customer</p>
@@ -102,8 +102,8 @@
                         <p>${{$orderdetails->total}}</p>
                     </td>
                 </tr>
-                @endforeach
             </table>
         </div>
+        @endforeach
     </div>
 @endsection
