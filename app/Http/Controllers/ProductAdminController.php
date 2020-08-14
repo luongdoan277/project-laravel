@@ -127,6 +127,7 @@ class ProductAdminController extends Controller
         ]);
 
         $product = Product::find($id);
+
         $product->name = $request->input('name');
         $product->type = $request->input('type');
         $product->slug = $request->input('slug');

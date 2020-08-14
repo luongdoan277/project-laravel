@@ -44,7 +44,7 @@ Route::get('chart','HightChartController@index');
 
 //product list
     Route::get('product-list','PageController@index')->name('Dashboard');
-
+    Route::get('/product-list/fetch_data','PageController@fetch_data');
 //Edit Product
     Route::get('products','ProductAdminController@index');
     Route::get('/delete/{id}','ProductAdminController@destroy');

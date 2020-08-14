@@ -130,6 +130,7 @@
 <script src="{{asset('js/jquery.slimscroll.js')}}"></script>
 <script src="{{asset('js/jquery.nicescroll.js')}}"></script>
 <script src="{{asset('js/jquery.scrollTo.js')}}"></script>
+<script src="{{asset('js/pagination.js')}}"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function () {
