@@ -38,6 +38,7 @@
             type: 'GET'
         }).done(function (response) {
             RenderCart(response);
+            console.log(response);
             alertify.success('Success add a product');
         });
     }
@@ -70,9 +71,12 @@
         });
     }
 
-    function RenderCart(response){
+    function RenderListCart(response){
         $("#list-item-cart").empty();
         $("#list-item-cart").html(response);
+    }
+
+    function RenderCart(response){
         $("#change-item-cart").empty();
         $("#change-item-cart").html(response);
         $("#total-quantity-show").text($("#total_quantity").val());

@@ -1,12 +1,12 @@
 @extends('homepage')
 
 @section('main')
-    @include('component.headerDetails')
+    @include('component.headerProduct')
     <section>
-        <div class="title-payment text-center">
+        <div class="title-payment text-center" style="margin: 60px 0">
             Payment
         </div>
-        <form action="/review" method="post">
+        <form action="{{route('createOrder')}}">
             @csrf
             <div class="row" style="padding: 0 40px">
                 <div class="col-lg-5 left-payment">
@@ -65,20 +65,21 @@
                         <ul class="payments-method">
                             <li class="payment_method_bacs">
                                 <input id = "Payment_method_bacs" type = "radio" class = "input-radio" name = "Payment_method" value = "1" />
-                                <label for =  "Payment_method_bacs"> Thanh toán khi nhận hàng </label>
+                                <label for =  "Payment_method_bacs"> Payment on delivery\
+                                </label>
                                 <div class = "Payment_box Payment_method_bacs" >
-                                    Cửa hàng sẽ gửi hàng đến địa chỉ của bạn, bạn xem hàng của mình thanh toán trực tiếp cho nhân  viên giao hàng
+                                    The store will send the goods to your address, you watch your goods pay directly to the delivery staff
                                 </div>
                             </li>
                             <li class="payment_method_cheque">
                                 <input id = "Payment_method_cheque" type = "radio" class = "input-radio" name = "Payment_method" value = "0" />
-                                <label for =  "Payment_method_cheque"> Chuyển khoản</label>
+                                <label for =  "Payment_method_cheque"> Transfer</label>
                                 <div class = "Payment_box Payment_method_cheque">
-                                    <p>Tên Tài khoản: Trường Đại học FPT</p>
-                                    <p>Số tài khoản: 0011001803620</p>
+                                    <p>Account name: Trường Đại học FPT</p>
+                                    <p>Bank account number: 0011001803620</p>
                                     <p>Ngân hàng Thương mại Cổ phần Ngoại thương Việt Nam – Sở Giao dịch Hà Nội</p>
-                                    <p>Nội dung: Thanh toán đơn hàng Mã số XXXXXXXXXX</p>
-                                    <p>Phí chuyển tiền: Phí ngoài  (Người nộp chịu phí)</p>
+                                    <p>Content: Payment orders - Number order XXXXXXXXXX</p>
+                                    <p>Transfer fee: Outside fees  (Payer is charged)</p>
                                 </div>
                             </li>
                         </ul>
@@ -131,9 +132,9 @@
                                     <div class="price2"><p>${{number_format($item['productInfo']->price)}}</p></div>
                                 </div>
                             @endforeach
-                                <div class="total" style="margin-top:10px;border-top: 2px solid #676767;">
-                                    <p style="font-weight: 600;font-size: 18px;float: left; ">Subtotal :</p>
-                                    <span style="font-size: 22px;font-weight: 700;color: #e2b86b;text-align: right">${{number_format(Session::get("Cart")->totalPrice)}}</span>
+                                <div class="total" style="margin-top:10px;border-top: 2px solid #676767; text-align: right">
+                                    <p style="font-weight: 600;font-size: 18px;display: contents; ">Subtotal :</p>
+                                    <span style="font-size: 22px;font-weight: 700;color: #e2b86b;">${{number_format(Session::get("Cart")->totalPrice)}}</span>
                                 </div>
                         @endif
                     </div>

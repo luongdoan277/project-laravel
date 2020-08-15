@@ -1,37 +1,361 @@
-#container {
-    height: 400px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.highcharts-figure, .highcharts-data-table table {
-    min-width: 320px;
-    max-width: 800px;
-    margin: 1em auto;
+.check-out-list{
+    min-height: 500px;
+    padding: 0 30px;
 }
-
-.highcharts-data-table table {
-    font-family: Verdana, sans-serif;
-    border-collapse: collapse;
-    border: 1px solid #EBEBEB;
-    margin: 10px auto;
-    text-align: center;
+.container{
+    /*border: 1px solid black;*/
+}
+.check-out{
+    font-weight: 700;
+    font-size: 40px;
+    padding: 30px 0;
+}
+.list-product-checkout{
+    float: left;
+    margin-bottom: 5%;
+}
+.border-right{
+    float: right;
+    border: 1px solid #d2cfcf;
+    margin-top: 30px;
+    padding: 20px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+.text{
+    background-color: #E0E0E0;
     width: 100%;
-    max-width: 500px;
+    float: left;
+    margin-top: 30px;
 }
-.highcharts-data-table caption {
-    padding: 1em 0;
-    font-size: 1.2em;
-    color: #555;
+.cart1{
+    padding-top: 30px;
+    width: 100%;
+    float: left;
+    margin-bottom: 3%;
 }
-.highcharts-data-table th {
+.product-checkout{
+    width: 30%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.description-checkout{
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.quantity-checkout{
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.price-checkout{
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.save-checkout{
+    width: 5%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.remove-checkout{
+    width: 5%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.product-payment{
+    width: 30%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.description2-payment{
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.description1-payment{
+    width: 30%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.quantity-payment{
+    width: 10%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.price-payment{
+    width: 10%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+.item{
+    height: 255px;
+}
+.img{
+    width: 30%;
+    float: left;
+    height: 255px;
+}
+.img > img{
+    padding: 0 10px;
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+}
+.title{
+    width: 20%;
+    float: left;
+    text-align: center;
+    font-size: 15px;
+    padding: 110px 0;
+}
+.title a{
+    color: #000000;
+    font-weight: 700;
+}
+.description-payment{
+    height: 100%;
+    width: 30%;
+    float: left;
+    display: grid;
+}
+.description-payment p{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.count{
+    padding: 105px 50px;
+    width: 20%;
+    float: left;
+    text-align: center;
+    display: flex;
+}
+.count p{
+    margin: 0;
+    line-height: 34px;
+    padding: 0;
+    font-size: 13px;
+    text-align: center;
+}
+.price1{
+    width: 20%;
+    float: left;
+    font-size: 15px;
+    text-align: center;
+    padding: 110px 0;
+}
+.price1 p{
+    font-weight: 700 ;
+}
+.icon-save{
+    width: 5%;
+    float: left;
+    text-align: center;
+    padding: 110px 0;
+}
+.icon-remove{
+    width: 5%;
+    float: left;
+    text-align: center;
+    padding: 110px 0;
+}
+.input-button{
+    width: 40px;
+    height: 30px;
+}
+.subtotal{
+    width: 100%;
+    float: left
+}
+.payment{
+    background-color: black;
+    width: 100%;
+    float: left;
+    height: 40px;
+    margin: 20px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0;
+}
+.payment h6{
+    padding: 7px 0;
+    font-weight: 700;
+}
+
+.modal-dialog {
+    max-width: 1000px !important;
+}
+.dropdown{
+    float: left;
+    width: 100%;
+}
+.btn .btn-secondary .dropdown-toggle .dropdown-menu{
+    float: left;
+    width: 100%;
+}
+.btn .btn-secondary .dropdown-toggle{
+    width: 80%;
+    margin-left: 15px;
+    color:black;
+    border: 1px solid #d6cfcf;
+}
+.custom-select{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+.item .count .pro-qty {
+    width: 123px;
+    height: 46px;
+    border: 2px solid #ebebeb;
+    padding: 0 15px;
+    float: left;
+    margin-right: 14px;
+}
+
+.item .count .pro-qty .qtybtn {
+    font-size: 24px;
+    color: #b2b2b2;
+    float: left;
+    line-height: 38px;
+    cursor: pointer;
+    width: 18px;
+}
+
+.item .count .pro-qty .qtybtn.dec {
+    font-size: 30px;
+}
+
+.item .count .pro-qty input {
+    overflow: hidden;
+    text-align: center;
+    width: 52px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    color: #4c4c4c;
+    line-height: 40px;
+    float: left;
+}
+.bold{
+    font-weight: 700;
+}
+.margin-left-right{
+    margin: 0 30px;
+}
+.margin-top{
+    margin-top: 20px;
+}
+.padding-top{
+    padding-top: 1rem;
+}
+.padding-left{
+    padding-left: 1rem;
+}
+.padding-right{
+    padding-right: 1rem;
+}
+.padding-bottom{
+    padding-bottom: 1rem;
+}
+.no-padding-bottom{
+    padding-bottom: 0;
+}
+.no-margin-bottom{
+    margin-bottom: 0;
+}
+.form-control1 {
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+    flex-direction: column;
+    border: 1px solid #949494 !important;
+    height: 32px;
+    border-radius: 5px;
+}
+.title-payment{
+    font-size: 40px;
+    font-weight: 700;
+}
+.title-search{
+    font-size: 40px;
+    font-weight: 700;
+}
+.address p{
+    font-size: 22px;
     font-weight: 600;
-    padding: 0.5em;
 }
-.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
-    padding: 0.5em;
+.count1{
+    padding: 105px 50px;
+    width: 10%;
+    float: left;
+    text-align: center;
+    display: flex;
 }
-.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
-    background: #f8f8f8;
+.count1 p{
+    margin: 0;
+    line-height: 34px;
+    padding: 0;
+    font-size: 13px;
+    text-align: center;
 }
-.highcharts-data-table tr:hover {
-    background: #f1f7ff;
+.price2{
+    width: 10%;
+    float: left;
+    font-size: 15px;
+    text-align: center;
+    padding: 110px 0;
+}
+.price2 p{
+    font-weight: 700 ;
+}
+.left-payment .form-block{
+    margin: 20px 0;
+}
+.left-payment .form-block label{
+    font-size: 18px;
+    width: 25%;
+    padding-left: 25px;
+}
+.left-payment .form-block input{
+    width: 72%;
+    height: 36px;
+    padding-left: 15px;
+}
+.left-payment .form-block .textarea{
+    width: 72%;
+    height: 100px;
+    padding-left: 15px;
+}
+.payments-method li{
+    list-style: none;
+}
+.Payment_box{
+    padding: 20px;
+    background-color: white;
+}
+.search-order{
+    background-image: url("../images/background-search.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 350px;
+    padding-top: 60px;
 }

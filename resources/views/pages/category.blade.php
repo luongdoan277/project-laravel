@@ -19,7 +19,7 @@
                                 <div class="product">
                                     <div class="them">
                                         <div class="image-product">
-                                            <img src="/images/{{$product->url_image}}" alt="">
+                                            <img src="{{asset('images/'.$product->url_image)}}" alt="">
                                         </div>
                                         <div class="check-product">
                                             <a href="{{ route('product.show', $product->id)}}" class="check"><i class="fas fa-info-circle"></i></a>

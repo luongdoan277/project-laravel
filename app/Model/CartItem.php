@@ -37,6 +37,7 @@ class CartItem extends Model
                 $newProduct = $this->products[$id];
             }
         }
+//        $newProduct['productInfo']->url_image = 'http://127.0.0.1:8000/images/'+ $products->url_image;
         $newProduct['qty']++;
         $newProduct['price'] = $newProduct['qty'] * $products->price;
         $this->products[$id] = $newProduct;
