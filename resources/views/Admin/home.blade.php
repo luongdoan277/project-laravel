@@ -26,9 +26,6 @@
                 <div class="cart-content" id="table_data">
                     @include('Admin.pagination')
                 </div>
-                <div class="nav" style="border-top: 1px solid #0000002e;padding: 10px">
-                    {!! $Products->links() !!}
-                </div>
             </div>
         </div>
     </div>

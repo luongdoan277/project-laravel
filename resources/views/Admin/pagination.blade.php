@@ -30,10 +30,13 @@
                 </a>
             </td>
             <td class="ct">
-                <a href="{{route('product.show', $product->id)}}">
+                <a href="{{route('product-admin.show', $product->id)}}">
                     <i class="far fa-edit"></i>
                 </a>
             </td>
         </tr>
     @endforeach
 </table>
+<div class="nav" style="border-top: 1px solid #0000002e;padding: 10px">
+    {!! $Products->links() !!}
+</div>

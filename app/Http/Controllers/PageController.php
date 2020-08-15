@@ -15,7 +15,7 @@ class PageController extends Controller
     function fetch_data(Request $request){
         if ($request->ajax()){
             $Products = Product::paginate(4);
-            return view('Admin.pagination',compact('Products'));
+            return view('Admin.pagination',compact('Products'))->render();
         }
     }
 }

@@ -1,7 +1,11 @@
-$(document).on('click', '.pagination a',function (event) {
-    event.preventDefault();
-    var page = $(this).attr('href').split('page=')[1];
-    fetch_data(page);
+
+
+$(document).ready(function (){
+    $(document).on('click', '.pagination a',function (event) {
+        event.preventDefault();
+        var page = $(this).attr('href').split('page=')[1];
+        fetch_data(page);
+    });
 
     function fetch_data(page) {
         $.ajax({
@@ -12,3 +16,5 @@ $(document).on('click', '.pagination a',function (event) {
         });
     }
 });
+
+
