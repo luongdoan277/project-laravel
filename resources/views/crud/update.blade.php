@@ -45,7 +45,7 @@
         @method('PUT')
         <div class="product-info">
             <label>Name</label>
-            <input type="text" name="name">
+            <input type="text" name="name" value="{{$product->name}}">
             <div><span style="color: red">
                         {{$errors->first('name')}}
                 </span>
@@ -53,7 +53,7 @@
         </div>
         <div class="product-info">
             <label>Type</label>
-            <input type="text" name="type">
+            <input type="text" name="type" value="{{$product->type}}">
             <div><span style="color: red">
                     {{$errors->first('type')}}
                 </span>
@@ -61,7 +61,7 @@
         </div>
         <div class="product-info">
             <label>Slug</label>
-            <input type="text" name="slug">
+            <input type="text" name="slug" value="{{$product->slug}}">
             <div><span style="color: red">
                        {{$errors->first('slug')}}
                 </span>
@@ -69,16 +69,16 @@
         </div>
         <div class="product-info">
             <label>Description</label>
-            <input type="text" name="description">
+            <input type="text" name="description" value="{{$product->description}}">
             <div>{{$errors->first('description')}}</div>
             <div><span style="color: red">
-                       {{$errors->first('slug')}}
+                       {{$errors->first('description')}}
                     </span>
             </div>
         </div>
         <div class="product-info">
             <label>Sku</label>
-            <input type="text" name="sku">
+            <input type="text" name="sku" value="{{$product->sku}}">
             <div><span style="color: red">
                        {{$errors->first('sku')}}
                     </span>
@@ -86,7 +86,7 @@
         </div>
         <div class="product-info">
             <label>Price</label>
-            <input type="text" name="price">
+            <input type="text" name="price" value="{{$product->price}}">
             <div><span style="color: red">
                        {{$errors->first('price')}}
                     </span>
@@ -94,7 +94,7 @@
         </div>
         <div class="product-info">
             <label>Quantity</label>
-            <input type="number" name="quantity">
+            <input type="number" name="quantity" value="{{$product->quantity}}">
             <div><span style="color: red">
                        {{$errors->first('quantity')}}
                     </span>
@@ -102,7 +102,7 @@
         </div>
         <div class="product-info">
             <label>Category ID</label>
-            <input type="text" name="category_id">
+            <input type="text" name="category_id" value="{{$product->category_id}}">
             <div><span style="color: red">
                        {{$errors->first('category_id')}}
                     </span>
@@ -110,7 +110,7 @@
         </div>
         <div class="product-info">
             <label>Status</label>
-            <input type="text" name="status">
+            <input type="text" name="status" value="{{$product->status}}">
             <div><span style="color: red">
                        {{$errors->first('status')}}
                     </span>

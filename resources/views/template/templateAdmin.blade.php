@@ -19,7 +19,7 @@
     <section id="container">
         <header class="header fixed-top clearfix">
             <div class="brand">
-                <a href="index.html" class="logo">
+                <a href="{{route('Dashboard')}}" class="logo">
                     BerryBerri
                 </a>
                 <div class="sidebar-toggle-box">

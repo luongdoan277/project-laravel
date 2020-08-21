@@ -386,10 +386,9 @@
 }
 
 .payment{
-    width: 58%;
+    width: 38%;
     height: 250px;
     background: #ffffff;
-    display: flex;
     align-items: center;
 }
 .payment > ul >li{

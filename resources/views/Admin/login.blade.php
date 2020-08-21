@@ -41,7 +41,6 @@
         </form>
         <div class="question">
             <a href="">Forgot Password?</a>
-            <a href="{{url('register')}}">Create an account?</a>
         </div>
     </div>
     </div>

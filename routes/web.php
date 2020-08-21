@@ -66,4 +66,4 @@ Route::get('chart','HightChartController@index');
 
 //    Route::get('/showOrderStatus/{order_number}','OrderAdminController@orderStatus')->name('order-status');
 
-    Route::get('/update/{order_number}','OrderAdminController@updateStatus')->name('update-status');
+    Route::put('/update/{order_number}','OrderAdminController@updateStatus')->name('update-status');

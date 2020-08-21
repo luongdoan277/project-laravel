@@ -115,8 +115,6 @@ class ProductAdminController extends Controller
     {
         $this->validate($request,[
             'name' => 'required|string|max:255',
-            'type' => 'required|string|max:255',
-            'slug' => 'required|string|max:255',
             'url_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'description' => 'required|string',
             'sku' => 'required|string|max:255',

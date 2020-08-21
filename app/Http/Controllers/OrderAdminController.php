@@ -29,7 +29,7 @@ class OrderAdminController extends Controller
 //          dd($order_item);
 //          dd($customer->name);
 //          dd($order,$customer,$order_item);
-            return view('Admin.orderDetails',compact(['order','customer','order_item']));
+        return view('Admin.orderDetails',compact(['order','customer','order_item']));
     }
 
 //    public function orderStatus($order_number){

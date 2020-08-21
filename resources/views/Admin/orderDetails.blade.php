@@ -60,8 +60,18 @@
                         <span>Come:</span>
                         <p>{{$orderdetails->shipping_address}}</p>
                     </li>
-
                 </ul>
+            </div>
+            <div style="width: 20%; background-color: white; height: 250px">
+                <form action="">
+                    <p style="font-size: 20px; font-weight: 600; padding: 10px 12px">Status</p>
+                    <select name="status" class="form-control input-inline" style="width: 200px">
+                        <option value="1">Chưa giao</option>
+                        <option value="2">Đang giao</option>
+                        <option value="2">Đã giao</option>
+                    </select>
+                    <input type="submit" value="Xử lý" class="btn btn-primary">
+                </form>
             </div>
         </div>
         <div class="product-info-order">
