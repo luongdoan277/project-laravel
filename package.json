@@ -27,7 +27,7 @@
     "dependencies": {
         "antd": "^4.5.2",
         "bootstrap": "^4.5.0",
-        "highcharts": "^8.1.2",
+        "highcharts": "^9.0.0",
         "highcharts-react-official": "^3.0.0",
         "react": "^16.13.1",
         "redux": "^4.0.5"
